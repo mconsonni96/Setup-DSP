@@ -1,0 +1,78 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.691824",
+   "Default View_TopLeft":"-142,-173",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port M00_AXIS -pg 1 -lvl 7 -x 2200 -y 330 -defaultsOSRD
+preplace port M00_BB -pg 1 -lvl 7 -x 2200 -y 620 -defaultsOSRD
+preplace port M01_AXIS_DebugCT -pg 1 -lvl 7 -x 2200 -y 500 -defaultsOSRD
+preplace port M01_AXIS_DebugCT1 -pg 1 -lvl 7 -x 2200 -y 780 -defaultsOSRD
+preplace port M01_AXIS_DebugCT2 -pg 1 -lvl 7 -x 2200 -y 370 -defaultsOSRD
+preplace port ch1_diff -pg 1 -lvl 0 -x 0 -y 680 -defaultsOSRD
+preplace port ch2_diff -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
+preplace port sync_diff -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port clk_BB -pg 1 -lvl 0 -x 0 -y 850 -defaultsOSRD
+preplace port clk_TDC -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD
+preplace port reset_0 -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace portBus Din -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace portBus Din_1 -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
+preplace portBus Res -pg 1 -lvl 7 -x 2200 -y 850 -defaultsOSRD
+preplace portBus dout -pg 1 -lvl 7 -x 2200 -y 700 -defaultsOSRD
+preplace inst Ch1 -pg 1 -lvl 4 -x 1230 -y 510 -defaultsOSRD
+preplace inst Ch2 -pg 1 -lvl 5 -x 1660 -y 790 -defaultsOSRD
+preplace inst CoarseTreeDistributor_0 -pg 1 -lvl 2 -x 350 -y 600 -defaultsOSRD
+preplace inst StartStopGenerator_0 -pg 1 -lvl 2 -x 350 -y 800 -defaultsOSRD
+preplace inst Sync -pg 1 -lvl 3 -x 760 -y 370 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 6 -x 2030 -y 850 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 5 -x 1660 -y 580 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2030 -y 700 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 790 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 350 -y 460 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 3 -x 760 -y 50 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 4 -x 1230 -y 110 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 2 -x 350 -y 360 -defaultsOSRD
+preplace inst xlslice_4 -pg 1 -lvl 3 -x 760 -y 170 -defaultsOSRD
+preplace inst xlslice_5 -pg 1 -lvl 4 -x 1230 -y 230 -defaultsOSRD
+preplace netloc BeltBus_TDL_Channel_TDC_0_Calibrated 1 3 2 990J 640 1470
+preplace netloc BeltBus_TDL_Channel_TDC_1_Calibrated 1 4 1 1430 520n
+preplace netloc BeltBus_TDL_Channel_TDC_2_Calibrated 1 5 1 1850 800n
+preplace netloc CoarseTreeDistributor_0_CoarseCounter_CTD_0 1 2 1 500 330n
+preplace netloc CoarseTreeDistributor_0_CoarseCounter_CTD_1 1 2 2 NJ 600 980
+preplace netloc CoarseTreeDistributor_0_CoarseCounter_CTD_2 1 2 3 500 770 NJ 770 NJ
+preplace netloc Din_1_1 1 0 4 NJ 270 190 270 510 230 NJ
+preplace netloc Net 1 0 4 NJ 250 200 250 500 110 NJ
+preplace netloc StartStopGenerator_0_StartOut 1 2 1 510 310n
+preplace netloc StartStopGenerator_0_StopOut 1 2 3 560 560 1000 750 NJ
+preplace netloc Sync_read_reg1 1 3 3 950J 650 NJ 650 1870
+preplace netloc TDCChannelSlice_1_read_reg 1 4 2 1420J 510 1880
+preplace netloc TDCChannelSlice_2_read_reg 1 5 1 1870 720n
+preplace netloc clk_BB_1 1 0 5 NJ 850 190 870 550 570 1010 790 NJ
+preplace netloc clk_TDC_1 1 0 5 NJ 610 180 690 530 580 1040 810 NJ
+preplace netloc reset_0_1 1 0 3 NJ 310 180J 300 540J
+preplace netloc reset_TDC_1 1 1 4 200 520 570 590 960 830 NJ
+preplace netloc util_vector_logic_0_Res 1 6 1 NJ 850
+preplace netloc util_vector_logic_1_Res 1 5 1 1860 580n
+preplace netloc xlconcat_0_dout 1 6 1 NJ 700
+preplace netloc xlslice_3_Dout 1 2 1 520J 360n
+preplace netloc xlslice_4_Dout 1 3 1 1020J 170n
+preplace netloc xlslice_5_Dout 1 4 1 1450J 230n
+preplace netloc xlslice_0_Dout 1 2 1 540J 450n
+preplace netloc xlslice_1_Dout 1 3 1 1030J 50n
+preplace netloc xlslice_2_Dout 1 4 1 1460J 110n
+preplace netloc BeltBus_TDL_Channel_0_M00_BB 1 3 1 1010 350n
+preplace netloc BeltBus_TDL_Channel_0_M01_AXIS_DebugCT 1 3 4 NJ 370 NJ 370 NJ 370 NJ
+preplace netloc BeltBus_TDL_Channel_1_M00_BB 1 4 1 1440 480n
+preplace netloc BeltBus_TDL_Channel_1_M01_AXIS_DebugCT 1 4 3 NJ 500 NJ 500 NJ
+preplace netloc BeltBus_TDL_Channel_2_M00_BB 1 5 2 1850J 620 NJ
+preplace netloc BeltBus_TDL_Channel_2_M01_AXIS_DebugCT 1 5 2 NJ 780 NJ
+preplace netloc Conn1 1 0 3 NJ 290 NJ 290 NJ
+preplace netloc Conn2 1 0 4 NJ 680 NJ 680 NJ 680 970J
+preplace netloc Conn3 1 0 5 NJ 730 NJ 730 NJ 730 NJ 730 NJ
+preplace netloc Conn4 1 3 4 NJ 330 NJ 330 NJ 330 NJ
+levelinfo -pg 1 0 100 350 760 1230 1660 2030 2200
+pagesize -pg 1 -db -bbox -sgen -150 -10 2410 920
+"
+}
+
