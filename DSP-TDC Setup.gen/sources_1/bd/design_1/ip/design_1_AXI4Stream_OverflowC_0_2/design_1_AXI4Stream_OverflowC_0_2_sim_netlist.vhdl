@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
 -- Date        : Tue Mar 15 12:27:26 2022
 -- Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim {/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC
---               Setup.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_OverflowC_0_2/design_1_AXI4Stream_OverflowC_0_2_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_AXI4Stream_OverflowC_0_2 -prefix
+--               design_1_AXI4Stream_OverflowC_0_2_ design_1_AXI4Stream_OverflowC_0_2_sim_netlist.vhdl
 -- Design      : design_1_AXI4Stream_OverflowC_0_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,8 +24,6 @@ entity design_1_AXI4Stream_OverflowC_0_2_OverflowCounter is
     reset : in STD_LOGIC;
     IsCalibrated : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_OverflowC_0_2_OverflowCounter : entity is "OverflowCounter";
 end design_1_AXI4Stream_OverflowC_0_2_OverflowCounter;
 
 architecture STRUCTURE of design_1_AXI4Stream_OverflowC_0_2_OverflowCounter is
@@ -1160,8 +1158,6 @@ entity design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounterWrapper is
     reset : in STD_LOGIC;
     IsCalibrated : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounterWrapper : entity is "AXI4Stream_OverflowCounterWrapper";
 end design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounterWrapper;
 
 architecture STRUCTURE of design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounterWrapper is
@@ -1199,8 +1195,6 @@ entity design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounter is
   attribute BIT_FID of design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounter : entity is 2;
   attribute BIT_RESOLUTION : integer;
   attribute BIT_RESOLUTION of design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounter : entity is 16;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounter : entity is "AXI4Stream_OverflowCounter";
 end design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounter;
 
 architecture STRUCTURE of design_1_AXI4Stream_OverflowC_0_2_AXI4Stream_OverflowCounter is

@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.runs/design_1_MME_0_1_synth_1'
+HD_PWD='/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_MME_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -58,7 +58,7 @@ ENTITY design_1_AXI4Stream_IperDecod_0_2 IS
     reset : IN STD_LOGIC;
     clk : IN STD_LOGIC;
     s00_axis_undeco_tvalid : IN STD_LOGIC;
-    s00_axis_undeco_tdata : IN STD_LOGIC_VECTOR(199 DOWNTO 0);
+    s00_axis_undeco_tdata : IN STD_LOGIC_VECTOR(967 DOWNTO 0);
     m00_axis_subint_tvalid : OUT STD_LOGIC;
     m00_axis_subint_tdata : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     subInterpolationMatrix : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
@@ -112,7 +112,7 @@ ARCHITECTURE design_1_AXI4Stream_IperDecod_0_2_arch OF design_1_AXI4Stream_IperD
       reset : IN STD_LOGIC;
       clk : IN STD_LOGIC;
       s00_axis_undeco_tvalid : IN STD_LOGIC;
-      s00_axis_undeco_tdata : IN STD_LOGIC_VECTOR(199 DOWNTO 0);
+      s00_axis_undeco_tdata : IN STD_LOGIC_VECTOR(967 DOWNTO 0);
       m00_axis_subint_tvalid : OUT STD_LOGIC;
       m00_axis_subint_tdata : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       subInterpolationMatrix : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
@@ -128,7 +128,7 @@ ARCHITECTURE design_1_AXI4Stream_IperDecod_0_2_arch OF design_1_AXI4Stream_IperD
   ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_subint_tvalid: SIGNAL IS "XIL_INTERFACENAME M00_AXIS_SubInt, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 416666666, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m00_axis_subint_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M00_AXIS_SubInt TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axis_undeco_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S00_AXIS_UnDeco TDATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axis_undeco_tvalid: SIGNAL IS "XIL_INTERFACENAME S00_AXIS_UnDeco, TDATA_NUM_BYTES 25, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 416666666, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axis_undeco_tvalid: SIGNAL IS "XIL_INTERFACENAME S00_AXIS_UnDeco, TDATA_NUM_BYTES 121, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 416666666, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axis_undeco_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S00_AXIS_UnDeco TVALID";
   ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, ASSOCIATED_BUSIF S00_AXIS_UnDeco:M00_AXIS_SubInt, FREQ_HZ 416666666, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
@@ -141,8 +141,8 @@ BEGIN
       EDGE_CHECK => false,
       MD_VS_TD => "MD",
       TYPE_DECODER => "T2B",
-      TYPE_EDGE_0 => "DN",
-      TYPE_EDGE_1 => "DN",
+      TYPE_EDGE_0 => "UP",
+      TYPE_EDGE_1 => "UP",
       TYPE_EDGE_2 => "DN",
       TYPE_EDGE_3 => "DN",
       TYPE_EDGE_5 => "DN",
@@ -157,10 +157,10 @@ BEGIN
       TYPE_EDGE_13 => "DN",
       TYPE_EDGE_14 => "DN",
       TYPE_EDGE_15 => "DN",
-      NUMBER_OF_TDL => 1,
-      BIT_TDL => 192,
+      NUMBER_OF_TDL => 2,
+      BIT_TDL => 480,
       BIT_BUBBLE => 4,
-      BIT_SUB_INT => 8,
+      BIT_SUB_INT => 10,
       DECO_LOG_MAX_INPUT_ENGINE_PIPELINE_0 => 2,
       DECO_LOG_MAX_INPUT_ENGINE_PIPELINE_1 => 2,
       DECO_T2B_MAX_INPUT_ENGINE_PIPELINE_0 => 2,

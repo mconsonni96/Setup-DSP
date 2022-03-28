@@ -939,11 +939,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 21 12:16:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1727374b</spirit:value>
+            <spirit:value>9:25787ee0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -954,7 +954,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1727374b</spirit:value>
+            <spirit:value>9:25787ee0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -970,11 +970,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 08:21:42 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1727374b</spirit:value>
+            <spirit:value>9:25787ee0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -989,11 +989,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 21 12:16:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:425cdde4</spirit:value>
+            <spirit:value>9:c0221110</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1009,11 +1009,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 08:21:42 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:425cdde4</spirit:value>
+            <spirit:value>9:c0221110</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1027,11 +1027,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:27:06 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 08:27:18 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1727374b</spirit:value>
+            <spirit:value>9:25787ee0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1331,7 +1331,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>BIT_UNCALIBRATED</spirit:name>
         <spirit:displayName>Bit Uncalibrated</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_UNCALIBRATED" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_UNCALIBRATED" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">9</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BIT_COARSE</spirit:name>
@@ -1508,7 +1508,7 @@
     <spirit:parameter>
       <spirit:name>BIT_UNCALIBRATED</spirit:name>
       <spirit:displayName>Bit Uncalibrated</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_UNCALIBRATED" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_UNCALIBRATED" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">9</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BIT_COARSE</spirit:name>

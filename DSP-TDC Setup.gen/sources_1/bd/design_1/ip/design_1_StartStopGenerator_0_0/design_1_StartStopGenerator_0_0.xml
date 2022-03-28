@@ -114,7 +114,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.clk_in" xilinx:dependency="$CLK_SELECT = &quot;EXTERNAL&quot;">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.clk_in" xilinx:dependency="$CLK_SELECT = &quot;EXTERNAL&quot;">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -167,11 +167,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 21 12:16:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4b13e952</spirit:value>
+            <spirit:value>9:5982f3c0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -182,7 +182,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4b13e952</spirit:value>
+            <spirit:value>9:5982f3c0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -198,11 +198,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Thu Mar 24 13:27:20 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4b13e952</spirit:value>
+            <spirit:value>9:5982f3c0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -217,11 +217,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 21 12:16:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:af27f753</spirit:value>
+            <spirit:value>9:012ff8bc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -237,11 +237,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Thu Mar 24 13:27:20 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:af27f753</spirit:value>
+            <spirit:value>9:012ff8bc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -255,11 +255,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:25:53 UTC 2022</spirit:value>
+            <spirit:value>Thu Mar 24 13:27:53 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4b13e952</spirit:value>
+            <spirit:value>9:5982f3c0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -290,6 +290,13 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
+        <spirit:vendorExtensions>
+          <xilinx:portInfo>
+            <xilinx:enablement>
+              <xilinx:isEnabled xilinx:id="PORT_ENABLEMENT.clk_in">false</xilinx:isEnabled>
+            </xilinx:enablement>
+          </xilinx:portInfo>
+        </spirit:vendorExtensions>
       </spirit:port>
       <spirit:port>
         <spirit:name>Divider</spirit:name>
@@ -356,7 +363,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>HALF_DIVIDER</spirit:name>
         <spirit:displayName>Half Divider</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HALF_DIVIDER" spirit:minimum="0" spirit:rangeType="long">5</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HALF_DIVIDER" spirit:minimum="0" spirit:rangeType="long">10</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DIVIDER_INIT</spirit:name>
@@ -366,7 +373,7 @@
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>CLK_SELECT</spirit:name>
         <spirit:displayName>Clk Select</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CLK_SELECT">EXTERNAL</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CLK_SELECT">RING OSCILLATOR</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>START_STOP_DALAY_NUM_CARRY_BLOCK</spirit:name>
@@ -507,7 +514,7 @@
     <spirit:parameter>
       <spirit:name>HALF_DIVIDER</spirit:name>
       <spirit:displayName>Half Divider</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HALF_DIVIDER" spirit:minimum="0" spirit:maximum="1400" spirit:rangeType="long">5</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HALF_DIVIDER" spirit:minimum="0" spirit:maximum="1400" spirit:rangeType="long">10</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DIVIDER_INIT</spirit:name>
@@ -517,7 +524,7 @@
     <spirit:parameter>
       <spirit:name>CLK_SELECT</spirit:name>
       <spirit:displayName>Clock Select</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_SELECT" spirit:choiceRef="choice_list_f6cdde5d">EXTERNAL</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_SELECT" spirit:choiceRef="choice_list_f6cdde5d">RING OSCILLATOR</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>START_STOP_DALAY_NUM_CARRY_BLOCK</spirit:name>

@@ -168,7 +168,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS_UNDECO.TDATA_NUM_BYTES">25</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXIS_UNDECO.TDATA_NUM_BYTES">121</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -442,11 +442,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 21 12:16:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e4505996</spirit:value>
+            <spirit:value>9:6d0aa638</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -457,7 +457,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e4505996</spirit:value>
+            <spirit:value>9:6d0aa638</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -473,11 +473,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 28 09:16:25 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e4505996</spirit:value>
+            <spirit:value>9:6d0aa638</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -492,11 +492,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 21 12:16:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:58a50c93</spirit:value>
+            <spirit:value>9:abab1736</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -512,11 +512,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 28 09:16:25 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:58a50c93</spirit:value>
+            <spirit:value>9:abab1736</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -530,11 +530,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:35:53 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 28 09:17:54 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e4505996</spirit:value>
+            <spirit:value>9:6d0aa638</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -584,7 +584,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.BIT_PIPE_COARSE&apos;)) + (spirit:decode(id(&apos;MODELPARAM_VALUE.NUMBER_OF_TDL&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.BIT_TDL&apos;)))) - 1) / 8) + 1) * 8) - 1)">199</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((((spirit:decode(id(&apos;MODELPARAM_VALUE.BIT_PIPE_COARSE&apos;)) + (spirit:decode(id(&apos;MODELPARAM_VALUE.NUMBER_OF_TDL&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.BIT_TDL&apos;)))) - 1) / 8) + 1) * 8) - 1)">967</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -668,12 +668,12 @@
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>TYPE_EDGE_0</spirit:name>
         <spirit:displayName>Type Edge 0</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TYPE_EDGE_0">DN</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TYPE_EDGE_0">UP</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>TYPE_EDGE_1</spirit:name>
         <spirit:displayName>Type Edge 1</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TYPE_EDGE_1">DN</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TYPE_EDGE_1">UP</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -853,12 +853,12 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>NUMBER_OF_TDL</spirit:name>
         <spirit:displayName>Number Of Tdl</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUMBER_OF_TDL" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUMBER_OF_TDL" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BIT_TDL</spirit:name>
         <spirit:displayName>Bit Tdl</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_TDL" spirit:minimum="4" spirit:maximum="4096" spirit:rangeType="long">192</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_TDL" spirit:minimum="4" spirit:maximum="4096" spirit:rangeType="long">480</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BIT_BUBBLE</spirit:name>
@@ -868,7 +868,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BIT_SUB_INT</spirit:name>
         <spirit:displayName>Bit Sub Int</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_SUB_INT" spirit:minimum="0" spirit:rangeType="long">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_SUB_INT" spirit:minimum="0" spirit:rangeType="long">10</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -1340,7 +1340,7 @@
     <spirit:parameter>
       <spirit:name>TYPE_EDGE_0</spirit:name>
       <spirit:displayName>Type Edge TDL 0</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TYPE_EDGE_0" spirit:choiceRef="choice_list_4152761a">DN</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TYPE_EDGE_0" spirit:choiceRef="choice_list_4152761a">UP</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1352,11 +1352,11 @@
     <spirit:parameter>
       <spirit:name>TYPE_EDGE_1</spirit:name>
       <spirit:displayName>Type Edge TDL 1</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TYPE_EDGE_1" spirit:choiceRef="choice_list_4152761a">DN</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.TYPE_EDGE_1" spirit:choiceRef="choice_list_4152761a">UP</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.TYPE_EDGE_1">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.TYPE_EDGE_1">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -1532,12 +1532,12 @@
     <spirit:parameter>
       <spirit:name>NUMBER_OF_TDL</spirit:name>
       <spirit:displayName>Number of TDL</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUMBER_OF_TDL" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUMBER_OF_TDL" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BIT_TDL</spirit:name>
       <spirit:displayName>Number of Taps</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_TDL" spirit:minimum="4" spirit:maximum="4096" spirit:rangeType="long">192</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_TDL" spirit:minimum="4" spirit:maximum="4096" spirit:rangeType="long">480</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BIT_BUBBLE</spirit:name>
@@ -1547,7 +1547,7 @@
     <spirit:parameter>
       <spirit:name>BIT_SUB_INT</spirit:name>
       <spirit:displayName>Bit Sub-Interpolated</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_SUB_INT" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_SUB_INT" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">10</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1801,8 +1801,12 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXIS_UNDECO.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SUBINTERPOLATIONMATRIX.LAYERED_METADATA" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.BIT_PIPE_COARSE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.BIT_SUB_INT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.BIT_TDL" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DEBUG_MODE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.NUMBER_OF_TDL" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TYPE_EDGE_0" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.TYPE_EDGE_1" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

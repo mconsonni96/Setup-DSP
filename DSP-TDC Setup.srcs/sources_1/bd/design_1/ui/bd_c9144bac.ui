@@ -1,0 +1,70 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.549828",
+   "Default View_TopLeft":"-238,-275",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port M00_BB -pg 1 -lvl 7 -x 2770 -y 780 -defaultsOSRD
+preplace port M01_AXIS_DebugCT -pg 1 -lvl 7 -x 2770 -y 380 -defaultsOSRD
+preplace port S00_BB -pg 1 -lvl 0 -x -10 -y 780 -defaultsOSRD
+preplace port ch1_diff -pg 1 -lvl 0 -x -10 -y 540 -defaultsOSRD
+preplace port CalibEventIn -pg 1 -lvl 0 -x -10 -y 720 -defaultsOSRD
+preplace port Calibrated -pg 1 -lvl 7 -x 2770 -y 400 -defaultsOSRD
+preplace port clk_BB -pg 1 -lvl 0 -x -10 -y 850 -defaultsOSRD
+preplace port clk_TDC -pg 1 -lvl 0 -x -10 -y 580 -defaultsOSRD
+preplace port reset_TDC -pg 1 -lvl 0 -x -10 -y 560 -defaultsOSRD
+preplace portBus CoarseCounter_CTD -pg 1 -lvl 0 -x -10 -y 800 -defaultsOSRD
+preplace portBus read_reg -pg 1 -lvl 7 -x 2770 -y 310 -defaultsOSRD
+preplace portBus write_debug_reg_0 -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace portBus write_reg -pg 1 -lvl 0 -x -10 -y 220 -defaultsOSRD
+preplace inst AXI4Stream_CoarseExt_0 -pg 1 -lvl 4 -x 1440 -y 590 -defaultsOSRD
+preplace inst AXI4Stream_IperDecod_0 -pg 1 -lvl 3 -x 1020 -y 540 -defaultsOSRD
+preplace inst AXI4Stream_MagicCali_0 -pg 1 -lvl 5 -x 1950 -y 380 -defaultsOSRD
+preplace inst AXI4Stream_OverflowC_0 -pg 1 -lvl 3 -x 1020 -y 940 -defaultsOSRD
+preplace inst AXI4Stream_Synchroni_0 -pg 1 -lvl 4 -x 1440 -y 960 -defaultsOSRD
+preplace inst BeltBus_NodeInserter_0 -pg 1 -lvl 5 -x 1950 -y 790 -defaultsOSRD
+preplace inst TDCChannelSlice_1 -pg 1 -lvl 6 -x 2430 -y 180 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 5 -x 1950 -y 570 -defaultsOSRD
+preplace inst InputLogic_1 -pg 1 -lvl 1 -x 220 -y 630 -defaultsOSRD
+preplace inst AXI4Stream_DSP_TDC_0 -pg 1 -lvl 2 -x 610 -y 510 -defaultsOSRD
+preplace netloc BeltBus_TDL_Channel_TDC_1_Calibrated 1 0 7 30 860 NJ 860 810 850 NJ 850 1630J 920 2220 400 NJ
+preplace netloc CoarseCounter_CTD_1 1 0 4 NJ 800 NJ 800 NJ 800 1250J
+preplace netloc InputLogic_1_AsyncEventOut 1 1 1 380 510n
+preplace netloc StartStopGenerator_0_StopOut 1 0 1 NJ 720
+preplace netloc TDCChannelSlice_1_Divider 1 0 7 40 820 NJ 820 NJ 820 NJ 820 1660J 890 NJ 890 2720
+preplace netloc TDCChannelSlice_1_EdgeTrigger 1 0 7 50 410 NJ 410 NJ 410 NJ 410 1660J 690 NJ 690 2740
+preplace netloc TDCChannelSlice_1_ForceCalibrate 1 0 7 50 830 NJ 830 NJ 830 NJ 830 1650J 900 NJ 900 2710
+preplace netloc TDCChannelSlice_1_Gate 1 0 7 60 840 NJ 840 NJ 840 NJ 840 1640J 910 NJ 910 2750
+preplace netloc TDCChannelSlice_1_Restart_Calibration 1 4 3 1750 250 2160J 370 2680
+preplace netloc TDCChannelSlice_1_Stop_Calibration 1 4 3 1720 630 NJ 630 2670
+preplace netloc TDCChannelSlice_1_StretchLength 1 0 7 60 480 390J 730 NJ 730 NJ 730 1670J 880 NJ 880 2730
+preplace netloc TDCChannelSlice_1_ValidPositionTap 1 1 6 430 390 NJ 390 NJ 390 1700J 670 NJ 670 2700
+preplace netloc TDCChannelSlice_1_bitTrn_Cal_dout 1 4 3 1740 650 NJ 650 2650
+preplace netloc TDCChannelSlice_1_bitTrn_ReqSample 1 4 3 1750 660 NJ 660 2640
+preplace netloc TDCChannelSlice_1_bitTrn_Uncal_addr 1 4 3 1730 640 NJ 640 2660
+preplace netloc TDCChannelSlice_1_read_reg 1 6 1 NJ 310
+preplace netloc TDCChannelSlice_1_subInterpolationMatrix 1 2 5 820 400 NJ 400 1670J 680 NJ 680 2690
+preplace netloc clk_BB_1 1 0 6 NJ 850 NJ 850 790 1030 1240 710 1710 510 2190
+preplace netloc clk_TDC_1 1 0 6 10 790 410 620 790 450 1220 140 NJ 140 NJ
+preplace netloc reset_TDC_1 1 0 5 20 810 400 610 800 630 1230 720 1690
+preplace netloc write_debug_reg_0_1 1 0 6 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 2200J
+preplace netloc xlconstant_2_dout 1 5 1 2180J 120n
+preplace netloc InputLogic_1_PolarityOut 1 1 1 420 530n
+preplace netloc write_reg_1 1 0 6 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 2210J
+preplace netloc AXI4Stream_OverflowC_0_m00_axis_beltbus 1 3 1 N 940
+preplace netloc BeltBus_NodeInserter_0_M00_AXIS 1 5 1 2170 100n
+preplace netloc AXI4Stream_IperDecod_0_M00_AXIS_SubInt 1 3 1 N 540
+preplace netloc Conn2 1 0 1 NJ 540
+preplace netloc AXI4Stream_DSP_TDC_0_m00_axis_undeco 1 2 1 N 510
+preplace netloc AXI4Stream_MagicCali_0_M00_AXIS_TimeStamp 1 2 4 820 700 NJ 700 NJ 700 2150
+preplace netloc AXI4Stream_Synchroni_0_M00_AXIS 1 4 1 1680 760n
+preplace netloc BeltBus_NodeInserter_0_M00_BB 1 5 2 NJ 780 NJ
+preplace netloc S00_BB_1 1 0 5 NJ 780 NJ 780 NJ 780 NJ 780 NJ
+preplace netloc AXI4Stream_CoarseExt_0_M00_AXIS_UnCalib 1 4 1 1630 310n
+preplace netloc AXI4Stream_MagicCali_0_M01_AXIS_DebugCT 1 5 2 NJ 380 NJ
+levelinfo -pg 1 -10 220 610 1020 1440 1950 2430 2770
+pagesize -pg 1 -db -bbox -sgen -240 -10 2970 1040
+"
+}
+

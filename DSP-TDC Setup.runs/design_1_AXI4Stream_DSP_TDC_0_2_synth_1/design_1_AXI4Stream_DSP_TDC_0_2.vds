@@ -2,16 +2,18 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Mar 16 16:42:56 2022
-# Process ID: 84162
-# Current directory: /home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_2_synth_1
+# Start of session at: Mon Mar 28 11:31:28 2022
+# Process ID: 101597
+# Current directory: /home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_2_synth_1
 # Command line: vivado -log design_1_AXI4Stream_DSP_TDC_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_AXI4Stream_DSP_TDC_0_2.tcl
-# Log file: /home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_2_synth_1/design_1_AXI4Stream_DSP_TDC_0_2.vds
-# Journal file: /home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_2_synth_1/vivado.jou
+# Log file: /home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_2_synth_1/design_1_AXI4Stream_DSP_TDC_0_2.vds
+# Journal file: /home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_2_synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_AXI4Stream_DSP_TDC_0_2.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1271]}  -suppress '. The existing rule will be replaced.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mconsonni/Utility_Ip_Core'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_AXI4Stream_DSP_TDC_0_2, cache-ID = 046076ef23f4a141.
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 16 16:43:03 2022...
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_AXI4Stream_DSP_TDC_0_2, cache-ID = 95274a3b8711f6d9.
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 11:31:36 2022...

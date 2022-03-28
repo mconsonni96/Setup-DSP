@@ -1,9 +1,9 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Wed Mar 16 16:43:11 2022
+// Date        : Mon Mar 28 11:32:10 2022
 // Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
-// Command     : write_verilog -force -mode synth_stub {/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC
+// Command     : write_verilog -force -mode synth_stub {/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC
 //               Setup.gen/sources_1/bd/design_1/ip/design_1_MME_0_1/design_1_MME_0_1_stub.v}
 // Design      : design_1_MME_0_1
 // Purpose     : Stub declaration of top-level module interface

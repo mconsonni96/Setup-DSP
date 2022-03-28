@@ -1,11 +1,11 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Tue Mar 15 12:28:28 2022
+// Date        : Mon Mar 21 10:50:53 2022
 // Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top design_1_BeltBus_NodeInserter_0_1 -prefix
-//               design_1_BeltBus_NodeInserter_0_1_ design_1_BeltBus_NodeInserter_0_2_stub.v
-// Design      : design_1_BeltBus_NodeInserter_0_2
+//               design_1_BeltBus_NodeInserter_0_1_ design_1_BeltBus_NodeInserter_0_1_stub.v
+// Design      : design_1_BeltBus_NodeInserter_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tftg256-2
 // --------------------------------------------------------------------------------

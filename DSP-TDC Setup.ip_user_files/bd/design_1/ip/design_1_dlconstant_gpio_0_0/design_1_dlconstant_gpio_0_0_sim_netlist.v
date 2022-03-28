@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Tue Mar 15 12:23:04 2022
+// Date        : Mon Mar 14 15:47:58 2022
 // Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
-// Command     : write_verilog -force -mode funcsim {/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC
-//               Setup.gen/sources_1/bd/design_1/ip/design_1_dlconstant_gpio_0_0/design_1_dlconstant_gpio_0_0_sim_netlist.v}
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_dlconstant_gpio_0_0 -prefix
+//               design_1_dlconstant_gpio_0_0_ design_1_dlconstant_gpio_0_0_sim_netlist.v
 // Design      : design_1_dlconstant_gpio_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -54,16 +54,16 @@ gx89PtZu7lIqARGaUuViapiTbpXvEHnuJivsCg==
 `pragma protect control decryption = (xilinx_activity==simulation)? "false" : "true"
 `pragma protect end_toolblock="7SGoAXadKN90mEv89L0drAAgXP1TtagDblLhKKCCre4="
 `pragma protect data_method = "AES128-CBC"
-`pragma protect encoding = (enctype = "BASE64", line_length = 76, bytes = 448)
+`pragma protect encoding = (enctype = "BASE64", line_length = 76, bytes = 416)
 `pragma protect data_block
-mSBSW5pK3BlKmxKdFHoNdgJij8APCRxZmCeFhIyo0B9caqnjx9vqTSjl/2x4n5H9NHTjPQwwrHkz
-2hu5Fh7OcBXSFUJ4HjRnWAowoQxkzFPL3dUlAdxjy5vsxRT3LghP32wrfxPf5WsNkBkPHVpl+E2e
-eHgwYMBUeKezzgdCbI4GaLnesscBu+8W4YcaORuR8r2hmSy6SkMNMUxTtvMwxq0rxIFcNpjEp34W
-hkP/dwCZ863gSvZrNUx0vV3e62SqtsxD9P1WnXS/DZQOnTacZG0V7u93ZWsRqn6yceENNO2UK6av
-72A65aKQ93trGLGtC6ubTFeHo4QtOwEWPFoqMUuk6oGbUzLMhAj4+fp3F2yI3ehnhjrFs9o7mVWy
-GCxJJ546xSSoWrm/Na6qgleB3u7juDSbkTnwl0ol0Jqwx5RZaC/UxOdlfJ4fq0e5Vuy3yeBRjLQl
-WrjbBsb2pwsR62ZIZkEZ8V+89D0Ez1FiyvNoEBDtYxtNvNLs5FfTIFqViASYiBCfS9LbEH6pEo07
-XkEvOSZBXjC3p8ogJVVpZgeTdAI1tllarnfXrWOJOEr/YrMzXyCsfK7lFnjelI1Uhw==
+2/N8OdPBNbqNJOQeya0UNspYkFKeZmcfmVvArjOajzkC88DvnniVWhlQl7bXk+GnrE2GSvp9+yeJ
+zBUkRn8FrOrDMfG477CGYzK9WHFiiEU4mOZxdT2j7wLR2LC5uxOzx2ScnPUY4xoWLzpL6RAOWo89
+Vckq39p8hS19thQUxOaX0Otk98RH997JzuZqH+bRoznfrWF5+C8WC3vZle2rKsyuVqalzfGnVQjK
+C+U+aGEXSSbPJowK5do5kr61b2g3XjDA+fQp9XRLvK1v29ddgEIblQq7Lt3V/Yl0rwsVPsVYGW1M
+dIDhSCh5H99KVOIDoOdBf5vZ9cit2cbvETYQiy1Rx4OlpC44uImRTTEpkM5nV5OF2dL/9PUBvJTc
+x48AcQCcGO+z2t9GbuSEj0zgDAhzAh5GfFuJeey5Ky8Q75ZfgAtuzvcJGEHmeRbirvGWpO5rAOdQ
+2NXK8TFo4BPN44lWrUJHYbbFqzvEYpwdIRM7vzHVhJO1b5VSza4a+6g6nnTzf6XtLjYJwo2oRF+9
+3TBadT7xQBtdNxo5XMduH0c=
 `pragma protect end_protected
 `ifndef GLBL
 `define GLBL

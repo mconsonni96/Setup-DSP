@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.runs/impl_1/design_1_wrapper.tcl"
+  variable script "/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -117,6 +117,8 @@ OPTRACE "impl_1" END { }
 
 set_msg_config  -id {[BD 41-1306]}  -suppress 
 set_msg_config  -id {[BD 41-1271]}  -suppress 
+set_msg_config  -id {[BD 41-1306]}  -suppress 
+set_msg_config  -id {[BD 41-1271]}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -127,26 +129,28 @@ set rc [catch {
   set_param chipscope.maxJobs 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tftg256-2
-  set_property board_part digilab:felix:part0:2.0 [current_project]
+  set_property board_part digilab:felix:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir {/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.cache/wt} [current_project]
-  set_property parent.project_path {/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.xpr} [current_project]
+  set_property webtalk.parent_dir {/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.cache/wt} [current_project]
+  set_property parent.project_path {/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.xpr} [current_project]
   set_property ip_repo_paths /home/mconsonni/Utility_Ip_Core [current_project]
   update_ip_catalog
-  set_property ip_output_repo {{/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.cache/ip}} [current_project]
+  set_property ip_output_repo {{/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet {{/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.runs/synth_1/design_1_wrapper.dcp}}
+  add_files -quiet {{/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/synth_1/design_1_wrapper.dcp}}
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files {{/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC Setup.srcs/sources_1/bd/design_1/design_1.bd}}
+  add_files {{/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.srcs/sources_1/bd/design_1/design_1.bd}}
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
+  read_xdc /home/mconsonni/Desktop/Altre-Cartelle-master/xdc/FTDI.xdc
+  read_xdc /home/mconsonni/Desktop/Altre-Cartelle-master/xdc/QSPI.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

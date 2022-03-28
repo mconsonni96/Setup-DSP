@@ -1225,6 +1225,18 @@
           }
         },
         "interface_nets": {
+          "m00_couplers_to_axis_interconnect_0": {
+            "interface_ports": [
+              "M00_AXIS",
+              "m00_couplers/M_AXIS"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXIS",
+              "xbar/S00_AXIS"
+            ]
+          },
           "axis_interconnect_0_to_s00_couplers": {
             "interface_ports": [
               "S00_AXIS",
@@ -1237,34 +1249,22 @@
               "m01_couplers/S_AXIS"
             ]
           },
-          "m02_couplers_to_axis_interconnect_0": {
-            "interface_ports": [
-              "M02_AXIS",
-              "m02_couplers/M_AXIS"
-            ]
-          },
           "xbar_to_m02_couplers": {
             "interface_ports": [
               "xbar/M02_AXIS",
               "m02_couplers/S_AXIS"
             ]
           },
-          "s00_couplers_to_xbar": {
+          "m02_couplers_to_axis_interconnect_0": {
             "interface_ports": [
-              "s00_couplers/M_AXIS",
-              "xbar/S00_AXIS"
+              "M02_AXIS",
+              "m02_couplers/M_AXIS"
             ]
           },
           "xbar_to_m00_couplers": {
             "interface_ports": [
               "xbar/M00_AXIS",
               "m00_couplers/S_AXIS"
-            ]
-          },
-          "m00_couplers_to_axis_interconnect_0": {
-            "interface_ports": [
-              "M00_AXIS",
-              "m00_couplers/M_AXIS"
             ]
           },
           "m01_couplers_to_axis_interconnect_0": {
@@ -1762,16 +1762,10 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m00_couplers": {
+          "s02_couplers_to_xbar": {
             "interface_ports": [
-              "xbar/M00_AXIS",
-              "m00_couplers/S_AXIS"
-            ]
-          },
-          "m00_couplers_to_axis_interconnect_1": {
-            "interface_ports": [
-              "M00_AXIS",
-              "m00_couplers/M_AXIS"
+              "s02_couplers/M_AXIS",
+              "xbar/S02_AXIS"
             ]
           },
           "axis_interconnect_1_to_s00_couplers": {
@@ -1780,16 +1774,22 @@
               "s00_couplers/S_AXIS"
             ]
           },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXIS",
+              "m00_couplers/S_AXIS"
+            ]
+          },
           "s00_couplers_to_xbar": {
             "interface_ports": [
               "s00_couplers/M_AXIS",
               "xbar/S00_AXIS"
             ]
           },
-          "axis_interconnect_1_to_s01_couplers": {
+          "m00_couplers_to_axis_interconnect_1": {
             "interface_ports": [
-              "S01_AXIS",
-              "s01_couplers/S_AXIS"
+              "M00_AXIS",
+              "m00_couplers/M_AXIS"
             ]
           },
           "s01_couplers_to_xbar": {
@@ -1804,10 +1804,10 @@
               "s02_couplers/S_AXIS"
             ]
           },
-          "s02_couplers_to_xbar": {
+          "axis_interconnect_1_to_s01_couplers": {
             "interface_ports": [
-              "s02_couplers/M_AXIS",
-              "xbar/S02_AXIS"
+              "S01_AXIS",
+              "s01_couplers/S_AXIS"
             ]
           }
         },
@@ -1919,52 +1919,10 @@
       }
     },
     "interface_nets": {
-      "axi_datamover_0_M_AXIS_MM2S": {
+      "AXI4Stream_DataMover_MM2S_0_M_AXIS_MM2S_CMD": {
         "interface_ports": [
-          "AXI4Stream_DataMover_MM2S_0/S_AXIS_MM2S",
-          "axi_datamover_0/M_AXIS_MM2S"
-        ]
-      },
-      "AXI4Stream_multicobs_upsizer_0_M_AXIS": {
-        "interface_ports": [
-          "AXI4Stream_PacketFetcher_0/S_AXIS",
-          "AXI4Stream_multicobs_upsizer_0/M_AXIS"
-        ]
-      },
-      "axis_interconnect_0_M00_AXIS": {
-        "interface_ports": [
-          "AXI4Stream_DataMover_MM2S_0/S_AXIS_MAIN",
-          "axis_interconnect_0/M00_AXIS"
-        ]
-      },
-      "axis_interconnect_0_M01_AXIS": {
-        "interface_ports": [
-          "AXI4Stream_Datamover_S2MM_0/S_AXIS",
-          "axis_interconnect_0/M01_AXIS"
-        ]
-      },
-      "axis_interconnect_1_M00_AXIS": {
-        "interface_ports": [
-          "AXI4Stream_Packetizer_0/S_AXIS",
-          "axis_interconnect_1/M00_AXIS"
-        ]
-      },
-      "axis_interconnect_0_M02_AXIS": {
-        "interface_ports": [
-          "PTE_OUTPUT",
-          "axis_interconnect_0/M02_AXIS"
-        ]
-      },
-      "axis_dwidth_converter_0_M_AXIS": {
-        "interface_ports": [
-          "M_AXIS",
-          "axis_dwidth_converter_0/M_AXIS"
-        ]
-      },
-      "AXI4Stream_DataMover_MM2S_0_M_AXIS_AUX": {
-        "interface_ports": [
-          "M_AXIS_AUX",
-          "AXI4Stream_DataMover_MM2S_0/M_AXIS_AUX"
+          "AXI4Stream_DataMover_MM2S_0/M_AXIS_MM2S_CMD",
+          "axi_datamover_0/S_AXIS_MM2S_CMD"
         ]
       },
       "AXI4Stream_Packetizer_0_M_AXIS": {
@@ -1973,70 +1931,10 @@
           "axis_dwidth_converter_0/S_AXIS"
         ]
       },
-      "S_AXIS_1": {
+      "axi_datamover_0_M_AXI_S2MM": {
         "interface_ports": [
-          "S_AXIS",
-          "AXI4Stream_multicobs_upsizer_0/S_AXIS"
-        ]
-      },
-      "AXI4Stream_DataMover_MM2S_0_M_AXIS": {
-        "interface_ports": [
-          "AXI4Stream_DataMover_MM2S_0/M_AXIS",
-          "axis_interconnect_1/S00_AXIS"
-        ]
-      },
-      "AXI4Stream_DataMover_MM2S_0_M_AXIS_MM2S_CMD": {
-        "interface_ports": [
-          "AXI4Stream_DataMover_MM2S_0/M_AXIS_MM2S_CMD",
-          "axi_datamover_0/S_AXIS_MM2S_CMD"
-        ]
-      },
-      "axis_interconnect_1_S02_AXIS": {
-        "interface_ports": [
-          "axis_interconnect_1/S02_AXIS",
-          "AXI4Stream_TDEST_filter_0/m_axis"
-        ]
-      },
-      "axis_filter_S00_AXIS": {
-        "interface_ports": [
-          "PTE_INPUT",
-          "AXI4Stream_TDEST_filter_0/s_axis"
-        ]
-      },
-      "axi_datamover_0_M_AXIS_S2MM_STS": {
-        "interface_ports": [
-          "AXI4Stream_Datamover_S2MM_0/S_AXIS_S2MM_STS",
-          "axi_datamover_0/M_AXIS_S2MM_STS"
-        ]
-      },
-      "axi_datamover_0_M_AXIS_MM2S_STS": {
-        "interface_ports": [
-          "AXI4Stream_DataMover_MM2S_0/S_AXIS_MM2S_STS",
-          "axi_datamover_0/M_AXIS_MM2S_STS"
-        ]
-      },
-      "axi_datamover_0_M_AXI_MM2S": {
-        "interface_ports": [
-          "M_AXI_MM2S",
-          "axi_datamover_0/M_AXI_MM2S"
-        ]
-      },
-      "AXI4Stream_Datamover_S2MM_0_M_AXIS_S2MM_CMD": {
-        "interface_ports": [
-          "AXI4Stream_Datamover_S2MM_0/M_AXIS_S2MM_CMD",
-          "axi_datamover_0/S_AXIS_S2MM_CMD"
-        ]
-      },
-      "AXI4Stream_Datamover_S2MM_0_M_AXIS_S2MM": {
-        "interface_ports": [
-          "AXI4Stream_Datamover_S2MM_0/M_AXIS_S2MM",
-          "axi_datamover_0/S_AXIS_S2MM"
-        ]
-      },
-      "AXI4Stream_PacketFetcher_0_M_AXIS": {
-        "interface_ports": [
-          "AXI4Stream_PacketFetcher_0/M_AXIS",
-          "axis_interconnect_0/S00_AXIS"
+          "M_AXI_S2MM",
+          "axi_datamover_0/M_AXI_S2MM"
         ]
       },
       "S_AXIS_AUX_1": {
@@ -2045,16 +1943,118 @@
           "AXI4Stream_DataMover_MM2S_0/S_AXIS_AUX"
         ]
       },
+      "axis_filter_S00_AXIS": {
+        "interface_ports": [
+          "PTE_INPUT",
+          "AXI4Stream_TDEST_filter_0/s_axis"
+        ]
+      },
+      "axi_datamover_0_M_AXIS_MM2S": {
+        "interface_ports": [
+          "AXI4Stream_DataMover_MM2S_0/S_AXIS_MM2S",
+          "axi_datamover_0/M_AXIS_MM2S"
+        ]
+      },
+      "S_AXIS_1": {
+        "interface_ports": [
+          "S_AXIS",
+          "AXI4Stream_multicobs_upsizer_0/S_AXIS"
+        ]
+      },
+      "axis_interconnect_0_M00_AXIS": {
+        "interface_ports": [
+          "AXI4Stream_DataMover_MM2S_0/S_AXIS_MAIN",
+          "axis_interconnect_0/M00_AXIS"
+        ]
+      },
+      "axi_datamover_0_M_AXIS_MM2S_STS": {
+        "interface_ports": [
+          "AXI4Stream_DataMover_MM2S_0/S_AXIS_MM2S_STS",
+          "axi_datamover_0/M_AXIS_MM2S_STS"
+        ]
+      },
+      "AXI4Stream_DataMover_MM2S_0_M_AXIS_AUX": {
+        "interface_ports": [
+          "M_AXIS_AUX",
+          "AXI4Stream_DataMover_MM2S_0/M_AXIS_AUX"
+        ]
+      },
+      "axis_interconnect_1_S02_AXIS": {
+        "interface_ports": [
+          "axis_interconnect_1/S02_AXIS",
+          "AXI4Stream_TDEST_filter_0/m_axis"
+        ]
+      },
+      "AXI4Stream_DataMover_MM2S_0_M_AXIS": {
+        "interface_ports": [
+          "AXI4Stream_DataMover_MM2S_0/M_AXIS",
+          "axis_interconnect_1/S00_AXIS"
+        ]
+      },
+      "axi_datamover_0_M_AXI_MM2S": {
+        "interface_ports": [
+          "M_AXI_MM2S",
+          "axi_datamover_0/M_AXI_MM2S"
+        ]
+      },
       "AXI4Stream_Datamover_S2MM_0_M_AXIS": {
         "interface_ports": [
           "AXI4Stream_Datamover_S2MM_0/M_AXIS",
           "axis_interconnect_1/S01_AXIS"
         ]
       },
-      "axi_datamover_0_M_AXI_S2MM": {
+      "axis_interconnect_0_M01_AXIS": {
         "interface_ports": [
-          "M_AXI_S2MM",
-          "axi_datamover_0/M_AXI_S2MM"
+          "AXI4Stream_Datamover_S2MM_0/S_AXIS",
+          "axis_interconnect_0/M01_AXIS"
+        ]
+      },
+      "AXI4Stream_Datamover_S2MM_0_M_AXIS_S2MM": {
+        "interface_ports": [
+          "AXI4Stream_Datamover_S2MM_0/M_AXIS_S2MM",
+          "axi_datamover_0/S_AXIS_S2MM"
+        ]
+      },
+      "AXI4Stream_multicobs_upsizer_0_M_AXIS": {
+        "interface_ports": [
+          "AXI4Stream_PacketFetcher_0/S_AXIS",
+          "AXI4Stream_multicobs_upsizer_0/M_AXIS"
+        ]
+      },
+      "AXI4Stream_PacketFetcher_0_M_AXIS": {
+        "interface_ports": [
+          "AXI4Stream_PacketFetcher_0/M_AXIS",
+          "axis_interconnect_0/S00_AXIS"
+        ]
+      },
+      "axi_datamover_0_M_AXIS_S2MM_STS": {
+        "interface_ports": [
+          "AXI4Stream_Datamover_S2MM_0/S_AXIS_S2MM_STS",
+          "axi_datamover_0/M_AXIS_S2MM_STS"
+        ]
+      },
+      "axis_interconnect_0_M02_AXIS": {
+        "interface_ports": [
+          "PTE_OUTPUT",
+          "axis_interconnect_0/M02_AXIS"
+        ]
+      },
+      "axis_interconnect_1_M00_AXIS": {
+        "interface_ports": [
+          "AXI4Stream_Packetizer_0/S_AXIS",
+          "axis_interconnect_1/M00_AXIS"
+        ]
+      },
+      "AXI4Stream_Datamover_S2MM_0_M_AXIS_S2MM_CMD": {
+        "interface_ports": [
+          "AXI4Stream_Datamover_S2MM_0/M_AXIS_S2MM_CMD",
+          "axi_datamover_0/S_AXIS_S2MM_CMD"
+        ]
+      },
+      "axis_dwidth_converter_0_M_AXIS": {
+        "interface_ports": [
+          "M_AXIS",
+          "axis_dwidth_converter_0/M_AXIS"
         ]
       }
     },

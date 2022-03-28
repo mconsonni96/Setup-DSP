@@ -60,8 +60,9 @@ ENTITY design_1_AXI4Stream_DSP_TDC_0_0 IS
     AsyncInput : IN STD_LOGIC;
     PolarityIn : IN STD_LOGIC;
     m00_axis_undeco_tvalid : OUT STD_LOGIC;
-    m00_axis_undeco_tdata : OUT STD_LOGIC_VECTOR(199 DOWNTO 0);
-    ValidPositionTap : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
+    m00_axis_undeco_tdata : OUT STD_LOGIC_VECTOR(967 DOWNTO 0);
+    ValidPositionTap : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    ValidNumberOfTdl : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END design_1_AXI4Stream_DSP_TDC_0_0;
 
@@ -70,14 +71,17 @@ ARCHITECTURE design_1_AXI4Stream_DSP_TDC_0_0_arch OF design_1_AXI4Stream_DSP_TDC
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_AXI4Stream_DSP_TDC_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT AXI4Stream_DSP_TDC IS
     GENERIC (
-      TYPE_TDL_0 : STRING;
       DEBUG_MODE : BOOLEAN;
+      NUMBER_OF_TDL : INTEGER;
       NUM_TAP_TDL : INTEGER;
       MIN_VALID_TAP_POS : INTEGER;
       STEP_VALID_TAP_POS : INTEGER;
       MAX_VALID_TAP_POS : INTEGER;
       VALID_POSITION_TAP_INIT : INTEGER;
-      BIT_SMP_TDL : INTEGER
+      VALID_NUMBER_OF_TDL_INIT : INTEGER;
+      BIT_SMP_TDL : INTEGER;
+      NUM_TAP_PRE_TDL : INTEGER;
+      BIT_SMP_PRE_TDL : INTEGER
     );
     PORT (
       reset : IN STD_LOGIC;
@@ -85,38 +89,44 @@ ARCHITECTURE design_1_AXI4Stream_DSP_TDC_0_0_arch OF design_1_AXI4Stream_DSP_TDC
       AsyncInput : IN STD_LOGIC;
       PolarityIn : IN STD_LOGIC;
       m00_axis_undeco_tvalid : OUT STD_LOGIC;
-      m00_axis_undeco_tdata : OUT STD_LOGIC_VECTOR(199 DOWNTO 0);
-      ValidPositionTap : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
+      m00_axis_undeco_tdata : OUT STD_LOGIC_VECTOR(967 DOWNTO 0);
+      ValidPositionTap : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      ValidNumberOfTdl : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT AXI4Stream_DSP_TDC;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_AXI4Stream_DSP_TDC_0_0_arch: ARCHITECTURE IS "package_project";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER OF ValidNumberOfTdl: SIGNAL IS "XIL_INTERFACENAME ValidNumberOfTdl, LAYERED_METADATA undef";
+  ATTRIBUTE X_INTERFACE_INFO OF ValidNumberOfTdl: SIGNAL IS "xilinx.com:signal:data:1.0 ValidNumberOfTdl DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF ValidPositionTap: SIGNAL IS "XIL_INTERFACENAME ValidPositionTap, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF ValidPositionTap: SIGNAL IS "xilinx.com:signal:data:1.0 ValidPositionTap DATA";
   ATTRIBUTE X_INTERFACE_INFO OF m00_axis_undeco_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 m00_axis_undeco TDATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_undeco_tvalid: SIGNAL IS "XIL_INTERFACENAME m00_axis_undeco, TDATA_NUM_BYTES 25, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 416666666, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_undeco_tvalid: SIGNAL IS "XIL_INTERFACENAME m00_axis_undeco, TDATA_NUM_BYTES 121, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 416666666, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m00_axis_undeco_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 m00_axis_undeco TVALID";
   ATTRIBUTE X_INTERFACE_PARAMETER OF PolarityIn: SIGNAL IS "XIL_INTERFACENAME PolarityIn, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF PolarityIn: SIGNAL IS "xilinx.com:signal:data:1.0 PolarityIn DATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF AsyncInput: SIGNAL IS "XIL_INTERFACENAME AsyncInput, LAYERED_METADATA undef";
   ATTRIBUTE X_INTERFACE_INFO OF AsyncInput: SIGNAL IS "xilinx.com:signal:data:1.0 AsyncInput DATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF m00_axis_undeco, ASSOCIATED_RESET reset:AsyncInput:PolarityIn:ValidPositionTap, FREQ_HZ 416666666, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF m00_axis_undeco, ASSOCIATED_RESET reset:AsyncInput:PolarityIn:ValidPositionTap:ValidNumberOfTdl, FREQ_HZ 416666666, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
   ATTRIBUTE X_INTERFACE_PARAMETER OF reset: SIGNAL IS "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF reset: SIGNAL IS "xilinx.com:signal:reset:1.0 reset RST";
 BEGIN
   U0 : AXI4Stream_DSP_TDC
     GENERIC MAP (
-      TYPE_TDL_0 => "O",
       DEBUG_MODE => true,
-      NUM_TAP_TDL => 192,
-      MIN_VALID_TAP_POS => 0,
-      STEP_VALID_TAP_POS => 8,
-      MAX_VALID_TAP_POS => 191,
+      NUMBER_OF_TDL => 2,
+      NUM_TAP_TDL => 480,
+      MIN_VALID_TAP_POS => -48,
+      STEP_VALID_TAP_POS => 16,
+      MAX_VALID_TAP_POS => 479,
       VALID_POSITION_TAP_INIT => 0,
-      BIT_SMP_TDL => 192
+      VALID_NUMBER_OF_TDL_INIT => 0,
+      BIT_SMP_TDL => 480,
+      NUM_TAP_PRE_TDL => 48,
+      BIT_SMP_PRE_TDL => 48
     )
     PORT MAP (
       reset => reset,
@@ -125,6 +135,7 @@ BEGIN
       PolarityIn => PolarityIn,
       m00_axis_undeco_tvalid => m00_axis_undeco_tvalid,
       m00_axis_undeco_tdata => m00_axis_undeco_tdata,
-      ValidPositionTap => ValidPositionTap
+      ValidPositionTap => ValidPositionTap,
+      ValidNumberOfTdl => ValidNumberOfTdl
     );
 END design_1_AXI4Stream_DSP_TDC_0_0_arch;

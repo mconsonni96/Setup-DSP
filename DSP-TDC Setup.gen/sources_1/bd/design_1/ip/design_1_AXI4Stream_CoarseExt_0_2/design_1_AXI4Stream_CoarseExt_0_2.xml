@@ -543,11 +543,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 21 12:16:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3ac352bc</spirit:value>
+            <spirit:value>9:3fca078a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -558,7 +558,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3ac352bc</spirit:value>
+            <spirit:value>9:3fca078a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -574,11 +574,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 08:21:42 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3ac352bc</spirit:value>
+            <spirit:value>9:3fca078a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -593,11 +593,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Mon Mar 21 12:16:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1a38c590</spirit:value>
+            <spirit:value>9:f9859ed1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -613,11 +613,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:20:49 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 08:21:42 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1a38c590</spirit:value>
+            <spirit:value>9:f9859ed1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -631,11 +631,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 15 11:26:18 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 08:27:15 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3ac352bc</spirit:value>
+            <spirit:value>9:3fca078a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -793,12 +793,12 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BIT_SUB_INT</spirit:name>
         <spirit:displayName>Bit Sub Int</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_SUB_INT" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_SUB_INT" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">9</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BIT_UNCALIBRATED</spirit:name>
         <spirit:displayName>Bit Uncalibrated</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_UNCALIBRATED" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BIT_UNCALIBRATED" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">9</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BIT_FID</spirit:name>
@@ -1074,12 +1074,12 @@
     <spirit:parameter>
       <spirit:name>BIT_SUB_INT</spirit:name>
       <spirit:displayName>Bit Sub-Interpolated</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_SUB_INT" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_SUB_INT" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">9</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BIT_UNCALIBRATED</spirit:name>
       <spirit:displayName>Bit Uncalibrated</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_UNCALIBRATED" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.BIT_UNCALIBRATED" spirit:minimum="2" spirit:maximum="16" spirit:rangeType="long">9</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BIT_FID</spirit:name>

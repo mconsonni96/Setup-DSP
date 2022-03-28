@@ -9,8 +9,646 @@
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
 source design_1_AXI4Stream_DSP_TDC_0_1.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1271]}  -suppress '. The existing rule will be replaced.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mconsonni/Utility_Ip_Core'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_AXI4Stream_DSP_TDC_0_1, cache-ID = 046076ef23f4a141.
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 16 16:42:45 2022...
+Command: synth_design -top design_1_AXI4Stream_DSP_TDC_0_1 -part xc7a100tftg256-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tftg256-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 101408
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2417.645 ; gain = 0.000 ; free physical = 5782 ; free virtual = 10900
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_AXI4Stream_DSP_TDC_0_1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_DSP_TDC_0_1/synth/design_1_AXI4Stream_DSP_TDC_0_1.vhd:69]
+	Parameter DEBUG_MODE bound to: 1 - type: bool 
+	Parameter NUMBER_OF_TDL bound to: 2 - type: integer 
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter MIN_VALID_TAP_POS bound to: -48 - type: integer 
+	Parameter STEP_VALID_TAP_POS bound to: 16 - type: integer 
+	Parameter MAX_VALID_TAP_POS bound to: 479 - type: integer 
+	Parameter VALID_POSITION_TAP_INIT bound to: 0 - type: integer 
+	Parameter VALID_NUMBER_OF_TDL_INIT bound to: 0 - type: integer 
+	Parameter BIT_SMP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+	Parameter BIT_SMP_PRE_TDL bound to: 48 - type: integer 
+INFO: [Synth 8-3491] module 'AXI4Stream_DSP_TDC' declared at '/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC.vhd:67' bound to instance 'U0' of component 'AXI4Stream_DSP_TDC' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_DSP_TDC_0_1/synth/design_1_AXI4Stream_DSP_TDC_0_1.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'AXI4Stream_DSP_TDC' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC.vhd:120]
+	Parameter DEBUG_MODE bound to: 1 - type: bool 
+	Parameter NUMBER_OF_TDL bound to: 2 - type: integer 
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter MIN_VALID_TAP_POS bound to: -48 - type: integer 
+	Parameter STEP_VALID_TAP_POS bound to: 16 - type: integer 
+	Parameter MAX_VALID_TAP_POS bound to: 479 - type: integer 
+	Parameter VALID_POSITION_TAP_INIT bound to: 0 - type: integer 
+	Parameter VALID_NUMBER_OF_TDL_INIT bound to: 0 - type: integer 
+	Parameter BIT_SMP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+	Parameter BIT_SMP_PRE_TDL bound to: 48 - type: integer 
+	Parameter DEBUG_MODE bound to: 1 - type: bool 
+	Parameter NUMBER_OF_TDL bound to: 2 - type: integer 
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter MIN_VALID_TAP_POS bound to: -48 - type: integer 
+	Parameter STEP_VALID_TAP_POS bound to: 16 - type: integer 
+	Parameter MAX_VALID_TAP_POS bound to: 479 - type: integer 
+	Parameter VALID_POSITION_TAP_INIT bound to: 0 - type: integer 
+	Parameter VALID_NUMBER_OF_TDL_INIT bound to: 0 - type: integer 
+	Parameter BIT_SMP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+	Parameter BIT_SMP_PRE_TDL bound to: 48 - type: integer 
+INFO: [Synth 8-3491] module 'AXI4Stream_DSP_TDC_Wrapper' declared at '/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC_Wrapper.vhd:63' bound to instance 'Inst_AXI4Stream_DSP_TDC_Wrapper' of component 'AXI4Stream_DSP_TDC_Wrapper' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC.vhd:187]
+INFO: [Synth 8-638] synthesizing module 'AXI4Stream_DSP_TDC_Wrapper' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC_Wrapper.vhd:116]
+	Parameter DEBUG_MODE bound to: 1 - type: bool 
+	Parameter NUMBER_OF_TDL bound to: 2 - type: integer 
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter MIN_VALID_TAP_POS bound to: -48 - type: integer 
+	Parameter STEP_VALID_TAP_POS bound to: 16 - type: integer 
+	Parameter MAX_VALID_TAP_POS bound to: 479 - type: integer 
+	Parameter VALID_POSITION_TAP_INIT bound to: 0 - type: integer 
+	Parameter VALID_NUMBER_OF_TDL_INIT bound to: 0 - type: integer 
+	Parameter BIT_SMP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+	Parameter BIT_SMP_PRE_TDL bound to: 48 - type: integer 
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+INFO: [Synth 8-3491] module 'DSP_TDC' declared at '/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:62' bound to instance 'Inst_TDC' of component 'DSP_TDC' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC_Wrapper.vhd:238]
+INFO: [Synth 8-638] synthesizing module 'DSP_TDC' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:84]
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:121]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+	Parameter ACASCREG bound to: 0 - type: integer 
+	Parameter ADREG bound to: 0 - type: integer 
+	Parameter ALUMODEREG bound to: 1 - type: integer 
+	Parameter AREG bound to: 0 - type: integer 
+	Parameter AUTORESET_PATDET bound to: NO_RESET - type: string 
+	Parameter A_INPUT bound to: DIRECT - type: string 
+	Parameter BCASCREG bound to: 0 - type: integer 
+	Parameter BREG bound to: 0 - type: integer 
+	Parameter B_INPUT bound to: DIRECT - type: string 
+	Parameter CARRYINREG bound to: 0 - type: integer 
+	Parameter CARRYINSELREG bound to: 1 - type: integer 
+	Parameter CREG bound to: 0 - type: integer 
+	Parameter DREG bound to: 0 - type: integer 
+	Parameter INMODEREG bound to: 1 - type: integer 
+	Parameter IS_ALUMODE_INVERTED bound to: 4'b0000 
+	Parameter IS_CARRYIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_INMODE_INVERTED bound to: 5'b00000 
+	Parameter IS_OPMODE_INVERTED bound to: 7'b0000000 
+	Parameter MASK bound to: 48'b001111111111111111111111111111111111111111111111 
+	Parameter MREG bound to: 0 - type: integer 
+	Parameter OPMODEREG bound to: 1 - type: integer 
+	Parameter PATTERN bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PREG bound to: 0 - type: integer 
+	Parameter SEL_MASK bound to: MASK - type: string 
+	Parameter SEL_PATTERN bound to: PATTERN - type: string 
+	Parameter USE_DPORT bound to: 0 - type: bool 
+	Parameter USE_MULT bound to: NONE - type: string 
+	Parameter USE_PATTERN_DETECT bound to: NO_PATDET - type: string 
+	Parameter USE_SIMD bound to: ONE48 - type: string 
+INFO: [Synth 8-113] binding component instance 'DSP48E1_inst' to cell 'DSP48E1' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:221]
+INFO: [Synth 8-256] done synthesizing module 'DSP_TDC' (1#1) [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:84]
+	Parameter DEBUG_MODE bound to: 1 - type: bool 
+	Parameter MIN_VALID_TAP_POS bound to: -48 - type: integer 
+	Parameter STEP_VALID_TAP_POS bound to: 16 - type: integer 
+	Parameter MAX_VALID_TAP_POS bound to: 479 - type: integer 
+	Parameter VALID_POSITION_TAP_INIT bound to: 0 - type: integer 
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter BIT_SMP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+	Parameter BIT_SMP_PRE_TDL bound to: 48 - type: integer 
+INFO: [Synth 8-3491] module 'Sampler_TDC' declared at '/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/Sampler_TDC.vhd:61' bound to instance 'Inst_Sampler_TDC' of component 'Sampler_TDC' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC_Wrapper.vhd:273]
+INFO: [Synth 8-638] synthesizing module 'Sampler_TDC' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/Sampler_TDC.vhd:105]
+	Parameter DEBUG_MODE bound to: 1 - type: bool 
+	Parameter MIN_VALID_TAP_POS bound to: -48 - type: integer 
+	Parameter STEP_VALID_TAP_POS bound to: 16 - type: integer 
+	Parameter MAX_VALID_TAP_POS bound to: 479 - type: integer 
+	Parameter VALID_POSITION_TAP_INIT bound to: 0 - type: integer 
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter BIT_SMP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+	Parameter BIT_SMP_PRE_TDL bound to: 48 - type: integer 
+WARNING: [Synth 8-614] signal 'Polarity' is read in the process but is not in the sensitivity list [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/Sampler_TDC.vhd:138]
+INFO: [Synth 8-256] done synthesizing module 'Sampler_TDC' (2#1) [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/Sampler_TDC.vhd:105]
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+INFO: [Synth 8-3491] module 'DSP_TDC' declared at '/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/DSP_TDC.vhd:62' bound to instance 'Inst_TDC' of component 'DSP_TDC' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC_Wrapper.vhd:238]
+	Parameter DEBUG_MODE bound to: 1 - type: bool 
+	Parameter MIN_VALID_TAP_POS bound to: -48 - type: integer 
+	Parameter STEP_VALID_TAP_POS bound to: 16 - type: integer 
+	Parameter MAX_VALID_TAP_POS bound to: 479 - type: integer 
+	Parameter VALID_POSITION_TAP_INIT bound to: 0 - type: integer 
+	Parameter NUM_TAP_TDL bound to: 480 - type: integer 
+	Parameter BIT_SMP_TDL bound to: 480 - type: integer 
+	Parameter NUM_TAP_PRE_TDL bound to: 48 - type: integer 
+	Parameter BIT_SMP_PRE_TDL bound to: 48 - type: integer 
+INFO: [Synth 8-3491] module 'Sampler_TDC' declared at '/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/Sampler_TDC.vhd:61' bound to instance 'Inst_Sampler_TDC' of component 'Sampler_TDC' [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC_Wrapper.vhd:273]
+INFO: [Synth 8-256] done synthesizing module 'AXI4Stream_DSP_TDC_Wrapper' (3#1) [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC_Wrapper.vhd:116]
+INFO: [Synth 8-256] done synthesizing module 'AXI4Stream_DSP_TDC' (4#1) [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ipshared/b2ab/hdl/AXI4Stream_DSP_TDC.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'design_1_AXI4Stream_DSP_TDC_0_1' (5#1) [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_DSP_TDC_0_1/synth/design_1_AXI4Stream_DSP_TDC_0_1.vhd:69]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2417.645 ; gain = 0.000 ; free physical = 5941 ; free virtual = 11060
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2417.645 ; gain = 0.000 ; free physical = 6663 ; free virtual = 11782
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2417.645 ; gain = 0.000 ; free physical = 6663 ; free virtual = 11782
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2417.645 ; gain = 0.000 ; free physical = 6691 ; free virtual = 11809
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_DSP_TDC_0_1/src/timing_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_DSP_TDC_0_1/src/timing_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2554.410 ; gain = 0.000 ; free physical = 6630 ; free virtual = 11749
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2554.410 ; gain = 0.000 ; free physical = 6630 ; free virtual = 11749
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6710 ; free virtual = 11829
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6710 ; free virtual = 11829
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  {/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_1_synth_1/dont_touch.xdc}, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6710 ; free virtual = 11829
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6702 ; free virtual = 11822
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              528 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6688 ; free virtual = 11811
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6440 ; free virtual = 11563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6427 ; free virtual = 11550
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6422 ; free virtual = 11545
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6396 ; free virtual = 11519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6396 ; free virtual = 11519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6393 ; free virtual = 11516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6393 ; free virtual = 11516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6393 ; free virtual = 11516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6393 ; free virtual = 11516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |    22|
+|2     |LUT3    |     1|
+|3     |LUT5    |     2|
+|4     |LUT6    |    20|
+|5     |MUXF7   |     9|
+|6     |MUXF8   |     4|
+|7     |FDRE    |   969|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6393 ; free virtual = 11516
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2554.410 ; gain = 0.000 ; free physical = 6456 ; free virtual = 11579
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2554.410 ; gain = 136.766 ; free physical = 6456 ; free virtual = 11579
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2554.410 ; gain = 0.000 ; free physical = 6538 ; free virtual = 11662
+INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2554.410 ; gain = 0.000 ; free physical = 6475 ; free virtual = 11598
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 2554.410 ; gain = 136.844 ; free physical = 6628 ; free virtual = 11751
+INFO: [Common 17-1381] The checkpoint '/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_1_synth_1/design_1_AXI4Stream_DSP_TDC_0_1.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_AXI4Stream_DSP_TDC_0_1, cache-ID = 95274a3b8711f6d9
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_1_synth_1/design_1_AXI4Stream_DSP_TDC_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_AXI4Stream_DSP_TDC_0_1_utilization_synth.rpt -pb design_1_AXI4Stream_DSP_TDC_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 11:31:27 2022...

@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Tue Mar 15 12:23:16 2022
+-- Date        : Mon Mar 14 15:48:04 2022
 -- Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim {/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC
---               Setup.gen/sources_1/bd/design_1/ip/design_1_dlconstant_gpio_1_0/design_1_dlconstant_gpio_1_0_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_dlconstant_gpio_1_0 -prefix
+--               design_1_dlconstant_gpio_1_0_ design_1_dlconstant_gpio_1_0_sim_netlist.vhdl
 -- Design      : design_1_dlconstant_gpio_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -37,30 +37,27 @@ gx89PtZu7lIqARGaUuViapiTbpXvEHnuJivsCg==
 `protect control decryption = (xilinx_activity==simulation)? "false" : "true"
 `protect end_toolblock="7SGoAXadKN90mEv89L0drAAgXP1TtagDblLhKKCCre4="
 `protect data_method = "AES128-CBC"
-`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1200)
+`protect encoding = (enctype = "BASE64", line_length = 76, bytes = 1072)
 `protect data_block
-6NsyqpGppFgDtDkbZtlmjmcIozJ1+z8dTQBby+kMANzEHVQppg+LcwWA9GC5cwbZD6f7tWOTDg3b
-QKEsfMUhrUWhLVfx5mfHjp4jYAjoeCbTlXmTm8dznu5nLHNVgQ6jDB2Lpv6lVEl8/+PjMutkmlhh
-wZvx2Zoecm+CnV/3pckhvhFMa/6TryDQnM85mzZHbgU5OxoXkc+a0scL2WyxiNqjGYizwQfmlaiv
-+HbkJ3yGuV+x37ZM0iR5Bc1Y6RHloYTNRRsk/E2Aeiuf8Wczokcr5spPnLZ0A6FbZ5KdFggViVBW
-kKOhevrNI5CEMC9P+N02JG9BHzrhcV+GES6bXstzWfasQUmB+8GFfPbaUpanHXLbF/4oGEG+xR/r
-cGVH/beczbP5JQI2Xgbjatv0EnZfUTtM5lllJMK3LBQc2NWz5GXF45xYf7VzHfl8KipbF5ImbCcg
-tV8Xo77aVVgMxqcl4V/b6LdGDHGUHHEEpZBRaapZNZXA81jKwHKGqStrtXPnbkWxZ+lW08QIqi4o
-ivhgT60gYR78NJN3HM0iwDqOAZY5GyR3uTuvkKfuyAd319dSCpoZz8ITh84uHOb7gOuGVkQ2/Xwg
-ICu78L2FXAhtM1FnDnb8himDCpSCOnfYdyNylPMT+Fhgfm9NkcEywreiXkG7RvsJDhOlYC2W+L2j
-CimXHgQqQlD0tRGo6nLXHRQD4KNE1oQ0te1/5XhYnyFO4bljsr6f+dzjqYhlWh9H/MY1+IZSiV2B
-GhvTDHwnVAYXMfgWZgpW8uzkHGEFUnAfMOFRdUtjq4UBaTLTDbtE5R62IIKFiaMNwCKTOWXLjCbC
-MLVT+Lk40KHFPbMtAuq8azB9NyCt/1MPr2KFgCa4WcFYDnXpIo6FKns5N8lcw1JXjIfLiSpUCiyl
-yQqTmzLFzn50b94lKRy5jmYq8mxD1bP/SchexAHcPTfXSp2a0ADtRUpjBV2tlqALsBMxpwtkaOgj
-aqkpViVDqNHAlnnLmpuHs+LARmQ9nlIYrzEpv4A6OBejq78WzObvqvf6DqTCxE85YbdkEBZ85vi6
-ZKO1iwHia59fYm3Sg3++q2FZmyvW5QMjq2SUzMTxBFrD9mQ5aBTdZ3Etu7EajegXhSX9vvPRLqAr
-HmSLxyfmo1HmruY8gFfNHk1N8rzJ9zT50ijouwfQKvXW5I+xcIT5kfy5fPbShzwrG6y0zi2eas31
-lbe6tELxIs3T7ySX6iuC8gI7/ZqMzPxv9jLrDLby5zxbQouj5QFalKxwrb/QJK4orq+03gwyK2FZ
-IFV7CamMlGwsczkFKByylOY5mcrG30ar3HUGyt0ZUHwoYc4k0qMHaTM2ifYlAQ2r+wIuj95iEl+h
-CJ71QnxSUckl9e/kuswuseNnUbBz0BqnfKuhHItI+CDETkKixGYOZfpCqCBhjd6Y1DS3K6g2IXg5
-TaI9iQVJLUuHEfXxBpSHbo81HjM17gRx3ePoIX2E3komNsDydip+gG6sOEA0MWzx5TU7HxM6YQS1
-1KTJWBLaxF57bUAPBk2NYcw2Ypk1Rz9Lpm7yPudxAOwdbm38MdxrYz4t2O4QD4Hui6CoeugqjVk+
-DEbb
+2CE+U8fS2Y0QZoex2FHC6DCfNnYpHdebV8YwV7Lg56k6rbhtfC8pJo5I22FlMmtTvGMmPl1fUyXJ
+GDzyhPurCFEeltlaaGjNIoBmCg5w9Sh+POG/5xLU1Ni1wy6WWR6mxVjQGKC6K3Ykf4NvCw5T1fl9
+dB7TBYDb6zF8f9MUyUy1b3YKkSQIYjaSLQNJSwvZ/+ZesmILVmLH3lvblVskmYXLC0FMiqJeI691
+jziAF5zVJ4I6BvaVKvDFtOk5Ik9ETiCrGxALWylyAuIbvE1y170M7JUU+ACjVyXFVc3vOEV/YjbO
+dvqM2aiHjWf34gvInl+25OugblLtIXj6MbfizG8qA4s1O54tqWUOZc4vnfAzo/lqzNj5ormnFNVy
+CXYl4Pp6lUOak4K08MphyGluvRhQL9/5G3SnaH2gQtuPh7I0idJ3fb225X7Uius0bleX3nS6zgxW
+5TJ0TCJETel9y+50ccVYZAWPvZZT9kl6snMFsoOBaNaTfAMO6k4E0n71a+EXgUECOuBmQKQJsfyg
+bCVblhfsxx72nXAgZCtfW2ZkjcixYwrIZNf1Dm3nFmL2SuKXdT/IpKq1MX4jDvZ9kxpHqZ7HRYdL
+6wSlpGGGTZuOQuUHdtG6Swz/Kjqr8vMs5p7EplDVa3AYqPqJCUJ6x84of+UumPLD8y17SPb5j4iZ
+kqUxnCPgL1gyXqKdfQ3cYo5F/IOMAK06o5q03TJGye6rFm5pJ+0kc6KaZVdeZ1td3vkvkSCHpW9Z
+x2zt2ABUa+21NZdKG+x+zF1mKHgMW0EsEXyuwHDJTtajg+OqkXj+L0RX4CB32b8R8FLwANwkzuUO
+Ykez2upgS9EoVQGTFXZZf5ETBNotlT4v+E4wKVGzPeVeh/BLkyhEAv2SnVVceVD//neJUAt+FgCS
+5z6kn11JASiTYxz/mm22+OLan/dfc2Ef4JDNqtJA77k0FSpQH4+7MJK29hE1R7G3e7I7ourAYmVt
+O9pIZVFb7f1cj6wg377F5GGwRxgZu1fs3k1/XiUV8+mMtFPg2jA+ubxeJqhvnHLagSquV0JLmO+V
+waAPTI5XNJerxqga/fkD279sOpamhbYJW4HYr6gOF8Dh8h40l2EQseFkgvUKaOoq0yCxsF9UhOW+
+wWiyZ9qfmeT/CqrvoR0ZNUjwHMKfcvEu44XeXSS8rE8URaAMlw9qXjUTmDTFlB5+YbL/CnpG6x7z
+cblYWqdaNH9tZzi0ZDGy/FtCAEw3zM2FuEXF9rVzX7zxc+FIsfgje0gUIGMLHBMPXamKclG+aEY5
+PQv17gWwgJQpVBQWy8zmPKCqK8vFCfJiLiyJgZhfjoFyLiD7tZI2pRM0TtjNcQ697xLmkravJZRJ
+19iefCtik5j/zJdHqCE6meoMWa5wqQI4pOad4CBiaF5h6UCKYbAY3rmWqSJTGA==
 `protect end_protected
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

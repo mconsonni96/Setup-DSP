@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Wed Mar 16 16:41:51 2022
+--Date        : Mon Mar 28 11:30:50 2022
 --Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -23,6 +23,8 @@ entity design_1_wrapper is
     FT245_txe : in STD_LOGIC;
     FT245_wr : out STD_LOGIC;
     FT_245_EN_BUS_tri_o : out STD_LOGIC;
+    I2C_BUS_scl_io : inout STD_LOGIC;
+    I2C_BUS_sda_io : inout STD_LOGIC;
     USB_UART_BUS_EN_tri_o : out STD_LOGIC;
     ch1_diff_ch_n : in STD_LOGIC;
     ch1_diff_ch_p : in STD_LOGIC;
@@ -42,16 +44,22 @@ architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
     ftdi_clock : in STD_LOGIC;
-    USB_UART_BUS_EN_tri_o : out STD_LOGIC;
-    ch2_diff_ch_p : in STD_LOGIC;
-    ch2_diff_ch_n : in STD_LOGIC;
-    ch1_diff_ch_p : in STD_LOGIC;
-    ch1_diff_ch_n : in STD_LOGIC;
-    tdc_diff_clock_clk_p : in STD_LOGIC;
-    tdc_diff_clock_clk_n : in STD_LOGIC;
     sys_diff_clock_clk_n : in STD_LOGIC;
     sys_diff_clock_clk_p : in STD_LOGIC;
+    FRONT_GREEN_POWER_LED_tri_o : out STD_LOGIC;
+    ch2_diff_ch_p : in STD_LOGIC;
+    ch2_diff_ch_n : in STD_LOGIC;
+    I2C_BUS_scl_i : in STD_LOGIC;
+    I2C_BUS_scl_o : out STD_LOGIC;
+    I2C_BUS_scl_t : out STD_LOGIC;
+    I2C_BUS_sda_i : in STD_LOGIC;
+    I2C_BUS_sda_o : out STD_LOGIC;
+    I2C_BUS_sda_t : out STD_LOGIC;
     DAC_RESETN_tri_o : out STD_LOGIC;
+    FT_245_EN_BUS_tri_o : out STD_LOGIC;
+    sync_diff_ch_p : in STD_LOGIC;
+    sync_diff_ch_n : in STD_LOGIC;
+    USB_UART_BUS_EN_tri_o : out STD_LOGIC;
     FT245_data_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     FT245_txe : in STD_LOGIC;
     FT245_rxf : in STD_LOGIC;
@@ -61,10 +69,10 @@ architecture STRUCTURE of design_1_wrapper is
     FT245_data_t : out STD_LOGIC_VECTOR ( 7 downto 0 );
     FT245_wr : out STD_LOGIC;
     FT245_data_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    sync_diff_ch_p : in STD_LOGIC;
-    sync_diff_ch_n : in STD_LOGIC;
-    FT_245_EN_BUS_tri_o : out STD_LOGIC;
-    FRONT_GREEN_POWER_LED_tri_o : out STD_LOGIC
+    ch1_diff_ch_p : in STD_LOGIC;
+    ch1_diff_ch_n : in STD_LOGIC;
+    tdc_diff_clock_clk_p : in STD_LOGIC;
+    tdc_diff_clock_clk_n : in STD_LOGIC
   );
   end component design_1;
   component IOBUF is
@@ -107,6 +115,12 @@ architecture STRUCTURE of design_1_wrapper is
   signal FT245_data_t_5 : STD_LOGIC_VECTOR ( 5 to 5 );
   signal FT245_data_t_6 : STD_LOGIC_VECTOR ( 6 to 6 );
   signal FT245_data_t_7 : STD_LOGIC_VECTOR ( 7 to 7 );
+  signal I2C_BUS_scl_i : STD_LOGIC;
+  signal I2C_BUS_scl_o : STD_LOGIC;
+  signal I2C_BUS_scl_t : STD_LOGIC;
+  signal I2C_BUS_sda_i : STD_LOGIC;
+  signal I2C_BUS_sda_o : STD_LOGIC;
+  signal I2C_BUS_sda_t : STD_LOGIC;
 begin
 FT245_data_iobuf_0: component IOBUF
      port map (
@@ -164,6 +178,20 @@ FT245_data_iobuf_7: component IOBUF
       O => FT245_data_i_7(7),
       T => FT245_data_t_7(7)
     );
+I2C_BUS_scl_iobuf: component IOBUF
+     port map (
+      I => I2C_BUS_scl_o,
+      IO => I2C_BUS_scl_io,
+      O => I2C_BUS_scl_i,
+      T => I2C_BUS_scl_t
+    );
+I2C_BUS_sda_iobuf: component IOBUF
+     port map (
+      I => I2C_BUS_sda_o,
+      IO => I2C_BUS_sda_io,
+      O => I2C_BUS_sda_i,
+      T => I2C_BUS_sda_t
+    );
 design_1_i: component design_1
      port map (
       DAC_RESETN_tri_o => DAC_RESETN_tri_o,
@@ -199,6 +227,12 @@ design_1_i: component design_1
       FT245_txe => FT245_txe,
       FT245_wr => FT245_wr,
       FT_245_EN_BUS_tri_o => FT_245_EN_BUS_tri_o,
+      I2C_BUS_scl_i => I2C_BUS_scl_i,
+      I2C_BUS_scl_o => I2C_BUS_scl_o,
+      I2C_BUS_scl_t => I2C_BUS_scl_t,
+      I2C_BUS_sda_i => I2C_BUS_sda_i,
+      I2C_BUS_sda_o => I2C_BUS_sda_o,
+      I2C_BUS_sda_t => I2C_BUS_sda_t,
       USB_UART_BUS_EN_tri_o => USB_UART_BUS_EN_tri_o,
       ch1_diff_ch_n => ch1_diff_ch_n,
       ch1_diff_ch_p => ch1_diff_ch_p,

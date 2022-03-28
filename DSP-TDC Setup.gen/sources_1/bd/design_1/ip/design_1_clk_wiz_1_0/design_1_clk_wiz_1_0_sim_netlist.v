@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Tue Mar 15 14:04:14 2022
+// Date        : Mon Mar 21 13:18:13 2022
 // Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
-// Command     : write_verilog -force -mode funcsim {/home/mconsonni/Desktop/Tesi/Projects/DSP-TDC Setup/DSP-TDC
-//               Setup.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_sim_netlist.v}
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_clk_wiz_1_0 -prefix
+//               design_1_clk_wiz_1_0_ design_1_clk_wiz_1_0_sim_netlist.v
 // Design      : design_1_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,7 +27,6 @@ module design_1_clk_wiz_1_0
         .clk_out1(clk_out1));
 endmodule
 
-(* ORIG_REF_NAME = "design_1_clk_wiz_1_0_clk_wiz" *) 
 module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
    (clk_out1,
     clk_in1);

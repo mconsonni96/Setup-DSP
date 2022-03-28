@@ -128,8 +128,8 @@ ARCHITECTURE design_1_BeltBus_NodeInserter_0_0_arch OF design_1_BeltBus_NodeInse
 BEGIN
   U0 : BeltBus_NodeInserter
     GENERIC MAP (
-      NUM_CH => 0,
-      NUM_NODE => 0,
+      NUM_CH => 1,
+      NUM_NODE => 1,
       PASS_THROUGH => "Both",
       BIT_NUM_CH => 4,
       BIT_FID => 2,
