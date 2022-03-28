@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Mar 22 09:27:09 2022
-# Process ID: 10578
+# Start of session at: Mon Mar 28 11:51:12 2022
+# Process ID: 173623
 # Current directory: /home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_MagicCali_0_2_synth_1
 # Command line: vivado -log design_1_AXI4Stream_MagicCali_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_AXI4Stream_MagicCali_0_2.tcl
 # Log file: /home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_MagicCali_0_2_synth_1/design_1_AXI4Stream_MagicCali_0_2.vds
@@ -15,5 +15,5 @@ WARNING: [Common 17-1361] You have specified a new message control rule that is 
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mconsonni/Utility_Ip_Core'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_AXI4Stream_MagicCali_0_2, cache-ID = e0cd8f82b108b323.
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 22 09:27:18 2022...
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_AXI4Stream_MagicCali_0_2, cache-ID = ed16c2a3ee303281.
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 11:51:22 2022...

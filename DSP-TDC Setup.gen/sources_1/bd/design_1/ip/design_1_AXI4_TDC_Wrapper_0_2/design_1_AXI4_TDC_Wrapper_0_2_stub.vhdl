@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Tue Mar 22 09:29:41 2022
+-- Date        : Mon Mar 28 11:53:12 2022
 -- Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub {/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC
 --               Setup.gen/sources_1/bd/design_1/ip/design_1_AXI4_TDC_Wrapper_0_2/design_1_AXI4_TDC_Wrapper_0_2_stub.vhdl}

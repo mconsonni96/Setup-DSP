@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Tue Mar 22 09:29:41 2022
+| Date         : Mon Mar 28 11:53:12 2022
 | Host         : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_utilization -file design_1_AXI4_TDC_Wrapper_0_2_utilization_synth.rpt -pb design_1_AXI4_TDC_Wrapper_0_2_utilization_synth.pb
 | Design       : design_1_AXI4_TDC_Wrapper_0_2
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1974 |     0 |     63400 |  3.11 |
-|   LUT as Logic          | 1974 |     0 |     63400 |  3.11 |
+| Slice LUTs*             | 1987 |     0 |     63400 |  3.13 |
+|   LUT as Logic          | 1987 |     0 |     63400 |  3.13 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         | 2221 |     0 |    126800 |  1.75 |
-|   Register as Flip Flop | 2221 |     0 |    126800 |  1.75 |
+| Slice Registers         | 2248 |     0 |    126800 |  1.77 |
+|   Register as Flip Flop | 2248 |     0 |    126800 |  1.77 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                |  413 |     0 |     31700 |  1.30 |
 | F8 Muxes                |   72 |     0 |     15850 |  0.45 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 7     |          Yes |           - |        Reset |
 | 19    |          Yes |         Set |            - |
-| 2195  |          Yes |       Reset |            - |
+| 2222  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -67,10 +67,10 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |  0.5 |     0 |       135 |  0.37 |
-|   RAMB36/FIFO*    |    0 |     0 |       135 |  0.00 |
-|   RAMB18          |    1 |     0 |       270 |  0.37 |
-|     RAMB18E1 only |    1 |       |           |       |
+| Block RAM Tile    |    1 |     0 |       135 |  0.74 |
+|   RAMB36/FIFO*    |    1 |     0 |       135 |  0.74 |
+|     RAMB36E1 only |    1 |       |           |       |
+|   RAMB18          |    0 |     0 |       270 |  0.00 |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -148,19 +148,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 2195 |        Flop & Latch |
-| LUT6     | 1517 |                 LUT |
+| FDRE     | 2222 |        Flop & Latch |
+| LUT6     | 1523 |                 LUT |
 | MUXF7    |  413 |               MuxFx |
-| LUT5     |  210 |                 LUT |
-| LUT3     |  153 |                 LUT |
-| LUT2     |  128 |                 LUT |
-| LUT4     |   90 |                 LUT |
+| LUT5     |  207 |                 LUT |
+| LUT3     |  149 |                 LUT |
+| LUT2     |  133 |                 LUT |
+| LUT4     |   89 |                 LUT |
 | MUXF8    |   72 |               MuxFx |
-| CARRY4   |   38 |          CarryLogic |
-| LUT1     |   23 |                 LUT |
+| CARRY4   |   44 |          CarryLogic |
 | FDSE     |   19 |        Flop & Latch |
+| LUT1     |   17 |                 LUT |
 | FDCE     |    7 |        Flop & Latch |
-| RAMB18E1 |    1 |        Block Memory |
+| RAMB36E1 |    1 |        Block Memory |
 | DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 

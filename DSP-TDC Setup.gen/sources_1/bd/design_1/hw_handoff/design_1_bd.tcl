@@ -183,8 +183,8 @@ proc create_hier_cell_Sync { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.BIT_COARSE {4} \
    CONFIG.BIT_FID {2} \
-   CONFIG.BIT_SUB_INT {9} \
-   CONFIG.BIT_UNCALIBRATED {9} \
+   CONFIG.BIT_SUB_INT {10} \
+   CONFIG.BIT_UNCALIBRATED {10} \
    CONFIG.CEC_VS_CTD_COUNTER {CTD} \
  ] $AXI4Stream_CoarseExt_0
 
@@ -221,7 +221,7 @@ proc create_hier_cell_Sync { parentCell nameHier } {
    CONFIG.BIT_COARSE {4} \
    CONFIG.BIT_FID {2} \
    CONFIG.BIT_RESOLUTION {16} \
-   CONFIG.BIT_UNCALIBRATED {9} \
+   CONFIG.BIT_UNCALIBRATED {10} \
    CONFIG.DEBUG_MODE_CT {true} \
  ] $AXI4Stream_MagicCali_0
 
@@ -403,8 +403,8 @@ proc create_hier_cell_Ch2 { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.BIT_COARSE {4} \
    CONFIG.BIT_FID {2} \
-   CONFIG.BIT_SUB_INT {9} \
-   CONFIG.BIT_UNCALIBRATED {9} \
+   CONFIG.BIT_SUB_INT {10} \
+   CONFIG.BIT_UNCALIBRATED {10} \
    CONFIG.CEC_VS_CTD_COUNTER {CTD} \
  ] $AXI4Stream_CoarseExt_0
 
@@ -440,7 +440,7 @@ proc create_hier_cell_Ch2 { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.BIT_COARSE {4} \
    CONFIG.BIT_FID {2} \
-   CONFIG.BIT_UNCALIBRATED {9} \
+   CONFIG.BIT_UNCALIBRATED {10} \
    CONFIG.DEBUG_MODE_CT {true} \
  ] $AXI4Stream_MagicCali_0
 
@@ -595,8 +595,8 @@ proc create_hier_cell_Ch1 { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.BIT_COARSE {4} \
    CONFIG.BIT_FID {2} \
-   CONFIG.BIT_SUB_INT {9} \
-   CONFIG.BIT_UNCALIBRATED {9} \
+   CONFIG.BIT_SUB_INT {10} \
+   CONFIG.BIT_UNCALIBRATED {10} \
    CONFIG.CEC_VS_CTD_COUNTER {CTD} \
  ] $AXI4Stream_CoarseExt_0
 
@@ -632,7 +632,7 @@ proc create_hier_cell_Ch1 { parentCell nameHier } {
   set_property -dict [ list \
    CONFIG.BIT_COARSE {4} \
    CONFIG.BIT_FID {2} \
-   CONFIG.BIT_UNCALIBRATED {9} \
+   CONFIG.BIT_UNCALIBRATED {10} \
    CONFIG.DEBUG_MODE_CT {true} \
  ] $AXI4Stream_MagicCali_0
 
@@ -1005,8 +1005,8 @@ proc create_hier_cell_TDC_Calib { parentCell nameHier } {
   set AXI4_TDC_Wrapper_1 [ create_bd_cell -type ip -vlnv DigiLAB:ip:AXI4_TDC_Wrapper:5.1 AXI4_TDC_Wrapper_1 ]
   set_property -dict [ list \
    CONFIG.BIT_CALIBRATION {24} \
-   CONFIG.BIT_RESOLUTION {9} \
-   CONFIG.BIT_UNCALIBRATED {9} \
+   CONFIG.BIT_RESOLUTION {10} \
+   CONFIG.BIT_UNCALIBRATED {10} \
    CONFIG.C_S00_AXI_ADDR_ABS {0x44A40000} \
    CONFIG.DEBUG_MODE_CC {false} \
    CONFIG.TDC_ENABLE_DEBUG_PORTS {true} \
