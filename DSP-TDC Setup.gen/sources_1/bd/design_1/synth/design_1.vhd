@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Mon Mar 28 11:49:43 2022
+--Date        : Wed Apr  6 10:33:00 2022
 --Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -7848,6 +7848,8 @@ entity design_1 is
     I2C_BUS_sda_i : in STD_LOGIC;
     I2C_BUS_sda_o : out STD_LOGIC;
     I2C_BUS_sda_t : out STD_LOGIC;
+    LED_G_BUS_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    LED_R_BUS_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
     USB_UART_BUS_EN_tri_o : out STD_LOGIC;
     ch1_diff_ch_n : in STD_LOGIC;
     ch1_diff_ch_p : in STD_LOGIC;
@@ -7862,7 +7864,7 @@ entity design_1 is
     tdc_diff_clock_clk_p : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=104,numReposBlks=79,numNonXlnxBlks=43,numHierBlks=25,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=105,numReposBlks=80,numNonXlnxBlks=44,numHierBlks=25,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -8212,6 +8214,19 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_proc_sys_reset_0_0;
+  component design_1_BeltBus_TDCLedCounter_1_0 is
+  port (
+    s00_bb_aclk : in STD_LOGIC;
+    s00_bb_aresetn : in STD_LOGIC;
+    s00_bb_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_bb_valid : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    is_calibrated : in STD_LOGIC;
+    green_leds : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    red_leds : out STD_LOGIC_VECTOR ( 2 downto 0 )
+  );
+  end component design_1_BeltBus_TDCLedCounter_1_0;
   signal AXI4Stream_FT245Sync_0_m00_axis_RX_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal AXI4Stream_FT245Sync_0_m00_axis_RX_TREADY : STD_LOGIC;
   signal AXI4Stream_FT245Sync_0_m00_axis_RX_TVALID : STD_LOGIC;
@@ -8221,6 +8236,8 @@ architecture STRUCTURE of design_1 is
   signal BeltBus_TDCHistogrammer_1_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 55 downto 0 );
   signal BeltBus_TDCHistogrammer_1_M00_AXIS_TREADY : STD_LOGIC_VECTOR ( 0 to 0 );
   signal BeltBus_TDCHistogrammer_1_M00_AXIS_TVALID : STD_LOGIC;
+  signal BeltBus_TDCLedCounter_1_GREEN_LEDS_TRI_O : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal BeltBus_TDCLedCounter_1_RED_LEDS_TRI_O : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal BeltBus_TTM_0_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal BeltBus_TTM_0_M00_AXIS_TDEST : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal BeltBus_TTM_0_M00_AXIS_TLAST : STD_LOGIC;
@@ -8321,6 +8338,7 @@ architecture STRUCTURE of design_1 is
   signal S_AXI_1_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
   signal TDC_Calib_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 39 downto 0 );
   signal TDC_Calib_M00_AXIS_TVALID : STD_LOGIC;
+  signal TDC_Calib_Res : STD_LOGIC_VECTOR ( 0 to 0 );
   signal TDC_M00_BB_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal TDC_M00_BB_TVALID : STD_LOGIC;
   signal axi_interconnect_0_M01_AXI_ARADDR : STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -8489,6 +8507,8 @@ architecture STRUCTURE of design_1 is
   signal axis_broadcaster_0_M01_AXIS_TVALID : STD_LOGIC_VECTOR ( 1 to 1 );
   signal axis_broadcaster_0_M02_AXIS_TDATA : STD_LOGIC_VECTOR ( 95 downto 64 );
   signal axis_broadcaster_0_M02_AXIS_TVALID : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal axis_broadcaster_0_M03_AXIS_TDATA : STD_LOGIC_VECTOR ( 127 downto 96 );
+  signal axis_broadcaster_0_M03_AXIS_TVALID : STD_LOGIC_VECTOR ( 3 to 3 );
   signal axis_broadcaster_0_M04_AXIS_TDATA : STD_LOGIC_VECTOR ( 159 downto 128 );
   signal axis_broadcaster_0_M04_AXIS_TVALID : STD_LOGIC_VECTOR ( 4 to 4 );
   signal axis_broadcaster_1_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 39 downto 0 );
@@ -8532,7 +8552,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_MME_0_PTE_OUTPUT_tlast_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_MME_0_PTE_OUTPUT_tvalid_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_MME_0_Packetfetcher_error_code_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_TDC_Calib_Res_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_interconnect_0_M06_AXI_araddr_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_interconnect_0_M06_AXI_arburst_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_interconnect_0_M06_AXI_arcache_UNCONNECTED : STD_LOGIC;
@@ -8563,8 +8582,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_interconnect_0_M06_AXI_wlast_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_interconnect_0_M06_AXI_wstrb_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_interconnect_0_M06_AXI_wvalid_UNCONNECTED : STD_LOGIC;
-  signal NLW_axis_broadcaster_0_m_axis_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 127 downto 96 );
-  signal NLW_axis_broadcaster_0_m_axis_tvalid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 to 3 );
   signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_xadc_wiz_0_alarm_out_UNCONNECTED : STD_LOGIC;
@@ -8608,6 +8625,8 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_INFO of FT245_data_i : signal is "DigiLAB:if:ft245:1.2 FT245 DATA_I";
   attribute X_INTERFACE_INFO of FT245_data_o : signal is "DigiLAB:if:ft245:1.2 FT245 DATA_O";
   attribute X_INTERFACE_INFO of FT245_data_t : signal is "DigiLAB:if:ft245:1.2 FT245 DATA_T";
+  attribute X_INTERFACE_INFO of LED_G_BUS_tri_o : signal is "xilinx.com:interface:gpio:1.0 LED_G_BUS TRI_O";
+  attribute X_INTERFACE_INFO of LED_R_BUS_tri_o : signal is "xilinx.com:interface:gpio:1.0 LED_R_BUS TRI_O";
 begin
   DAC_RESETN_tri_o <= dlconstant_gpio_3_constant_out_TRI_O(0);
   FRONT_GREEN_POWER_LED_tri_o <= dlconstant_gpio_1_constant_out_TRI_O(0);
@@ -8627,6 +8646,8 @@ begin
   I2C_BUS_sda_t <= IIC_I2C_BUS_SDA_T;
   IIC_I2C_BUS_SCL_I <= I2C_BUS_scl_i;
   IIC_I2C_BUS_SDA_I <= I2C_BUS_sda_i;
+  LED_G_BUS_tri_o(2 downto 0) <= BeltBus_TDCLedCounter_1_GREEN_LEDS_TRI_O(2 downto 0);
+  LED_R_BUS_tri_o(2 downto 0) <= BeltBus_TDCLedCounter_1_RED_LEDS_TRI_O(2 downto 0);
   USB_UART_BUS_EN_tri_o <= dlconstant_gpio_0_constant_out_TRI_O(0);
   ch1_diff_1_CH_N <= ch1_diff_ch_n;
   ch1_diff_1_CH_P <= ch1_diff_ch_p;
@@ -8757,6 +8778,18 @@ BeltBus_TDCHistogrammer_1: component design_1_BeltBus_TDCHistogrammer_1_0
       s00_belt_tvalid => axis_broadcaster_0_M02_AXIS_TVALID(2),
       sync_tdata(39 downto 0) => axis_broadcaster_1_M01_AXIS_TDATA(79 downto 40),
       sync_tvalid => axis_broadcaster_1_M01_AXIS_TVALID(1)
+    );
+BeltBus_TDCLedCounter_1: component design_1_BeltBus_TDCLedCounter_1_0
+     port map (
+      clk => clk_wiz_0_clk_out1,
+      green_leds(2 downto 0) => BeltBus_TDCLedCounter_1_GREEN_LEDS_TRI_O(2 downto 0),
+      is_calibrated => TDC_Calib_Res(0),
+      red_leds(2 downto 0) => BeltBus_TDCLedCounter_1_RED_LEDS_TRI_O(2 downto 0),
+      reset => proc_sys_reset_0_peripheral_reset(0),
+      s00_bb_aclk => clk_wiz_0_clk_out1,
+      s00_bb_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
+      s00_bb_data(31 downto 0) => axis_broadcaster_0_M03_AXIS_TDATA(127 downto 96),
+      s00_bb_valid => axis_broadcaster_0_M03_AXIS_TVALID(3)
     );
 BeltBus_TTM_0: component design_1_BeltBus_TTM_0_0
      port map (
@@ -8964,7 +8997,7 @@ TDC_Calib: entity work.TDC_Calib_imp_4BAZB9
       M00_AXIS_tvalid => TDC_Calib_M00_AXIS_TVALID,
       M00_BB_tdata(31 downto 0) => TDC_M00_BB_TDATA(31 downto 0),
       M00_BB_tvalid => TDC_M00_BB_TVALID,
-      Res(0) => NLW_TDC_Calib_Res_UNCONNECTED(0),
+      Res(0) => TDC_Calib_Res(0),
       S00_AXI_araddr(30 downto 0) => axi_interconnect_0_M04_AXI_ARADDR(30 downto 0),
       S00_AXI_arburst(1 downto 0) => axi_interconnect_0_M04_AXI_ARBURST(1 downto 0),
       S00_AXI_arid(4 downto 0) => axi_interconnect_0_M04_AXI_ARID(4 downto 0),
@@ -9308,12 +9341,12 @@ axis_broadcaster_0: component design_1_axis_broadcaster_0_1
       aclk => clk_wiz_0_clk_out1,
       aresetn => proc_sys_reset_0_peripheral_aresetn(0),
       m_axis_tdata(159 downto 128) => axis_broadcaster_0_M04_AXIS_TDATA(159 downto 128),
-      m_axis_tdata(127 downto 96) => NLW_axis_broadcaster_0_m_axis_tdata_UNCONNECTED(127 downto 96),
+      m_axis_tdata(127 downto 96) => axis_broadcaster_0_M03_AXIS_TDATA(127 downto 96),
       m_axis_tdata(95 downto 64) => axis_broadcaster_0_M02_AXIS_TDATA(95 downto 64),
       m_axis_tdata(63 downto 32) => axis_broadcaster_0_M01_AXIS_TDATA(63 downto 32),
       m_axis_tdata(31 downto 0) => axis_broadcaster_0_M00_AXIS_TDATA(31 downto 0),
       m_axis_tvalid(4) => axis_broadcaster_0_M04_AXIS_TVALID(4),
-      m_axis_tvalid(3) => NLW_axis_broadcaster_0_m_axis_tvalid_UNCONNECTED(3),
+      m_axis_tvalid(3) => axis_broadcaster_0_M03_AXIS_TVALID(3),
       m_axis_tvalid(2) => axis_broadcaster_0_M02_AXIS_TVALID(2),
       m_axis_tvalid(1) => axis_broadcaster_0_M01_AXIS_TVALID(1),
       m_axis_tvalid(0) => axis_broadcaster_0_M00_AXIS_TVALID(0),

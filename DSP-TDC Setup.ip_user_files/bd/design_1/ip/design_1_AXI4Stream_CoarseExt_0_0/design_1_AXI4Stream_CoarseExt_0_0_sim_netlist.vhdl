@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Tue Mar 22 09:25:57 2022
+-- Date        : Tue Mar 29 09:08:25 2022
 -- Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim {/home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC
---               Setup.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_CoarseExt_0_0/design_1_AXI4Stream_CoarseExt_0_0_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_AXI4Stream_CoarseExt_0_0 -prefix
+--               design_1_AXI4Stream_CoarseExt_0_0_ design_1_AXI4Stream_CoarseExt_0_0_sim_netlist.vhdl
 -- Design      : design_1_AXI4Stream_CoarseExt_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,15 +17,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_AXI4Stream_CoarseExt_0_0_Engine_EQ_TC is
   port (
     CompOut_EQ_reg_0 : out STD_LOGIC;
-    \din_reg[14]\ : out STD_LOGIC;
+    \din_reg[16]\ : out STD_LOGIC;
     CoarseCounter_CTD : in STD_LOGIC_VECTOR ( 3 downto 0 );
     clk_TDC : in STD_LOGIC;
     reset_TDC : in STD_LOGIC;
     s00_axis_subint_tvalid : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_Engine_EQ_TC : entity is "Engine_EQ_TC";
 end design_1_AXI4Stream_CoarseExt_0_0_Engine_EQ_TC;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_Engine_EQ_TC is
@@ -51,7 +49,7 @@ CompOut_EQ_reg: unisim.vcomponents.FDCE
       D => p_0_in,
       Q => Equality_check
     );
-\din[14]_i_1\: unisim.vcomponents.LUT3
+\din[16]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -59,7 +57,7 @@ CompOut_EQ_reg: unisim.vcomponents.FDCE
       I0 => din(0),
       I1 => reset_TDC,
       I2 => Equality_check,
-      O => \din_reg[14]\
+      O => \din_reg[16]\
     );
 wr_en_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -86,8 +84,6 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_gray : entity is 4;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_gray : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -1673,8 +1669,6 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_sync_rst is
   attribute INIT of design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_sync_rst : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of design_1_AXI4Stream_CoarseExt_0_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -1868,8 +1862,6 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_counter_updn is
     \count_value_i_reg[0]_0\ : in STD_LOGIC;
     rd_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end design_1_AXI4Stream_CoarseExt_0_0_xpm_counter_updn;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_counter_updn is
@@ -2669,8 +2661,6 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_reg_bit is
     wr_clk : in STD_LOGIC;
     rst : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_reg_bit is
@@ -2717,8 +2707,6 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_reg_vec is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_reg_vec is
@@ -2932,10 +2920,10 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
     regcea : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     addra : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 17 downto 0 );
     injectsbiterra : in STD_LOGIC;
     injectdbiterra : in STD_LOGIC;
-    douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 17 downto 0 );
     sbiterra : out STD_LOGIC;
     dbiterra : out STD_LOGIC;
     clkb : in STD_LOGIC;
@@ -2944,10 +2932,10 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
     regceb : in STD_LOGIC;
     web : in STD_LOGIC_VECTOR ( 0 to 0 );
     addrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    dinb : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    dinb : in STD_LOGIC_VECTOR ( 17 downto 0 );
     injectsbiterrb : in STD_LOGIC;
     injectdbiterrb : in STD_LOGIC;
-    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 17 downto 0 );
     sbiterrb : out STD_LOGIC;
     dbiterrb : out STD_LOGIC
   );
@@ -2958,9 +2946,9 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   attribute AUTO_SLEEP_TIME : integer;
   attribute AUTO_SLEEP_TIME of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 0;
   attribute BYTE_WRITE_WIDTH_A : integer;
-  attribute BYTE_WRITE_WIDTH_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute BYTE_WRITE_WIDTH_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute BYTE_WRITE_WIDTH_B : integer;
-  attribute BYTE_WRITE_WIDTH_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute BYTE_WRITE_WIDTH_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute CASCADE_HEIGHT : integer;
   attribute CASCADE_HEIGHT of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 0;
   attribute CLOCKING_MODE : integer;
@@ -2978,15 +2966,13 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   attribute MEMORY_PRIMITIVE : integer;
   attribute MEMORY_PRIMITIVE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 1;
   attribute MEMORY_SIZE : integer;
-  attribute MEMORY_SIZE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 256;
+  attribute MEMORY_SIZE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 288;
   attribute MEMORY_TYPE : integer;
   attribute MEMORY_TYPE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 1;
   attribute MESSAGE_CONTROL : integer;
   attribute MESSAGE_CONTROL of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -3000,17 +2986,17 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   attribute P_MEMORY_PRIMITIVE : string;
   attribute P_MEMORY_PRIMITIVE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is "distributed";
   attribute P_MIN_WIDTH_DATA : integer;
-  attribute P_MIN_WIDTH_DATA of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute P_MIN_WIDTH_DATA of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute P_MIN_WIDTH_DATA_A : integer;
-  attribute P_MIN_WIDTH_DATA_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute P_MIN_WIDTH_DATA_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute P_MIN_WIDTH_DATA_B : integer;
-  attribute P_MIN_WIDTH_DATA_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute P_MIN_WIDTH_DATA_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute P_MIN_WIDTH_DATA_ECC : integer;
-  attribute P_MIN_WIDTH_DATA_ECC of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute P_MIN_WIDTH_DATA_ECC of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute P_MIN_WIDTH_DATA_LDW : integer;
   attribute P_MIN_WIDTH_DATA_LDW of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 4;
   attribute P_MIN_WIDTH_DATA_SHFT : integer;
-  attribute P_MIN_WIDTH_DATA_SHFT of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute P_MIN_WIDTH_DATA_SHFT of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute P_NUM_COLS_WRITE_A : integer;
   attribute P_NUM_COLS_WRITE_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 1;
   attribute P_NUM_COLS_WRITE_B : integer;
@@ -3042,13 +3028,13 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   attribute P_WIDTH_ADDR_WRITE_B : integer;
   attribute P_WIDTH_ADDR_WRITE_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 4;
   attribute P_WIDTH_COL_WRITE_A : integer;
-  attribute P_WIDTH_COL_WRITE_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute P_WIDTH_COL_WRITE_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute P_WIDTH_COL_WRITE_B : integer;
-  attribute P_WIDTH_COL_WRITE_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute P_WIDTH_COL_WRITE_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute READ_DATA_WIDTH_A : integer;
-  attribute READ_DATA_WIDTH_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute READ_DATA_WIDTH_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute READ_DATA_WIDTH_B : integer;
-  attribute READ_DATA_WIDTH_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute READ_DATA_WIDTH_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute READ_LATENCY_A : integer;
   attribute READ_LATENCY_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 2;
   attribute READ_LATENCY_B : integer;
@@ -3074,9 +3060,9 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   attribute WAKEUP_TIME : integer;
   attribute WAKEUP_TIME of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 0;
   attribute WRITE_DATA_WIDTH_A : integer;
-  attribute WRITE_DATA_WIDTH_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute WRITE_DATA_WIDTH_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute WRITE_DATA_WIDTH_B : integer;
-  attribute WRITE_DATA_WIDTH_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute WRITE_DATA_WIDTH_B of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 18;
   attribute WRITE_MODE_A : integer;
   attribute WRITE_MODE_A of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 2;
   attribute WRITE_MODE_B : integer;
@@ -3088,18 +3074,17 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   attribute keep_hierarchy : string;
   attribute keep_hierarchy of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is "soft";
   attribute rsta_loop_iter : integer;
-  attribute rsta_loop_iter of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute rsta_loop_iter of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 20;
   attribute rstb_loop_iter : integer;
-  attribute rstb_loop_iter of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 16;
+  attribute rstb_loop_iter of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base : entity is 20;
 end design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   signal \<const0>\ : STD_LOGIC;
-  signal \gen_rd_b.doutb_reg\ : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal \gen_rd_b.doutb_reg0\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \gen_rd_b.doutb_reg\ : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal \gen_rd_b.doutb_reg0\ : STD_LOGIC_VECTOR ( 17 downto 0 );
   signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute dram_emb_xdc : string;
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[0]\ : label is "yes";
@@ -3109,6 +3094,8 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[13]\ : label is "yes";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[14]\ : label is "yes";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[15]\ : label is "yes";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[16]\ : label is "yes";
+  attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[17]\ : label is "yes";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[1]\ : label is "yes";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[2]\ : label is "yes";
   attribute dram_emb_xdc of \gen_rd_b.doutb_reg_reg[3]\ : label is "yes";
@@ -3121,7 +3108,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5\ : label is "";
   attribute RTL_RAM_BITS : integer;
-  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5\ : label is 256;
+  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5\ : label is 288;
   attribute RTL_RAM_NAME : string;
   attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5\ : label is "gen_wr_a.gen_word_narrow.mem";
   attribute RTL_RAM_TYPE : string;
@@ -3137,18 +3124,18 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
   attribute ram_slice_begin of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5\ : label is 0;
   attribute ram_slice_end : integer;
   attribute ram_slice_end of \gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5\ : label is 5;
-  attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is "";
-  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is 256;
-  attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is "gen_wr_a.gen_word_narrow.mem";
-  attribute RTL_RAM_TYPE of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is "RAM_SDP";
-  attribute dram_emb_xdc of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is "yes";
-  attribute ram_addr_begin of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is 0;
-  attribute ram_addr_end of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is 15;
-  attribute ram_offset of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is 0;
-  attribute ram_slice_begin of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is 12;
-  attribute ram_slice_end of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\ : label is 15;
+  attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is "";
+  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is 288;
+  attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is "gen_wr_a.gen_word_narrow.mem";
+  attribute RTL_RAM_TYPE of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is "RAM_SDP";
+  attribute dram_emb_xdc of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is "yes";
+  attribute ram_addr_begin of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is 0;
+  attribute ram_addr_end of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is 15;
+  attribute ram_offset of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is 0;
+  attribute ram_slice_begin of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is 12;
+  attribute ram_slice_end of \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\ : label is 17;
   attribute METHODOLOGY_DRC_VIOS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11\ : label is "";
-  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11\ : label is 256;
+  attribute RTL_RAM_BITS of \gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11\ : label is 288;
   attribute RTL_RAM_NAME of \gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11\ : label is "gen_wr_a.gen_word_narrow.mem";
   attribute RTL_RAM_TYPE of \gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11\ : label is "RAM_SDP";
   attribute dram_emb_xdc of \gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11\ : label is "yes";
@@ -3160,6 +3147,8 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_memory_base is
 begin
   dbiterra <= \<const0>\;
   dbiterrb <= \<const0>\;
+  douta(17) <= \<const0>\;
+  douta(16) <= \<const0>\;
   douta(15) <= \<const0>\;
   douta(14) <= \<const0>\;
   douta(13) <= \<const0>\;
@@ -3257,6 +3246,28 @@ GND: unisim.vcomponents.GND
       CE => enb,
       D => \gen_rd_b.doutb_reg0\(15),
       Q => \gen_rd_b.doutb_reg\(15),
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[16]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(16),
+      Q => \gen_rd_b.doutb_reg\(16),
+      R => '0'
+    );
+\gen_rd_b.doutb_reg_reg[17]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \gen_rd_b.doutb_reg0\(17),
+      Q => \gen_rd_b.doutb_reg\(17),
       R => '0'
     );
 \gen_rd_b.doutb_reg_reg[1]\: unisim.vcomponents.FDRE
@@ -3435,6 +3446,28 @@ GND: unisim.vcomponents.GND
       Q => doutb(15),
       R => rstb
     );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][16]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg\(16),
+      Q => doutb(16),
+      R => rstb
+    );
+\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][17]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => regceb,
+      D => \gen_rd_b.doutb_reg\(17),
+      Q => doutb(17),
+      R => rstb
+    );
 \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -3561,7 +3594,7 @@ GND: unisim.vcomponents.GND
       WCLK => clka,
       WE => ena
     );
-\gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15\: unisim.vcomponents.RAM32M
+\gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17\: unisim.vcomponents.RAM32M
     generic map(
       INIT_A => X"0000000000000000",
       INIT_B => X"0000000000000000",
@@ -3579,12 +3612,12 @@ GND: unisim.vcomponents.GND
       ADDRD(3 downto 0) => addra(3 downto 0),
       DIA(1 downto 0) => dina(13 downto 12),
       DIB(1 downto 0) => dina(15 downto 14),
-      DIC(1 downto 0) => B"00",
+      DIC(1 downto 0) => dina(17 downto 16),
       DID(1 downto 0) => B"00",
       DOA(1 downto 0) => \gen_rd_b.doutb_reg0\(13 downto 12),
       DOB(1 downto 0) => \gen_rd_b.doutb_reg0\(15 downto 14),
-      DOC(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOC_UNCONNECTED\(1 downto 0),
-      DOD(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOD_UNCONNECTED\(1 downto 0),
+      DOC(1 downto 0) => \gen_rd_b.doutb_reg0\(17 downto 16),
+      DOD(1 downto 0) => \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17_DOD_UNCONNECTED\(1 downto 0),
       WCLK => clka,
       WE => ena
     );
@@ -3623,15 +3656,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_AXI4Stream_CoarseExt_0_0_Step_TC is
   port (
     CompOut_EQ_reg : out STD_LOGIC;
-    \din_reg[14]\ : out STD_LOGIC;
+    \din_reg[16]\ : out STD_LOGIC;
     CoarseCounter_CTD : in STD_LOGIC_VECTOR ( 3 downto 0 );
     clk_TDC : in STD_LOGIC;
     reset_TDC : in STD_LOGIC;
     s00_axis_subint_tvalid : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_Step_TC : entity is "Step_TC";
 end design_1_AXI4Stream_CoarseExt_0_0_Step_TC;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_Step_TC is
@@ -3642,7 +3673,7 @@ begin
       CompOut_EQ_reg_0 => CompOut_EQ_reg,
       clk_TDC => clk_TDC,
       din(0) => din(0),
-      \din_reg[14]\ => \din_reg[14]\,
+      \din_reg[16]\ => \din_reg[16]\,
       reset_TDC => reset_TDC,
       s00_axis_subint_tvalid => s00_axis_subint_tvalid
     );
@@ -3664,8 +3695,6 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_rst is
     full : in STD_LOGIC;
     rst_d1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_rst is
@@ -4140,15 +4169,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_AXI4Stream_CoarseExt_0_0_TreeComparatorWrapper is
   port (
     CompOut_EQ_reg : out STD_LOGIC;
-    \din_reg[14]\ : out STD_LOGIC;
+    \din_reg[16]\ : out STD_LOGIC;
     CoarseCounter_CTD : in STD_LOGIC_VECTOR ( 3 downto 0 );
     clk_TDC : in STD_LOGIC;
     reset_TDC : in STD_LOGIC;
     s00_axis_subint_tvalid : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_TreeComparatorWrapper : entity is "TreeComparatorWrapper";
 end design_1_AXI4Stream_CoarseExt_0_0_TreeComparatorWrapper;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_TreeComparatorWrapper is
@@ -4159,7 +4186,7 @@ begin
       CompOut_EQ_reg => CompOut_EQ_reg,
       clk_TDC => clk_TDC,
       din(0) => din(0),
-      \din_reg[14]\ => \din_reg[14]\,
+      \din_reg[16]\ => \din_reg[16]\,
       reset_TDC => reset_TDC,
       s00_axis_subint_tvalid => s00_axis_subint_tvalid
     );
@@ -4174,7 +4201,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
     rst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
     wr_en : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    din : in STD_LOGIC_VECTOR ( 17 downto 0 );
     full : out STD_LOGIC;
     full_n : out STD_LOGIC;
     prog_full : out STD_LOGIC;
@@ -4185,7 +4212,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
     wr_ack : out STD_LOGIC;
     rd_clk : in STD_LOGIC;
     rd_en : in STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 17 downto 0 );
     empty : out STD_LOGIC;
     prog_empty : out STD_LOGIC;
     rd_data_count : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4243,15 +4270,13 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute FIFO_READ_LATENCY : integer;
   attribute FIFO_READ_LATENCY of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 0;
   attribute FIFO_SIZE : integer;
-  attribute FIFO_SIZE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 256;
+  attribute FIFO_SIZE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 288;
   attribute FIFO_WRITE_DEPTH : integer;
   attribute FIFO_WRITE_DEPTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 16;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 4;
   attribute PE_THRESH_MAX : integer;
@@ -4279,7 +4304,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute RD_PNTR_WIDTH : integer;
   attribute RD_PNTR_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 4;
   attribute READ_DATA_WIDTH : integer;
-  attribute READ_DATA_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 16;
+  attribute READ_DATA_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 18;
   attribute READ_MODE : integer;
   attribute READ_MODE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 1;
   attribute READ_MODE_LL : integer;
@@ -4299,7 +4324,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute WIDTH_RATIO : integer;
   attribute WIDTH_RATIO of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 1;
   attribute WRITE_DATA_WIDTH : integer;
-  attribute WRITE_DATA_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 16;
+  attribute WRITE_DATA_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 18;
   attribute WR_DATA_COUNT_WIDTH : integer;
   attribute WR_DATA_COUNT_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 1;
   attribute WR_DC_WIDTH_EXT : integer;
@@ -4311,7 +4336,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute WR_RD_RATIO : integer;
   attribute WR_RD_RATIO of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 0;
   attribute WR_WIDTH_LOG : integer;
-  attribute WR_WIDTH_LOG of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 4;
+  attribute WR_WIDTH_LOG of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is 5;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base : entity is "TRUE";
   attribute both_stages_valid : integer;
@@ -4373,7 +4398,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   signal \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\ : STD_LOGIC_VECTOR ( 17 downto 0 );
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1\ : label is "soft_lutpair9";
@@ -4430,9 +4455,9 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute AUTO_SLEEP_TIME : integer;
   attribute AUTO_SLEEP_TIME of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute BYTE_WRITE_WIDTH_A : integer;
-  attribute BYTE_WRITE_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute BYTE_WRITE_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute BYTE_WRITE_WIDTH_B : integer;
-  attribute BYTE_WRITE_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute BYTE_WRITE_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute CASCADE_HEIGHT of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute CLOCKING_MODE : integer;
   attribute CLOCKING_MODE of \gen_sdpram.xpm_memory_base_inst\ : label is 1;
@@ -4449,7 +4474,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute MEMORY_PRIMITIVE : integer;
   attribute MEMORY_PRIMITIVE of \gen_sdpram.xpm_memory_base_inst\ : label is 1;
   attribute MEMORY_SIZE : integer;
-  attribute MEMORY_SIZE of \gen_sdpram.xpm_memory_base_inst\ : label is 256;
+  attribute MEMORY_SIZE of \gen_sdpram.xpm_memory_base_inst\ : label is 288;
   attribute MEMORY_TYPE : integer;
   attribute MEMORY_TYPE of \gen_sdpram.xpm_memory_base_inst\ : label is 1;
   attribute MESSAGE_CONTROL : integer;
@@ -4469,17 +4494,17 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute P_MEMORY_PRIMITIVE : string;
   attribute P_MEMORY_PRIMITIVE of \gen_sdpram.xpm_memory_base_inst\ : label is "distributed";
   attribute P_MIN_WIDTH_DATA : integer;
-  attribute P_MIN_WIDTH_DATA of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute P_MIN_WIDTH_DATA of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute P_MIN_WIDTH_DATA_A : integer;
-  attribute P_MIN_WIDTH_DATA_A of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute P_MIN_WIDTH_DATA_A of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute P_MIN_WIDTH_DATA_B : integer;
-  attribute P_MIN_WIDTH_DATA_B of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute P_MIN_WIDTH_DATA_B of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute P_MIN_WIDTH_DATA_ECC : integer;
-  attribute P_MIN_WIDTH_DATA_ECC of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute P_MIN_WIDTH_DATA_ECC of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute P_MIN_WIDTH_DATA_LDW : integer;
   attribute P_MIN_WIDTH_DATA_LDW of \gen_sdpram.xpm_memory_base_inst\ : label is 4;
   attribute P_MIN_WIDTH_DATA_SHFT : integer;
-  attribute P_MIN_WIDTH_DATA_SHFT of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute P_MIN_WIDTH_DATA_SHFT of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute P_NUM_COLS_WRITE_A : integer;
   attribute P_NUM_COLS_WRITE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 1;
   attribute P_NUM_COLS_WRITE_B : integer;
@@ -4511,13 +4536,13 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute P_WIDTH_ADDR_WRITE_B : integer;
   attribute P_WIDTH_ADDR_WRITE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 4;
   attribute P_WIDTH_COL_WRITE_A : integer;
-  attribute P_WIDTH_COL_WRITE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute P_WIDTH_COL_WRITE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute P_WIDTH_COL_WRITE_B : integer;
-  attribute P_WIDTH_COL_WRITE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute P_WIDTH_COL_WRITE_B of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute READ_DATA_WIDTH_A : integer;
-  attribute READ_DATA_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute READ_DATA_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute READ_DATA_WIDTH_B : integer;
-  attribute READ_DATA_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute READ_DATA_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute READ_LATENCY_A : integer;
   attribute READ_LATENCY_A of \gen_sdpram.xpm_memory_base_inst\ : label is 2;
   attribute READ_LATENCY_B : integer;
@@ -4540,9 +4565,9 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute VERSION of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute WAKEUP_TIME of \gen_sdpram.xpm_memory_base_inst\ : label is 0;
   attribute WRITE_DATA_WIDTH_A : integer;
-  attribute WRITE_DATA_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute WRITE_DATA_WIDTH_A of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute WRITE_DATA_WIDTH_B : integer;
-  attribute WRITE_DATA_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute WRITE_DATA_WIDTH_B of \gen_sdpram.xpm_memory_base_inst\ : label is 18;
   attribute WRITE_MODE_A : integer;
   attribute WRITE_MODE_A of \gen_sdpram.xpm_memory_base_inst\ : label is 2;
   attribute WRITE_MODE_B : integer;
@@ -4551,9 +4576,9 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_base is
   attribute WRITE_PROTECT of \gen_sdpram.xpm_memory_base_inst\ : label is 1;
   attribute XPM_MODULE of \gen_sdpram.xpm_memory_base_inst\ : label is "TRUE";
   attribute rsta_loop_iter : integer;
-  attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute rsta_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 20;
   attribute rstb_loop_iter : integer;
-  attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 16;
+  attribute rstb_loop_iter of \gen_sdpram.xpm_memory_base_inst\ : label is 20;
   attribute SOFT_HLUTNM of \gen_sdpram.xpm_memory_base_inst_i_3\ : label is "soft_lutpair8";
 begin
   almost_empty <= \<const0>\;
@@ -4764,10 +4789,10 @@ GND: unisim.vcomponents.GND
       clkb => rd_clk,
       dbiterra => \NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED\,
       dbiterrb => \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED\,
-      dina(15 downto 0) => din(15 downto 0),
-      dinb(15 downto 0) => B"0000000000000000",
-      douta(15 downto 0) => \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\(15 downto 0),
-      doutb(15 downto 0) => dout(15 downto 0),
+      dina(17 downto 0) => din(17 downto 0),
+      dinb(17 downto 0) => B"000000000000000000",
+      douta(17 downto 0) => \NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED\(17 downto 0),
+      doutb(17 downto 0) => dout(17 downto 0),
       ena => ram_wr_en_i,
       enb => rdp_inst_n_9,
       injectdbiterra => '0',
@@ -4880,15 +4905,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_AXI4Stream_CoarseExt_0_0_TreeComparator is
   port (
     CompOut_EQ_reg : out STD_LOGIC;
-    \din_reg[14]\ : out STD_LOGIC;
+    \din_reg[16]\ : out STD_LOGIC;
     CoarseCounter_CTD : in STD_LOGIC_VECTOR ( 3 downto 0 );
     clk_TDC : in STD_LOGIC;
     reset_TDC : in STD_LOGIC;
     s00_axis_subint_tvalid : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_TreeComparator : entity is "TreeComparator";
 end design_1_AXI4Stream_CoarseExt_0_0_TreeComparator;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_TreeComparator is
@@ -4899,7 +4922,7 @@ Inst_TreeComparatorWrapper: entity work.design_1_AXI4Stream_CoarseExt_0_0_TreeCo
       CompOut_EQ_reg => CompOut_EQ_reg,
       clk_TDC => clk_TDC,
       din(0) => din(0),
-      \din_reg[14]\ => \din_reg[14]\,
+      \din_reg[16]\ => \din_reg[16]\,
       reset_TDC => reset_TDC,
       s00_axis_subint_tvalid => s00_axis_subint_tvalid
     );
@@ -4914,7 +4937,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async is
     rst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
     wr_en : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    din : in STD_LOGIC_VECTOR ( 17 downto 0 );
     full : out STD_LOGIC;
     prog_full : out STD_LOGIC;
     wr_data_count : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4924,7 +4947,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async is
     wr_ack : out STD_LOGIC;
     rd_clk : in STD_LOGIC;
     rd_en : in STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 17 downto 0 );
     empty : out STD_LOGIC;
     prog_empty : out STD_LOGIC;
     rd_data_count : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4955,8 +4978,6 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async is
   attribute FIFO_WRITE_DEPTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 16;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is "xpm_fifo_async";
   attribute PROG_EMPTY_THRESH : integer;
   attribute PROG_EMPTY_THRESH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 6;
   attribute PROG_FULL_THRESH : integer;
@@ -4974,7 +4995,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async is
   attribute RD_DATA_COUNT_WIDTH : integer;
   attribute RD_DATA_COUNT_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 1;
   attribute READ_DATA_WIDTH : integer;
-  attribute READ_DATA_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 16;
+  attribute READ_DATA_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 18;
   attribute READ_MODE : string;
   attribute READ_MODE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is "fwft";
   attribute RELATED_CLOCKS : integer;
@@ -4986,7 +5007,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async is
   attribute WAKEUP_TIME : integer;
   attribute WAKEUP_TIME of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 0;
   attribute WRITE_DATA_WIDTH : integer;
-  attribute WRITE_DATA_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 16;
+  attribute WRITE_DATA_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 18;
   attribute WR_DATA_COUNT_WIDTH : integer;
   attribute WR_DATA_COUNT_WIDTH of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async : entity is 1;
   attribute XPM_MODULE : string;
@@ -5051,7 +5072,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async is
   attribute FIFO_READ_DEPTH of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 16;
   attribute FIFO_READ_LATENCY of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 0;
   attribute FIFO_SIZE : integer;
-  attribute FIFO_SIZE of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 256;
+  attribute FIFO_SIZE of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 288;
   attribute FIFO_WRITE_DEPTH of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 16;
   attribute FULL_RESET_VALUE of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 1;
   attribute FULL_RST_VAL : string;
@@ -5081,7 +5102,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async is
   attribute RD_MODE of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 1;
   attribute RD_PNTR_WIDTH : integer;
   attribute RD_PNTR_WIDTH of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 4;
-  attribute READ_DATA_WIDTH of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 16;
+  attribute READ_DATA_WIDTH of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 18;
   attribute READ_MODE_integer : integer;
   attribute READ_MODE_integer of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 1;
   attribute READ_MODE_LL : integer;
@@ -5096,7 +5117,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async is
   attribute WAKEUP_TIME of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 0;
   attribute WIDTH_RATIO : integer;
   attribute WIDTH_RATIO of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 1;
-  attribute WRITE_DATA_WIDTH of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 16;
+  attribute WRITE_DATA_WIDTH of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 18;
   attribute WR_DATA_COUNT_WIDTH of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 1;
   attribute WR_DC_WIDTH_EXT : integer;
   attribute WR_DC_WIDTH_EXT of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 5;
@@ -5107,7 +5128,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async is
   attribute WR_RD_RATIO : integer;
   attribute WR_RD_RATIO of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 0;
   attribute WR_WIDTH_LOG : integer;
-  attribute WR_WIDTH_LOG of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 4;
+  attribute WR_WIDTH_LOG of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 5;
   attribute XPM_MODULE of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is "TRUE";
   attribute both_stages_valid : integer;
   attribute both_stages_valid of \gnuram_async_fifo.xpm_fifo_base_inst\ : label is 3;
@@ -5139,8 +5160,8 @@ GND: unisim.vcomponents.GND
       almost_full => \NLW_gnuram_async_fifo.xpm_fifo_base_inst_almost_full_UNCONNECTED\,
       data_valid => data_valid,
       dbiterr => \NLW_gnuram_async_fifo.xpm_fifo_base_inst_dbiterr_UNCONNECTED\,
-      din(15 downto 0) => din(15 downto 0),
-      dout(15 downto 0) => dout(15 downto 0),
+      din(17 downto 0) => din(17 downto 0),
+      dout(17 downto 0) => dout(17 downto 0),
       empty => empty,
       full => full,
       full_n => \NLW_gnuram_async_fifo.xpm_fifo_base_inst_full_n_UNCONNECTED\,
@@ -5170,7 +5191,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_AXI4Stream_CoarseExt_0_0_FIFO_Synchronizer is
   port (
-    dout : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 17 downto 0 );
     data_valid : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     queue_reg : out STD_LOGIC;
@@ -5178,19 +5199,17 @@ entity design_1_AXI4Stream_CoarseExt_0_0_FIFO_Synchronizer is
     queue_reg_0 : out STD_LOGIC;
     clk_TDC : in STD_LOGIC;
     wr_en : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    din : in STD_LOGIC_VECTOR ( 17 downto 0 );
     clk_SYS : in STD_LOGIC;
     rd_en : in STD_LOGIC;
     reset_SYS : in STD_LOGIC;
     queue_reg_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_FIFO_Synchronizer : entity is "FIFO_Synchronizer";
 end design_1_AXI4Stream_CoarseExt_0_0_FIFO_Synchronizer;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_FIFO_Synchronizer is
   signal \^data_valid\ : STD_LOGIC;
-  signal \^dout\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \^dout\ : STD_LOGIC_VECTOR ( 17 downto 0 );
   signal NLW_Inst_xpm_fifo_async_almost_empty_UNCONNECTED : STD_LOGIC;
   signal NLW_Inst_xpm_fifo_async_almost_full_UNCONNECTED : STD_LOGIC;
   signal NLW_Inst_xpm_fifo_async_dbiterr_UNCONNECTED : STD_LOGIC;
@@ -5241,7 +5260,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_FIFO_Synchronizer is
   attribute RD_DATA_COUNT_WIDTH : integer;
   attribute RD_DATA_COUNT_WIDTH of Inst_xpm_fifo_async : label is 1;
   attribute READ_DATA_WIDTH : integer;
-  attribute READ_DATA_WIDTH of Inst_xpm_fifo_async : label is 16;
+  attribute READ_DATA_WIDTH of Inst_xpm_fifo_async : label is 18;
   attribute READ_MODE : string;
   attribute READ_MODE of Inst_xpm_fifo_async : label is "fwft";
   attribute RELATED_CLOCKS : integer;
@@ -5253,27 +5272,27 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_FIFO_Synchronizer is
   attribute WAKEUP_TIME : integer;
   attribute WAKEUP_TIME of Inst_xpm_fifo_async : label is 0;
   attribute WRITE_DATA_WIDTH : integer;
-  attribute WRITE_DATA_WIDTH of Inst_xpm_fifo_async : label is 16;
+  attribute WRITE_DATA_WIDTH of Inst_xpm_fifo_async : label is 18;
   attribute WR_DATA_COUNT_WIDTH : integer;
   attribute WR_DATA_COUNT_WIDTH of Inst_xpm_fifo_async : label is 1;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of Inst_xpm_fifo_async : label is "TRUE";
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of queue_i_1 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \uncalib_tdata[14]_i_2\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \uncalib_tdata_tmp[14]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \uncalib_tdata[16]_i_2\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \uncalib_tdata_tmp[16]_i_1\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of uncalib_tvalid_i_1 : label is "soft_lutpair10";
 begin
   data_valid <= \^data_valid\;
-  dout(15 downto 0) <= \^dout\(15 downto 0);
+  dout(17 downto 0) <= \^dout\(17 downto 0);
 Inst_xpm_fifo_async: entity work.design_1_AXI4Stream_CoarseExt_0_0_xpm_fifo_async
      port map (
       almost_empty => NLW_Inst_xpm_fifo_async_almost_empty_UNCONNECTED,
       almost_full => NLW_Inst_xpm_fifo_async_almost_full_UNCONNECTED,
       data_valid => \^data_valid\,
       dbiterr => NLW_Inst_xpm_fifo_async_dbiterr_UNCONNECTED,
-      din(15 downto 0) => din(15 downto 0),
-      dout(15 downto 0) => \^dout\(15 downto 0),
+      din(17 downto 0) => din(17 downto 0),
+      dout(17 downto 0) => \^dout\(17 downto 0),
       empty => NLW_Inst_xpm_fifo_async_empty_UNCONNECTED,
       full => NLW_Inst_xpm_fifo_async_full_UNCONNECTED,
       injectdbiterr => '0',
@@ -5301,27 +5320,27 @@ queue_i_1: unisim.vcomponents.LUT4
     )
         port map (
       I0 => queue_reg_1,
-      I1 => \^dout\(14),
-      I2 => \^dout\(9),
+      I1 => \^dout\(16),
+      I2 => \^dout\(11),
       I3 => \^data_valid\,
       O => queue_reg_0
     );
-\uncalib_tdata[14]_i_2\: unisim.vcomponents.LUT2
+\uncalib_tdata[16]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
-      I0 => \^dout\(9),
-      I1 => \^dout\(14),
+      I0 => \^dout\(11),
+      I1 => \^dout\(16),
       O => uncalib_tvalid111_out
     );
-\uncalib_tdata_tmp[14]_i_1\: unisim.vcomponents.LUT4
+\uncalib_tdata_tmp[16]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0080"
     )
         port map (
-      I0 => \^dout\(14),
-      I1 => \^dout\(9),
+      I0 => \^dout\(16),
+      I1 => \^dout\(11),
       I2 => \^data_valid\,
       I3 => reset_SYS,
       O => E(0)
@@ -5332,8 +5351,8 @@ uncalib_tvalid_i_1: unisim.vcomponents.LUT4
     )
         port map (
       I0 => queue_reg_1,
-      I1 => \^dout\(9),
-      I2 => \^dout\(14),
+      I1 => \^dout\(11),
+      I2 => \^dout\(16),
       I3 => \^data_valid\,
       O => queue_reg
     );
@@ -5345,27 +5364,25 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore is
   port (
     m00_axis_uncalib_tvalid : out STD_LOGIC;
-    m00_axis_uncalib_tdata : out STD_LOGIC_VECTOR ( 14 downto 0 );
+    m00_axis_uncalib_tdata : out STD_LOGIC_VECTOR ( 16 downto 0 );
     clk_TDC : in STD_LOGIC;
     clk_SYS : in STD_LOGIC;
     reset_SYS : in STD_LOGIC;
     reset_TDC : in STD_LOGIC;
     CoarseCounter_CTD : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axis_subint_tdata : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    s00_axis_subint_tdata : in STD_LOGIC_VECTOR ( 11 downto 0 );
     s00_axis_subint_tvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore : entity is "CoarseExtensionCore";
 end design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore is
-  signal Inst_FIFO_Synchronizer_n_18 : STD_LOGIC;
   signal Inst_FIFO_Synchronizer_n_20 : STD_LOGIC;
+  signal Inst_FIFO_Synchronizer_n_22 : STD_LOGIC;
   signal Inst_TreeComparator_n_0 : STD_LOGIC;
   signal Inst_TreeComparator_n_1 : STD_LOGIC;
   signal data_valid : STD_LOGIC;
   signal din0_n_0 : STD_LOGIC;
-  signal \din[9]_i_1_n_0\ : STD_LOGIC;
+  signal \din[11]_i_1_n_0\ : STD_LOGIC;
   signal \din_reg_n_0_[0]\ : STD_LOGIC;
   signal \din_reg_n_0_[10]\ : STD_LOGIC;
   signal \din_reg_n_0_[11]\ : STD_LOGIC;
@@ -5373,6 +5390,8 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore 
   signal \din_reg_n_0_[13]\ : STD_LOGIC;
   signal \din_reg_n_0_[14]\ : STD_LOGIC;
   signal \din_reg_n_0_[15]\ : STD_LOGIC;
+  signal \din_reg_n_0_[16]\ : STD_LOGIC;
+  signal \din_reg_n_0_[17]\ : STD_LOGIC;
   signal \din_reg_n_0_[1]\ : STD_LOGIC;
   signal \din_reg_n_0_[2]\ : STD_LOGIC;
   signal \din_reg_n_0_[3]\ : STD_LOGIC;
@@ -5382,8 +5401,8 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore 
   signal \din_reg_n_0_[7]\ : STD_LOGIC;
   signal \din_reg_n_0_[8]\ : STD_LOGIC;
   signal \din_reg_n_0_[9]\ : STD_LOGIC;
-  signal dout : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal \^m00_axis_uncalib_tdata\ : STD_LOGIC_VECTOR ( 14 downto 0 );
+  signal dout : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal \^m00_axis_uncalib_tdata\ : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal queue_reg_n_0 : STD_LOGIC;
   signal \rd_en__0\ : STD_LOGIC;
   signal rd_en_n_0 : STD_LOGIC;
@@ -5391,10 +5410,12 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore 
   signal \uncalib_tdata[10]_i_1_n_0\ : STD_LOGIC;
   signal \uncalib_tdata[11]_i_1_n_0\ : STD_LOGIC;
   signal \uncalib_tdata[12]_i_1_n_0\ : STD_LOGIC;
-  signal \uncalib_tdata[12]_i_2_n_0\ : STD_LOGIC;
   signal \uncalib_tdata[13]_i_1_n_0\ : STD_LOGIC;
   signal \uncalib_tdata[14]_i_1_n_0\ : STD_LOGIC;
-  signal \uncalib_tdata[14]_i_3_n_0\ : STD_LOGIC;
+  signal \uncalib_tdata[14]_i_2_n_0\ : STD_LOGIC;
+  signal \uncalib_tdata[15]_i_1_n_0\ : STD_LOGIC;
+  signal \uncalib_tdata[16]_i_1_n_0\ : STD_LOGIC;
+  signal \uncalib_tdata[16]_i_3_n_0\ : STD_LOGIC;
   signal \uncalib_tdata[1]_i_1_n_0\ : STD_LOGIC;
   signal \uncalib_tdata[2]_i_1_n_0\ : STD_LOGIC;
   signal \uncalib_tdata[3]_i_1_n_0\ : STD_LOGIC;
@@ -5404,7 +5425,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore 
   signal \uncalib_tdata[7]_i_1_n_0\ : STD_LOGIC;
   signal \uncalib_tdata[8]_i_1_n_0\ : STD_LOGIC;
   signal \uncalib_tdata[9]_i_1_n_0\ : STD_LOGIC;
-  signal uncalib_tdata_tmp : STD_LOGIC_VECTOR ( 14 downto 0 );
+  signal uncalib_tdata_tmp : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal uncalib_tdata_tmp0 : STD_LOGIC;
   signal uncalib_tvalid111_out : STD_LOGIC;
   signal wr_en : STD_LOGIC;
@@ -5413,7 +5434,9 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore 
   attribute SOFT_HLUTNM of \uncalib_tdata[0]_i_1\ : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of \uncalib_tdata[10]_i_1\ : label is "soft_lutpair18";
   attribute SOFT_HLUTNM of \uncalib_tdata[11]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \uncalib_tdata[14]_i_3\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \uncalib_tdata[12]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \uncalib_tdata[13]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \uncalib_tdata[16]_i_3\ : label is "soft_lutpair12";
   attribute SOFT_HLUTNM of \uncalib_tdata[1]_i_1\ : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of \uncalib_tdata[2]_i_1\ : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of \uncalib_tdata[3]_i_1\ : label is "soft_lutpair14";
@@ -5424,13 +5447,15 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_CoarseExtensionCore 
   attribute SOFT_HLUTNM of \uncalib_tdata[8]_i_1\ : label is "soft_lutpair17";
   attribute SOFT_HLUTNM of \uncalib_tdata[9]_i_1\ : label is "soft_lutpair17";
 begin
-  m00_axis_uncalib_tdata(14 downto 0) <= \^m00_axis_uncalib_tdata\(14 downto 0);
+  m00_axis_uncalib_tdata(16 downto 0) <= \^m00_axis_uncalib_tdata\(16 downto 0);
 Inst_FIFO_Synchronizer: entity work.design_1_AXI4Stream_CoarseExt_0_0_FIFO_Synchronizer
      port map (
       E(0) => uncalib_tdata_tmp0,
       clk_SYS => clk_SYS,
       clk_TDC => clk_TDC,
       data_valid => data_valid,
+      din(17) => \din_reg_n_0_[17]\,
+      din(16) => \din_reg_n_0_[16]\,
       din(15) => \din_reg_n_0_[15]\,
       din(14) => \din_reg_n_0_[14]\,
       din(13) => \din_reg_n_0_[13]\,
@@ -5447,9 +5472,9 @@ Inst_FIFO_Synchronizer: entity work.design_1_AXI4Stream_CoarseExt_0_0_FIFO_Synch
       din(2) => \din_reg_n_0_[2]\,
       din(1) => \din_reg_n_0_[1]\,
       din(0) => \din_reg_n_0_[0]\,
-      dout(15 downto 0) => dout(15 downto 0),
-      queue_reg => Inst_FIFO_Synchronizer_n_18,
-      queue_reg_0 => Inst_FIFO_Synchronizer_n_20,
+      dout(17 downto 0) => dout(17 downto 0),
+      queue_reg => Inst_FIFO_Synchronizer_n_20,
+      queue_reg_0 => Inst_FIFO_Synchronizer_n_22,
       queue_reg_1 => queue_reg_n_0,
       rd_en => \rd_en__0\,
       reset_SYS => reset_SYS,
@@ -5461,8 +5486,8 @@ Inst_TreeComparator: entity work.design_1_AXI4Stream_CoarseExt_0_0_TreeComparato
       CoarseCounter_CTD(3 downto 0) => CoarseCounter_CTD(3 downto 0),
       CompOut_EQ_reg => Inst_TreeComparator_n_0,
       clk_TDC => clk_TDC,
-      din(0) => \din_reg_n_0_[14]\,
-      \din_reg[14]\ => Inst_TreeComparator_n_1,
+      din(0) => \din_reg_n_0_[16]\,
+      \din_reg[16]\ => Inst_TreeComparator_n_1,
       reset_TDC => reset_TDC,
       s00_axis_subint_tvalid => s00_axis_subint_tvalid
     );
@@ -5475,15 +5500,15 @@ din0: unisim.vcomponents.LUT2
       I1 => reset_TDC,
       O => din0_n_0
     );
-\din[9]_i_1\: unisim.vcomponents.LUT3
+\din[11]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"E2"
     )
         port map (
       I0 => s00_axis_subint_tvalid,
       I1 => reset_TDC,
-      I2 => \din_reg_n_0_[9]\,
-      O => \din[9]_i_1_n_0\
+      I2 => \din_reg_n_0_[11]\,
+      O => \din[11]_i_1_n_0\
     );
 \din_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -5497,15 +5522,15 @@ din0: unisim.vcomponents.LUT2
      port map (
       C => clk_TDC,
       CE => din0_n_0,
-      D => CoarseCounter_CTD(0),
+      D => s00_axis_subint_tdata(10),
       Q => \din_reg_n_0_[10]\,
       R => '0'
     );
 \din_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => clk_TDC,
-      CE => din0_n_0,
-      D => CoarseCounter_CTD(1),
+      CE => '1',
+      D => \din[11]_i_1_n_0\,
       Q => \din_reg_n_0_[11]\,
       R => '0'
     );
@@ -5513,7 +5538,7 @@ din0: unisim.vcomponents.LUT2
      port map (
       C => clk_TDC,
       CE => din0_n_0,
-      D => CoarseCounter_CTD(2),
+      D => CoarseCounter_CTD(0),
       Q => \din_reg_n_0_[12]\,
       R => '0'
     );
@@ -5521,15 +5546,15 @@ din0: unisim.vcomponents.LUT2
      port map (
       C => clk_TDC,
       CE => din0_n_0,
-      D => CoarseCounter_CTD(3),
+      D => CoarseCounter_CTD(1),
       Q => \din_reg_n_0_[13]\,
       R => '0'
     );
 \din_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => clk_TDC,
-      CE => '1',
-      D => Inst_TreeComparator_n_1,
+      CE => din0_n_0,
+      D => CoarseCounter_CTD(2),
       Q => \din_reg_n_0_[14]\,
       R => '0'
     );
@@ -5537,8 +5562,24 @@ din0: unisim.vcomponents.LUT2
      port map (
       C => clk_TDC,
       CE => din0_n_0,
-      D => s00_axis_subint_tdata(9),
+      D => CoarseCounter_CTD(3),
       Q => \din_reg_n_0_[15]\,
+      R => '0'
+    );
+\din_reg[16]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_TDC,
+      CE => '1',
+      D => Inst_TreeComparator_n_1,
+      Q => \din_reg_n_0_[16]\,
+      R => '0'
+    );
+\din_reg[17]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_TDC,
+      CE => din0_n_0,
+      D => s00_axis_subint_tdata(11),
+      Q => \din_reg_n_0_[17]\,
       R => '0'
     );
 \din_reg[1]\: unisim.vcomponents.FDRE
@@ -5608,8 +5649,8 @@ din0: unisim.vcomponents.LUT2
 \din_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => clk_TDC,
-      CE => '1',
-      D => \din[9]_i_1_n_0\,
+      CE => din0_n_0,
+      D => s00_axis_subint_tdata(9),
       Q => \din_reg_n_0_[9]\,
       R => '0'
     );
@@ -5621,7 +5662,7 @@ queue_reg: unisim.vcomponents.FDCE
       C => clk_SYS,
       CE => '1',
       CLR => reset_SYS,
-      D => Inst_FIFO_Synchronizer_n_20,
+      D => Inst_FIFO_Synchronizer_n_22,
       Q => queue_reg_n_0
     );
 rd_en: unisim.vcomponents.LUT3
@@ -5629,8 +5670,8 @@ rd_en: unisim.vcomponents.LUT3
       INIT => X"7F"
     )
         port map (
-      I0 => dout(14),
-      I1 => dout(9),
+      I0 => dout(16),
+      I1 => dout(11),
       I2 => data_valid,
       O => rd_en_n_0
     );
@@ -5662,7 +5703,7 @@ rd_en_reg: unisim.vcomponents.FDCE
         port map (
       I0 => uncalib_tdata_tmp(10),
       I1 => queue_reg_n_0,
-      I2 => dout(11),
+      I2 => dout(10),
       O => \uncalib_tdata[10]_i_1_n_0\
     );
 \uncalib_tdata[11]_i_1\: unisim.vcomponents.LUT3
@@ -5675,19 +5716,7 @@ rd_en_reg: unisim.vcomponents.FDCE
       I2 => dout(12),
       O => \uncalib_tdata[11]_i_1_n_0\
     );
-\uncalib_tdata[12]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0000FF20"
-    )
-        port map (
-      I0 => data_valid,
-      I1 => dout(14),
-      I2 => dout(9),
-      I3 => queue_reg_n_0,
-      I4 => reset_SYS,
-      O => \uncalib_tdata[12]_i_1_n_0\
-    );
-\uncalib_tdata[12]_i_2\: unisim.vcomponents.LUT3
+\uncalib_tdata[12]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -5695,45 +5724,77 @@ rd_en_reg: unisim.vcomponents.FDCE
       I0 => uncalib_tdata_tmp(12),
       I1 => queue_reg_n_0,
       I2 => dout(13),
-      O => \uncalib_tdata[12]_i_2_n_0\
+      O => \uncalib_tdata[12]_i_1_n_0\
     );
-\uncalib_tdata[13]_i_1\: unisim.vcomponents.LUT6
+\uncalib_tdata[13]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"AAAAAAAAFFFF2E2A"
+      INIT => X"B8"
     )
         port map (
-      I0 => \^m00_axis_uncalib_tdata\(13),
-      I1 => data_valid,
+      I0 => uncalib_tdata_tmp(13),
+      I1 => queue_reg_n_0,
       I2 => dout(14),
-      I3 => dout(9),
-      I4 => queue_reg_n_0,
-      I5 => reset_SYS,
       O => \uncalib_tdata[13]_i_1_n_0\
     );
-\uncalib_tdata[14]_i_1\: unisim.vcomponents.LUT6
+\uncalib_tdata[14]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B888FFFFB8880000"
+      INIT => X"0000FF20"
+    )
+        port map (
+      I0 => data_valid,
+      I1 => dout(16),
+      I2 => dout(11),
+      I3 => queue_reg_n_0,
+      I4 => reset_SYS,
+      O => \uncalib_tdata[14]_i_1_n_0\
+    );
+\uncalib_tdata[14]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
     )
         port map (
       I0 => uncalib_tdata_tmp(14),
       I1 => queue_reg_n_0,
-      I2 => uncalib_tvalid111_out,
-      I3 => dout(15),
-      I4 => \uncalib_tdata[14]_i_3_n_0\,
-      I5 => \^m00_axis_uncalib_tdata\(14),
-      O => \uncalib_tdata[14]_i_1_n_0\
+      I2 => dout(15),
+      O => \uncalib_tdata[14]_i_2_n_0\
     );
-\uncalib_tdata[14]_i_3\: unisim.vcomponents.LUT5
+\uncalib_tdata[15]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAAFFFF2E2A"
+    )
+        port map (
+      I0 => \^m00_axis_uncalib_tdata\(15),
+      I1 => data_valid,
+      I2 => dout(16),
+      I3 => dout(11),
+      I4 => queue_reg_n_0,
+      I5 => reset_SYS,
+      O => \uncalib_tdata[15]_i_1_n_0\
+    );
+\uncalib_tdata[16]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B888FFFFB8880000"
+    )
+        port map (
+      I0 => uncalib_tdata_tmp(16),
+      I1 => queue_reg_n_0,
+      I2 => uncalib_tvalid111_out,
+      I3 => dout(17),
+      I4 => \uncalib_tdata[16]_i_3_n_0\,
+      I5 => \^m00_axis_uncalib_tdata\(16),
+      O => \uncalib_tdata[16]_i_1_n_0\
+    );
+\uncalib_tdata[16]_i_3\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"0000FFA8"
     )
         port map (
       I0 => data_valid,
-      I1 => dout(14),
-      I2 => dout(9),
+      I1 => dout(16),
+      I2 => dout(11),
       I3 => queue_reg_n_0,
       I4 => reset_SYS,
-      O => \uncalib_tdata[14]_i_3_n_0\
+      O => \uncalib_tdata[16]_i_3_n_0\
     );
 \uncalib_tdata[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -5822,13 +5883,13 @@ rd_en_reg: unisim.vcomponents.FDCE
         port map (
       I0 => uncalib_tdata_tmp(9),
       I1 => queue_reg_n_0,
-      I2 => dout(10),
+      I2 => dout(9),
       O => \uncalib_tdata[9]_i_1_n_0\
     );
 \uncalib_tdata_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[0]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(0),
       R => '0'
@@ -5836,7 +5897,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[10]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(10),
       R => '0'
@@ -5844,7 +5905,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[11]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(11),
       R => '0'
@@ -5852,15 +5913,15 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
-      D => \uncalib_tdata[12]_i_2_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
+      D => \uncalib_tdata[12]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(12),
       R => '0'
     );
 \uncalib_tdata_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => '1',
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[13]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(13),
       R => '0'
@@ -5868,15 +5929,31 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => '1',
-      D => \uncalib_tdata[14]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
+      D => \uncalib_tdata[14]_i_2_n_0\,
       Q => \^m00_axis_uncalib_tdata\(14),
+      R => '0'
+    );
+\uncalib_tdata_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_SYS,
+      CE => '1',
+      D => \uncalib_tdata[15]_i_1_n_0\,
+      Q => \^m00_axis_uncalib_tdata\(15),
+      R => '0'
+    );
+\uncalib_tdata_reg[16]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_SYS,
+      CE => '1',
+      D => \uncalib_tdata[16]_i_1_n_0\,
+      Q => \^m00_axis_uncalib_tdata\(16),
       R => '0'
     );
 \uncalib_tdata_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[1]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(1),
       R => '0'
@@ -5884,7 +5961,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[2]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(2),
       R => '0'
@@ -5892,7 +5969,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[3]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(3),
       R => '0'
@@ -5900,7 +5977,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[4]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(4),
       R => '0'
@@ -5908,7 +5985,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[5]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(5),
       R => '0'
@@ -5916,7 +5993,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[6]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(6),
       R => '0'
@@ -5924,7 +6001,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[7]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(7),
       R => '0'
@@ -5932,7 +6009,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[8]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(8),
       R => '0'
@@ -5940,7 +6017,7 @@ rd_en_reg: unisim.vcomponents.FDCE
 \uncalib_tdata_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
-      CE => \uncalib_tdata[12]_i_1_n_0\,
+      CE => \uncalib_tdata[14]_i_1_n_0\,
       D => \uncalib_tdata[9]_i_1_n_0\,
       Q => \^m00_axis_uncalib_tdata\(9),
       R => '0'
@@ -5957,7 +6034,7 @@ rd_en_reg: unisim.vcomponents.FDCE
      port map (
       C => clk_SYS,
       CE => uncalib_tdata_tmp0,
-      D => dout(11),
+      D => dout(10),
       Q => uncalib_tdata_tmp(10),
       R => '0'
     );
@@ -5977,12 +6054,28 @@ rd_en_reg: unisim.vcomponents.FDCE
       Q => uncalib_tdata_tmp(12),
       R => '0'
     );
+\uncalib_tdata_tmp_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_SYS,
+      CE => uncalib_tdata_tmp0,
+      D => dout(14),
+      Q => uncalib_tdata_tmp(13),
+      R => '0'
+    );
 \uncalib_tdata_tmp_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => clk_SYS,
       CE => uncalib_tdata_tmp0,
       D => dout(15),
       Q => uncalib_tdata_tmp(14),
+      R => '0'
+    );
+\uncalib_tdata_tmp_reg[16]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_SYS,
+      CE => uncalib_tdata_tmp0,
+      D => dout(17),
+      Q => uncalib_tdata_tmp(16),
       R => '0'
     );
 \uncalib_tdata_tmp_reg[1]\: unisim.vcomponents.FDRE
@@ -6053,7 +6146,7 @@ rd_en_reg: unisim.vcomponents.FDCE
      port map (
       C => clk_SYS,
       CE => uncalib_tdata_tmp0,
-      D => dout(10),
+      D => dout(9),
       Q => uncalib_tdata_tmp(9),
       R => '0'
     );
@@ -6062,7 +6155,7 @@ uncalib_tvalid_reg: unisim.vcomponents.FDCE
       C => clk_SYS,
       CE => '1',
       CLR => reset_SYS,
-      D => Inst_FIFO_Synchronizer_n_18,
+      D => Inst_FIFO_Synchronizer_n_20,
       Q => m00_axis_uncalib_tvalid
     );
 wr_en_reg: unisim.vcomponents.FDCE
@@ -6084,17 +6177,15 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCoreWrapper_CEC is
   port (
     m00_axis_uncalib_tvalid : out STD_LOGIC;
-    m00_axis_uncalib_tdata : out STD_LOGIC_VECTOR ( 14 downto 0 );
+    m00_axis_uncalib_tdata : out STD_LOGIC_VECTOR ( 16 downto 0 );
     clk_TDC : in STD_LOGIC;
     clk_SYS : in STD_LOGIC;
     reset_SYS : in STD_LOGIC;
     reset_TDC : in STD_LOGIC;
     CoarseCounter_CTD : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s00_axis_subint_tdata : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    s00_axis_subint_tdata : in STD_LOGIC_VECTOR ( 11 downto 0 );
     s00_axis_subint_tvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCoreWrapper_CEC : entity is "AXI4Stream_CoarseExtensionCoreWrapper_CEC";
 end design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCoreWrapper_CEC;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCoreWrapper_CEC is
@@ -6104,11 +6195,11 @@ Inst_CoarseExtensionCore: entity work.design_1_AXI4Stream_CoarseExt_0_0_CoarseEx
       CoarseCounter_CTD(3 downto 0) => CoarseCounter_CTD(3 downto 0),
       clk_SYS => clk_SYS,
       clk_TDC => clk_TDC,
-      m00_axis_uncalib_tdata(14 downto 0) => m00_axis_uncalib_tdata(14 downto 0),
+      m00_axis_uncalib_tdata(16 downto 0) => m00_axis_uncalib_tdata(16 downto 0),
       m00_axis_uncalib_tvalid => m00_axis_uncalib_tvalid,
       reset_SYS => reset_SYS,
       reset_TDC => reset_TDC,
-      s00_axis_subint_tdata(9 downto 0) => s00_axis_subint_tdata(9 downto 0),
+      s00_axis_subint_tdata(11 downto 0) => s00_axis_subint_tdata(11 downto 0),
       s00_axis_subint_tvalid => s00_axis_subint_tvalid
     );
 end STRUCTURE;
@@ -6126,16 +6217,16 @@ entity design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore is
     s00_axis_subint_tvalid : in STD_LOGIC;
     s00_axis_subint_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m00_axis_uncalib_tvalid : out STD_LOGIC;
-    m00_axis_uncalib_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    m00_axis_uncalib_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 )
   );
   attribute BIT_COARSE : integer;
   attribute BIT_COARSE of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is 4;
   attribute BIT_FID : integer;
   attribute BIT_FID of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is 2;
   attribute BIT_SUB_INT : integer;
-  attribute BIT_SUB_INT of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is 9;
+  attribute BIT_SUB_INT of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is 11;
   attribute BIT_UNCALIBRATED : integer;
-  attribute BIT_UNCALIBRATED of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is 9;
+  attribute BIT_UNCALIBRATED of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is 11;
   attribute CDC_SYNC_STAGES : integer;
   attribute CDC_SYNC_STAGES of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is 4;
   attribute CEC_COARSE_CNT_INIT : integer;
@@ -6156,18 +6247,22 @@ entity design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore is
   attribute MAX_INPUT_ENGINE_AND_PIPELINE_STAGE3 of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is 4;
   attribute MAX_NUM_BIT_EQ_PIPELINE_STAGE0 : integer;
   attribute MAX_NUM_BIT_EQ_PIPELINE_STAGE0 of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is "AXI4Stream_CoarseExtensionCore";
   attribute RELATED_CLOCKS : string;
   attribute RELATED_CLOCKS of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore : entity is "FALSE";
 end design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore is
   signal \<const0>\ : STD_LOGIC;
-  signal \^m00_axis_uncalib_tdata\ : STD_LOGIC_VECTOR ( 14 downto 0 );
+  signal \^m00_axis_uncalib_tdata\ : STD_LOGIC_VECTOR ( 16 downto 0 );
 begin
-  m00_axis_uncalib_tdata(15) <= \<const0>\;
-  m00_axis_uncalib_tdata(14 downto 0) <= \^m00_axis_uncalib_tdata\(14 downto 0);
+  m00_axis_uncalib_tdata(23) <= \<const0>\;
+  m00_axis_uncalib_tdata(22) <= \<const0>\;
+  m00_axis_uncalib_tdata(21) <= \<const0>\;
+  m00_axis_uncalib_tdata(20) <= \<const0>\;
+  m00_axis_uncalib_tdata(19) <= \<const0>\;
+  m00_axis_uncalib_tdata(18) <= \<const0>\;
+  m00_axis_uncalib_tdata(17) <= \<const0>\;
+  m00_axis_uncalib_tdata(16 downto 0) <= \^m00_axis_uncalib_tdata\(16 downto 0);
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
@@ -6177,11 +6272,11 @@ Inst_AXI4Stream_CoarseExtensionCoreWrapper_CEC: entity work.design_1_AXI4Stream_
       CoarseCounter_CTD(3 downto 0) => CoarseCounter_CTD(3 downto 0),
       clk_SYS => clk_SYS,
       clk_TDC => clk_TDC,
-      m00_axis_uncalib_tdata(14 downto 0) => \^m00_axis_uncalib_tdata\(14 downto 0),
+      m00_axis_uncalib_tdata(16 downto 0) => \^m00_axis_uncalib_tdata\(16 downto 0),
       m00_axis_uncalib_tvalid => m00_axis_uncalib_tvalid,
       reset_SYS => reset_SYS,
       reset_TDC => reset_TDC,
-      s00_axis_subint_tdata(9 downto 0) => s00_axis_subint_tdata(9 downto 0),
+      s00_axis_subint_tdata(11 downto 0) => s00_axis_subint_tdata(11 downto 0),
       s00_axis_subint_tvalid => s00_axis_subint_tvalid
     );
 end STRUCTURE;
@@ -6199,7 +6294,7 @@ entity design_1_AXI4Stream_CoarseExt_0_0 is
     s00_axis_subint_tvalid : in STD_LOGIC;
     s00_axis_subint_tdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m00_axis_uncalib_tvalid : out STD_LOGIC;
-    m00_axis_uncalib_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    m00_axis_uncalib_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_1_AXI4Stream_CoarseExt_0_0 : entity is true;
@@ -6215,16 +6310,16 @@ end design_1_AXI4Stream_CoarseExt_0_0;
 
 architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0 is
   signal \<const0>\ : STD_LOGIC;
-  signal \^m00_axis_uncalib_tdata\ : STD_LOGIC_VECTOR ( 14 downto 0 );
-  signal NLW_U0_m00_axis_uncalib_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 15 to 15 );
+  signal \^m00_axis_uncalib_tdata\ : STD_LOGIC_VECTOR ( 16 downto 0 );
+  signal NLW_U0_m00_axis_uncalib_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 23 downto 17 );
   attribute BIT_COARSE : integer;
   attribute BIT_COARSE of U0 : label is 4;
   attribute BIT_FID : integer;
   attribute BIT_FID of U0 : label is 2;
   attribute BIT_SUB_INT : integer;
-  attribute BIT_SUB_INT of U0 : label is 9;
+  attribute BIT_SUB_INT of U0 : label is 11;
   attribute BIT_UNCALIBRATED : integer;
-  attribute BIT_UNCALIBRATED of U0 : label is 9;
+  attribute BIT_UNCALIBRATED of U0 : label is 11;
   attribute CDC_SYNC_STAGES : integer;
   attribute CDC_SYNC_STAGES of U0 : label is 4;
   attribute CEC_COARSE_CNT_INIT : integer;
@@ -6254,7 +6349,7 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0 is
   attribute x_interface_info of clk_TDC : signal is "xilinx.com:signal:clock:1.0 clk_TDC CLK";
   attribute x_interface_parameter of clk_TDC : signal is "XIL_INTERFACENAME clk_TDC, ASSOCIATED_BUSIF S00_AXIS_SubInt:CoarseCounter_CTD, ASSOCIATED_RESET reset_TDC, FREQ_HZ 416666666, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, INSERT_VIP 0";
   attribute x_interface_info of m00_axis_uncalib_tvalid : signal is "xilinx.com:interface:axis:1.0 M00_AXIS_UnCalib TVALID";
-  attribute x_interface_parameter of m00_axis_uncalib_tvalid : signal is "XIL_INTERFACENAME M00_AXIS_UnCalib, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute x_interface_parameter of m00_axis_uncalib_tvalid : signal is "XIL_INTERFACENAME M00_AXIS_UnCalib, TDATA_NUM_BYTES 3, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute x_interface_info of reset_SYS : signal is "xilinx.com:signal:reset:1.0 reset_SYS RST";
   attribute x_interface_parameter of reset_SYS : signal is "XIL_INTERFACENAME reset_SYS, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   attribute x_interface_info of reset_TDC : signal is "xilinx.com:signal:reset:1.0 reset_TDC RST";
@@ -6266,8 +6361,14 @@ architecture STRUCTURE of design_1_AXI4Stream_CoarseExt_0_0 is
   attribute x_interface_info of m00_axis_uncalib_tdata : signal is "xilinx.com:interface:axis:1.0 M00_AXIS_UnCalib TDATA";
   attribute x_interface_info of s00_axis_subint_tdata : signal is "xilinx.com:interface:axis:1.0 S00_AXIS_SubInt TDATA";
 begin
-  m00_axis_uncalib_tdata(15) <= \<const0>\;
-  m00_axis_uncalib_tdata(14 downto 0) <= \^m00_axis_uncalib_tdata\(14 downto 0);
+  m00_axis_uncalib_tdata(23) <= \<const0>\;
+  m00_axis_uncalib_tdata(22) <= \<const0>\;
+  m00_axis_uncalib_tdata(21) <= \<const0>\;
+  m00_axis_uncalib_tdata(20) <= \<const0>\;
+  m00_axis_uncalib_tdata(19) <= \<const0>\;
+  m00_axis_uncalib_tdata(18) <= \<const0>\;
+  m00_axis_uncalib_tdata(17) <= \<const0>\;
+  m00_axis_uncalib_tdata(16 downto 0) <= \^m00_axis_uncalib_tdata\(16 downto 0);
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
@@ -6277,13 +6378,13 @@ U0: entity work.design_1_AXI4Stream_CoarseExt_0_0_AXI4Stream_CoarseExtensionCore
       CoarseCounter_CTD(3 downto 0) => CoarseCounter_CTD(3 downto 0),
       clk_SYS => clk_SYS,
       clk_TDC => clk_TDC,
-      m00_axis_uncalib_tdata(15) => NLW_U0_m00_axis_uncalib_tdata_UNCONNECTED(15),
-      m00_axis_uncalib_tdata(14 downto 0) => \^m00_axis_uncalib_tdata\(14 downto 0),
+      m00_axis_uncalib_tdata(23 downto 17) => NLW_U0_m00_axis_uncalib_tdata_UNCONNECTED(23 downto 17),
+      m00_axis_uncalib_tdata(16 downto 0) => \^m00_axis_uncalib_tdata\(16 downto 0),
       m00_axis_uncalib_tvalid => m00_axis_uncalib_tvalid,
       reset_SYS => reset_SYS,
       reset_TDC => reset_TDC,
-      s00_axis_subint_tdata(15 downto 10) => B"000000",
-      s00_axis_subint_tdata(9 downto 0) => s00_axis_subint_tdata(9 downto 0),
+      s00_axis_subint_tdata(15 downto 12) => B"0000",
+      s00_axis_subint_tdata(11 downto 0) => s00_axis_subint_tdata(11 downto 0),
       s00_axis_subint_tvalid => s00_axis_subint_tvalid
     );
 end STRUCTURE;

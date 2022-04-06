@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Mar 28 11:31:37 2022
-# Process ID: 101697
+# Start of session at: Wed Apr  6 10:33:23 2022
+# Process ID: 259511
 # Current directory: /home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_0_synth_1
 # Command line: vivado -log design_1_AXI4Stream_DSP_TDC_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_AXI4Stream_DSP_TDC_0_0.tcl
 # Log file: /home/mconsonni/Desktop/Tesi/Projects/Setup-DSP/DSP-TDC Setup.runs/design_1_AXI4Stream_DSP_TDC_0_0_synth_1/design_1_AXI4Stream_DSP_TDC_0_0.vds

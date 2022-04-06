@@ -14,5 +14,5 @@ WARNING: [Common 17-1361] You have specified a new message control rule that is 
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mconsonni/Utility_Ip_Core'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_AXI4Stream_DSP_TDC_0_2, cache-ID = 95274a3b8711f6d9.
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 28 11:31:36 2022...
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_AXI4Stream_DSP_TDC_0_2, cache-ID = 56ef1f6d5d1cbe55.
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  6 10:34:30 2022...

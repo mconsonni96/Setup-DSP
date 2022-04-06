@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
---Date        : Mon Mar 28 11:49:43 2022
+--Date        : Wed Apr  6 10:33:00 2022
 --Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -25,6 +25,8 @@ entity design_1_wrapper is
     FT_245_EN_BUS_tri_o : out STD_LOGIC;
     I2C_BUS_scl_io : inout STD_LOGIC;
     I2C_BUS_sda_io : inout STD_LOGIC;
+    LED_G_BUS_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    LED_R_BUS_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
     USB_UART_BUS_EN_tri_o : out STD_LOGIC;
     ch1_diff_ch_n : in STD_LOGIC;
     ch1_diff_ch_p : in STD_LOGIC;
@@ -44,18 +46,10 @@ architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
     ftdi_clock : in STD_LOGIC;
-    sys_diff_clock_clk_n : in STD_LOGIC;
-    sys_diff_clock_clk_p : in STD_LOGIC;
-    FRONT_GREEN_POWER_LED_tri_o : out STD_LOGIC;
-    ch2_diff_ch_p : in STD_LOGIC;
-    ch2_diff_ch_n : in STD_LOGIC;
-    I2C_BUS_scl_i : in STD_LOGIC;
-    I2C_BUS_scl_o : out STD_LOGIC;
-    I2C_BUS_scl_t : out STD_LOGIC;
-    I2C_BUS_sda_i : in STD_LOGIC;
-    I2C_BUS_sda_o : out STD_LOGIC;
-    I2C_BUS_sda_t : out STD_LOGIC;
+    LED_G_BUS_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
     DAC_RESETN_tri_o : out STD_LOGIC;
+    ch1_diff_ch_p : in STD_LOGIC;
+    ch1_diff_ch_n : in STD_LOGIC;
     FT_245_EN_BUS_tri_o : out STD_LOGIC;
     sync_diff_ch_p : in STD_LOGIC;
     sync_diff_ch_n : in STD_LOGIC;
@@ -69,10 +63,20 @@ architecture STRUCTURE of design_1_wrapper is
     FT245_data_t : out STD_LOGIC_VECTOR ( 7 downto 0 );
     FT245_wr : out STD_LOGIC;
     FT245_data_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    ch1_diff_ch_p : in STD_LOGIC;
-    ch1_diff_ch_n : in STD_LOGIC;
+    ch2_diff_ch_p : in STD_LOGIC;
+    ch2_diff_ch_n : in STD_LOGIC;
     tdc_diff_clock_clk_p : in STD_LOGIC;
-    tdc_diff_clock_clk_n : in STD_LOGIC
+    tdc_diff_clock_clk_n : in STD_LOGIC;
+    sys_diff_clock_clk_n : in STD_LOGIC;
+    sys_diff_clock_clk_p : in STD_LOGIC;
+    FRONT_GREEN_POWER_LED_tri_o : out STD_LOGIC;
+    LED_R_BUS_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    I2C_BUS_scl_i : in STD_LOGIC;
+    I2C_BUS_scl_o : out STD_LOGIC;
+    I2C_BUS_scl_t : out STD_LOGIC;
+    I2C_BUS_sda_i : in STD_LOGIC;
+    I2C_BUS_sda_o : out STD_LOGIC;
+    I2C_BUS_sda_t : out STD_LOGIC
   );
   end component design_1;
   component IOBUF is
@@ -233,6 +237,8 @@ design_1_i: component design_1
       I2C_BUS_sda_i => I2C_BUS_sda_i,
       I2C_BUS_sda_o => I2C_BUS_sda_o,
       I2C_BUS_sda_t => I2C_BUS_sda_t,
+      LED_G_BUS_tri_o(2 downto 0) => LED_G_BUS_tri_o(2 downto 0),
+      LED_R_BUS_tri_o(2 downto 0) => LED_R_BUS_tri_o(2 downto 0),
       USB_UART_BUS_EN_tri_o => USB_UART_BUS_EN_tri_o,
       ch1_diff_ch_n => ch1_diff_ch_n,
       ch1_diff_ch_p => ch1_diff_ch_p,

@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Tue Mar 22 09:25:56 2022
+// Date        : Tue Mar 29 09:08:25 2022
 // Host        : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top design_1_AXI4Stream_CoarseExt_0_2 -prefix
 //               design_1_AXI4Stream_CoarseExt_0_2_ design_1_AXI4Stream_CoarseExt_0_0_sim_netlist.v
@@ -12,8 +12,8 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* BIT_COARSE = "4" *) (* BIT_FID = "2" *) (* BIT_SUB_INT = "9" *) 
-(* BIT_UNCALIBRATED = "9" *) (* CDC_SYNC_STAGES = "4" *) (* CEC_COARSE_CNT_INIT = "0" *) 
+(* BIT_COARSE = "4" *) (* BIT_FID = "2" *) (* BIT_SUB_INT = "11" *) 
+(* BIT_UNCALIBRATED = "11" *) (* CDC_SYNC_STAGES = "4" *) (* CEC_COARSE_CNT_INIT = "0" *) 
 (* CEC_VS_CTD_COUNTER = "CTD" *) (* FIFO_MEMORY_TYPE = "distributed" *) (* FIFO_WRITE_DEPTH = "16" *) 
 (* INTERNAL_OVERFLOW_CNT = "FALSE" *) (* MAX_INPUT_ENGINE_AND_PIPELINE_STAGE1 = "4" *) (* MAX_INPUT_ENGINE_AND_PIPELINE_STAGE2 = "4" *) 
 (* MAX_INPUT_ENGINE_AND_PIPELINE_STAGE3 = "4" *) (* MAX_NUM_BIT_EQ_PIPELINE_STAGE0 = "4" *) (* RELATED_CLOCKS = "FALSE" *) 
@@ -35,21 +35,27 @@ module design_1_AXI4Stream_CoarseExt_0_2_AXI4Stream_CoarseExtensionCore
   input s00_axis_subint_tvalid;
   input [15:0]s00_axis_subint_tdata;
   output m00_axis_uncalib_tvalid;
-  output [15:0]m00_axis_uncalib_tdata;
+  output [23:0]m00_axis_uncalib_tdata;
 
   wire \<const0> ;
   wire [3:0]CoarseCounter_CTD;
   wire clk_SYS;
   wire clk_TDC;
-  wire [14:0]\^m00_axis_uncalib_tdata ;
+  wire [16:0]\^m00_axis_uncalib_tdata ;
   wire m00_axis_uncalib_tvalid;
   wire reset_SYS;
   wire reset_TDC;
   wire [15:0]s00_axis_subint_tdata;
   wire s00_axis_subint_tvalid;
 
-  assign m00_axis_uncalib_tdata[15] = \<const0> ;
-  assign m00_axis_uncalib_tdata[14:0] = \^m00_axis_uncalib_tdata [14:0];
+  assign m00_axis_uncalib_tdata[23] = \<const0> ;
+  assign m00_axis_uncalib_tdata[22] = \<const0> ;
+  assign m00_axis_uncalib_tdata[21] = \<const0> ;
+  assign m00_axis_uncalib_tdata[20] = \<const0> ;
+  assign m00_axis_uncalib_tdata[19] = \<const0> ;
+  assign m00_axis_uncalib_tdata[18] = \<const0> ;
+  assign m00_axis_uncalib_tdata[17] = \<const0> ;
+  assign m00_axis_uncalib_tdata[16:0] = \^m00_axis_uncalib_tdata [16:0];
   GND GND
        (.G(\<const0> ));
   design_1_AXI4Stream_CoarseExt_0_2_AXI4Stream_CoarseExtensionCoreWrapper_CEC Inst_AXI4Stream_CoarseExtensionCoreWrapper_CEC
@@ -60,7 +66,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_AXI4Stream_CoarseExtensionCore
         .m00_axis_uncalib_tvalid(m00_axis_uncalib_tvalid),
         .reset_SYS(reset_SYS),
         .reset_TDC(reset_TDC),
-        .s00_axis_subint_tdata(s00_axis_subint_tdata[9:0]),
+        .s00_axis_subint_tdata(s00_axis_subint_tdata[11:0]),
         .s00_axis_subint_tvalid(s00_axis_subint_tvalid));
 endmodule
 
@@ -75,23 +81,23 @@ module design_1_AXI4Stream_CoarseExt_0_2_AXI4Stream_CoarseExtensionCoreWrapper_C
     s00_axis_subint_tdata,
     s00_axis_subint_tvalid);
   output m00_axis_uncalib_tvalid;
-  output [14:0]m00_axis_uncalib_tdata;
+  output [16:0]m00_axis_uncalib_tdata;
   input clk_TDC;
   input clk_SYS;
   input reset_SYS;
   input reset_TDC;
   input [3:0]CoarseCounter_CTD;
-  input [9:0]s00_axis_subint_tdata;
+  input [11:0]s00_axis_subint_tdata;
   input s00_axis_subint_tvalid;
 
   wire [3:0]CoarseCounter_CTD;
   wire clk_SYS;
   wire clk_TDC;
-  wire [14:0]m00_axis_uncalib_tdata;
+  wire [16:0]m00_axis_uncalib_tdata;
   wire m00_axis_uncalib_tvalid;
   wire reset_SYS;
   wire reset_TDC;
-  wire [9:0]s00_axis_subint_tdata;
+  wire [11:0]s00_axis_subint_tdata;
   wire s00_axis_subint_tvalid;
 
   design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore Inst_CoarseExtensionCore
@@ -117,25 +123,25 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
     s00_axis_subint_tdata,
     s00_axis_subint_tvalid);
   output m00_axis_uncalib_tvalid;
-  output [14:0]m00_axis_uncalib_tdata;
+  output [16:0]m00_axis_uncalib_tdata;
   input clk_TDC;
   input clk_SYS;
   input reset_SYS;
   input reset_TDC;
   input [3:0]CoarseCounter_CTD;
-  input [9:0]s00_axis_subint_tdata;
+  input [11:0]s00_axis_subint_tdata;
   input s00_axis_subint_tvalid;
 
   wire [3:0]CoarseCounter_CTD;
-  wire Inst_FIFO_Synchronizer_n_18;
   wire Inst_FIFO_Synchronizer_n_20;
+  wire Inst_FIFO_Synchronizer_n_22;
   wire Inst_TreeComparator_n_0;
   wire Inst_TreeComparator_n_1;
   wire clk_SYS;
   wire clk_TDC;
   wire data_valid;
   wire din0_n_0;
-  wire \din[9]_i_1_n_0 ;
+  wire \din[11]_i_1_n_0 ;
   wire \din_reg_n_0_[0] ;
   wire \din_reg_n_0_[10] ;
   wire \din_reg_n_0_[11] ;
@@ -143,6 +149,8 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
   wire \din_reg_n_0_[13] ;
   wire \din_reg_n_0_[14] ;
   wire \din_reg_n_0_[15] ;
+  wire \din_reg_n_0_[16] ;
+  wire \din_reg_n_0_[17] ;
   wire \din_reg_n_0_[1] ;
   wire \din_reg_n_0_[2] ;
   wire \din_reg_n_0_[3] ;
@@ -152,24 +160,26 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
   wire \din_reg_n_0_[7] ;
   wire \din_reg_n_0_[8] ;
   wire \din_reg_n_0_[9] ;
-  wire [15:0]dout;
-  wire [14:0]m00_axis_uncalib_tdata;
+  wire [17:0]dout;
+  wire [16:0]m00_axis_uncalib_tdata;
   wire m00_axis_uncalib_tvalid;
   wire queue_reg_n_0;
   wire rd_en__0;
   wire rd_en_n_0;
   wire reset_SYS;
   wire reset_TDC;
-  wire [9:0]s00_axis_subint_tdata;
+  wire [11:0]s00_axis_subint_tdata;
   wire s00_axis_subint_tvalid;
   wire \uncalib_tdata[0]_i_1_n_0 ;
   wire \uncalib_tdata[10]_i_1_n_0 ;
   wire \uncalib_tdata[11]_i_1_n_0 ;
   wire \uncalib_tdata[12]_i_1_n_0 ;
-  wire \uncalib_tdata[12]_i_2_n_0 ;
   wire \uncalib_tdata[13]_i_1_n_0 ;
   wire \uncalib_tdata[14]_i_1_n_0 ;
-  wire \uncalib_tdata[14]_i_3_n_0 ;
+  wire \uncalib_tdata[14]_i_2_n_0 ;
+  wire \uncalib_tdata[15]_i_1_n_0 ;
+  wire \uncalib_tdata[16]_i_1_n_0 ;
+  wire \uncalib_tdata[16]_i_3_n_0 ;
   wire \uncalib_tdata[1]_i_1_n_0 ;
   wire \uncalib_tdata[2]_i_1_n_0 ;
   wire \uncalib_tdata[3]_i_1_n_0 ;
@@ -179,7 +189,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
   wire \uncalib_tdata[7]_i_1_n_0 ;
   wire \uncalib_tdata[8]_i_1_n_0 ;
   wire \uncalib_tdata[9]_i_1_n_0 ;
-  wire [14:0]uncalib_tdata_tmp;
+  wire [16:0]uncalib_tdata_tmp;
   wire uncalib_tdata_tmp0;
   wire uncalib_tvalid111_out;
   wire wr_en;
@@ -189,10 +199,10 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
         .clk_SYS(clk_SYS),
         .clk_TDC(clk_TDC),
         .data_valid(data_valid),
-        .din({\din_reg_n_0_[15] ,\din_reg_n_0_[14] ,\din_reg_n_0_[13] ,\din_reg_n_0_[12] ,\din_reg_n_0_[11] ,\din_reg_n_0_[10] ,\din_reg_n_0_[9] ,\din_reg_n_0_[8] ,\din_reg_n_0_[7] ,\din_reg_n_0_[6] ,\din_reg_n_0_[5] ,\din_reg_n_0_[4] ,\din_reg_n_0_[3] ,\din_reg_n_0_[2] ,\din_reg_n_0_[1] ,\din_reg_n_0_[0] }),
+        .din({\din_reg_n_0_[17] ,\din_reg_n_0_[16] ,\din_reg_n_0_[15] ,\din_reg_n_0_[14] ,\din_reg_n_0_[13] ,\din_reg_n_0_[12] ,\din_reg_n_0_[11] ,\din_reg_n_0_[10] ,\din_reg_n_0_[9] ,\din_reg_n_0_[8] ,\din_reg_n_0_[7] ,\din_reg_n_0_[6] ,\din_reg_n_0_[5] ,\din_reg_n_0_[4] ,\din_reg_n_0_[3] ,\din_reg_n_0_[2] ,\din_reg_n_0_[1] ,\din_reg_n_0_[0] }),
         .dout(dout),
-        .queue_reg(Inst_FIFO_Synchronizer_n_18),
-        .queue_reg_0(Inst_FIFO_Synchronizer_n_20),
+        .queue_reg(Inst_FIFO_Synchronizer_n_20),
+        .queue_reg_0(Inst_FIFO_Synchronizer_n_22),
         .queue_reg_1(queue_reg_n_0),
         .rd_en(rd_en__0),
         .reset_SYS(reset_SYS),
@@ -202,8 +212,8 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
        (.CoarseCounter_CTD(CoarseCounter_CTD),
         .CompOut_EQ_reg(Inst_TreeComparator_n_0),
         .clk_TDC(clk_TDC),
-        .din(\din_reg_n_0_[14] ),
-        .\din_reg[14] (Inst_TreeComparator_n_1),
+        .din(\din_reg_n_0_[16] ),
+        .\din_reg[16] (Inst_TreeComparator_n_1),
         .reset_TDC(reset_TDC),
         .s00_axis_subint_tvalid(s00_axis_subint_tvalid));
   LUT2 #(
@@ -214,11 +224,11 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
         .O(din0_n_0));
   LUT3 #(
     .INIT(8'hE2)) 
-    \din[9]_i_1 
+    \din[11]_i_1 
        (.I0(s00_axis_subint_tvalid),
         .I1(reset_TDC),
-        .I2(\din_reg_n_0_[9] ),
-        .O(\din[9]_i_1_n_0 ));
+        .I2(\din_reg_n_0_[11] ),
+        .O(\din[11]_i_1_n_0 ));
   FDRE \din_reg[0] 
        (.C(clk_TDC),
         .CE(din0_n_0),
@@ -228,38 +238,50 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
   FDRE \din_reg[10] 
        (.C(clk_TDC),
         .CE(din0_n_0),
-        .D(CoarseCounter_CTD[0]),
+        .D(s00_axis_subint_tdata[10]),
         .Q(\din_reg_n_0_[10] ),
         .R(1'b0));
   FDRE \din_reg[11] 
        (.C(clk_TDC),
-        .CE(din0_n_0),
-        .D(CoarseCounter_CTD[1]),
+        .CE(1'b1),
+        .D(\din[11]_i_1_n_0 ),
         .Q(\din_reg_n_0_[11] ),
         .R(1'b0));
   FDRE \din_reg[12] 
        (.C(clk_TDC),
         .CE(din0_n_0),
-        .D(CoarseCounter_CTD[2]),
+        .D(CoarseCounter_CTD[0]),
         .Q(\din_reg_n_0_[12] ),
         .R(1'b0));
   FDRE \din_reg[13] 
        (.C(clk_TDC),
         .CE(din0_n_0),
-        .D(CoarseCounter_CTD[3]),
+        .D(CoarseCounter_CTD[1]),
         .Q(\din_reg_n_0_[13] ),
         .R(1'b0));
   FDRE \din_reg[14] 
        (.C(clk_TDC),
-        .CE(1'b1),
-        .D(Inst_TreeComparator_n_1),
+        .CE(din0_n_0),
+        .D(CoarseCounter_CTD[2]),
         .Q(\din_reg_n_0_[14] ),
         .R(1'b0));
   FDRE \din_reg[15] 
        (.C(clk_TDC),
         .CE(din0_n_0),
-        .D(s00_axis_subint_tdata[9]),
+        .D(CoarseCounter_CTD[3]),
         .Q(\din_reg_n_0_[15] ),
+        .R(1'b0));
+  FDRE \din_reg[16] 
+       (.C(clk_TDC),
+        .CE(1'b1),
+        .D(Inst_TreeComparator_n_1),
+        .Q(\din_reg_n_0_[16] ),
+        .R(1'b0));
+  FDRE \din_reg[17] 
+       (.C(clk_TDC),
+        .CE(din0_n_0),
+        .D(s00_axis_subint_tdata[11]),
+        .Q(\din_reg_n_0_[17] ),
         .R(1'b0));
   FDRE \din_reg[1] 
        (.C(clk_TDC),
@@ -311,8 +333,8 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
         .R(1'b0));
   FDRE \din_reg[9] 
        (.C(clk_TDC),
-        .CE(1'b1),
-        .D(\din[9]_i_1_n_0 ),
+        .CE(din0_n_0),
+        .D(s00_axis_subint_tdata[9]),
         .Q(\din_reg_n_0_[9] ),
         .R(1'b0));
   FDCE #(
@@ -321,14 +343,14 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
        (.C(clk_SYS),
         .CE(1'b1),
         .CLR(reset_SYS),
-        .D(Inst_FIFO_Synchronizer_n_20),
+        .D(Inst_FIFO_Synchronizer_n_22),
         .Q(queue_reg_n_0));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     rd_en
-       (.I0(dout[14]),
-        .I1(dout[9]),
+       (.I0(dout[16]),
+        .I1(dout[11]),
         .I2(data_valid),
         .O(rd_en_n_0));
   FDCE #(
@@ -353,7 +375,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
     \uncalib_tdata[10]_i_1 
        (.I0(uncalib_tdata_tmp[10]),
         .I1(queue_reg_n_0),
-        .I2(dout[11]),
+        .I2(dout[10]),
         .O(\uncalib_tdata[10]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
@@ -363,52 +385,68 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
         .I1(queue_reg_n_0),
         .I2(dout[12]),
         .O(\uncalib_tdata[11]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h0000FF20)) 
-    \uncalib_tdata[12]_i_1 
-       (.I0(data_valid),
-        .I1(dout[14]),
-        .I2(dout[9]),
-        .I3(queue_reg_n_0),
-        .I4(reset_SYS),
-        .O(\uncalib_tdata[12]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \uncalib_tdata[12]_i_2 
+    \uncalib_tdata[12]_i_1 
        (.I0(uncalib_tdata_tmp[12]),
         .I1(queue_reg_n_0),
         .I2(dout[13]),
-        .O(\uncalib_tdata[12]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAFFFF2E2A)) 
+        .O(\uncalib_tdata[12]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \uncalib_tdata[13]_i_1 
-       (.I0(m00_axis_uncalib_tdata[13]),
-        .I1(data_valid),
+       (.I0(uncalib_tdata_tmp[13]),
+        .I1(queue_reg_n_0),
         .I2(dout[14]),
-        .I3(dout[9]),
-        .I4(queue_reg_n_0),
-        .I5(reset_SYS),
         .O(\uncalib_tdata[13]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hB888FFFFB8880000)) 
+  LUT5 #(
+    .INIT(32'h0000FF20)) 
     \uncalib_tdata[14]_i_1 
+       (.I0(data_valid),
+        .I1(dout[16]),
+        .I2(dout[11]),
+        .I3(queue_reg_n_0),
+        .I4(reset_SYS),
+        .O(\uncalib_tdata[14]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \uncalib_tdata[14]_i_2 
        (.I0(uncalib_tdata_tmp[14]),
         .I1(queue_reg_n_0),
+        .I2(dout[15]),
+        .O(\uncalib_tdata[14]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAAAAAFFFF2E2A)) 
+    \uncalib_tdata[15]_i_1 
+       (.I0(m00_axis_uncalib_tdata[15]),
+        .I1(data_valid),
+        .I2(dout[16]),
+        .I3(dout[11]),
+        .I4(queue_reg_n_0),
+        .I5(reset_SYS),
+        .O(\uncalib_tdata[15]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hB888FFFFB8880000)) 
+    \uncalib_tdata[16]_i_1 
+       (.I0(uncalib_tdata_tmp[16]),
+        .I1(queue_reg_n_0),
         .I2(uncalib_tvalid111_out),
-        .I3(dout[15]),
-        .I4(\uncalib_tdata[14]_i_3_n_0 ),
-        .I5(m00_axis_uncalib_tdata[14]),
-        .O(\uncalib_tdata[14]_i_1_n_0 ));
+        .I3(dout[17]),
+        .I4(\uncalib_tdata[16]_i_3_n_0 ),
+        .I5(m00_axis_uncalib_tdata[16]),
+        .O(\uncalib_tdata[16]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'h0000FFA8)) 
-    \uncalib_tdata[14]_i_3 
+    \uncalib_tdata[16]_i_3 
        (.I0(data_valid),
-        .I1(dout[14]),
-        .I2(dout[9]),
+        .I1(dout[16]),
+        .I2(dout[11]),
         .I3(queue_reg_n_0),
         .I4(reset_SYS),
-        .O(\uncalib_tdata[14]_i_3_n_0 ));
+        .O(\uncalib_tdata[16]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hB8)) 
@@ -479,95 +517,107 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
     \uncalib_tdata[9]_i_1 
        (.I0(uncalib_tdata_tmp[9]),
         .I1(queue_reg_n_0),
-        .I2(dout[10]),
+        .I2(dout[9]),
         .O(\uncalib_tdata[9]_i_1_n_0 ));
   FDRE \uncalib_tdata_reg[0] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[0]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[0]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[10] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[10]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[10]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[11] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[11]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[11]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[12] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
-        .D(\uncalib_tdata[12]_i_2_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
+        .D(\uncalib_tdata[12]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[12]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[13] 
        (.C(clk_SYS),
-        .CE(1'b1),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[13]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[13]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[14] 
        (.C(clk_SYS),
-        .CE(1'b1),
-        .D(\uncalib_tdata[14]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
+        .D(\uncalib_tdata[14]_i_2_n_0 ),
         .Q(m00_axis_uncalib_tdata[14]),
+        .R(1'b0));
+  FDRE \uncalib_tdata_reg[15] 
+       (.C(clk_SYS),
+        .CE(1'b1),
+        .D(\uncalib_tdata[15]_i_1_n_0 ),
+        .Q(m00_axis_uncalib_tdata[15]),
+        .R(1'b0));
+  FDRE \uncalib_tdata_reg[16] 
+       (.C(clk_SYS),
+        .CE(1'b1),
+        .D(\uncalib_tdata[16]_i_1_n_0 ),
+        .Q(m00_axis_uncalib_tdata[16]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[1] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[1]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[1]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[2] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[2]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[2]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[3] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[3]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[3]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[4] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[4]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[4]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[5] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[5]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[5]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[6] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[6]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[6]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[7] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[7]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[7]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[8] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[8]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[8]),
         .R(1'b0));
   FDRE \uncalib_tdata_reg[9] 
        (.C(clk_SYS),
-        .CE(\uncalib_tdata[12]_i_1_n_0 ),
+        .CE(\uncalib_tdata[14]_i_1_n_0 ),
         .D(\uncalib_tdata[9]_i_1_n_0 ),
         .Q(m00_axis_uncalib_tdata[9]),
         .R(1'b0));
@@ -580,7 +630,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
   FDRE \uncalib_tdata_tmp_reg[10] 
        (.C(clk_SYS),
         .CE(uncalib_tdata_tmp0),
-        .D(dout[11]),
+        .D(dout[10]),
         .Q(uncalib_tdata_tmp[10]),
         .R(1'b0));
   FDRE \uncalib_tdata_tmp_reg[11] 
@@ -595,11 +645,23 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
         .D(dout[13]),
         .Q(uncalib_tdata_tmp[12]),
         .R(1'b0));
+  FDRE \uncalib_tdata_tmp_reg[13] 
+       (.C(clk_SYS),
+        .CE(uncalib_tdata_tmp0),
+        .D(dout[14]),
+        .Q(uncalib_tdata_tmp[13]),
+        .R(1'b0));
   FDRE \uncalib_tdata_tmp_reg[14] 
        (.C(clk_SYS),
         .CE(uncalib_tdata_tmp0),
         .D(dout[15]),
         .Q(uncalib_tdata_tmp[14]),
+        .R(1'b0));
+  FDRE \uncalib_tdata_tmp_reg[16] 
+       (.C(clk_SYS),
+        .CE(uncalib_tdata_tmp0),
+        .D(dout[17]),
+        .Q(uncalib_tdata_tmp[16]),
         .R(1'b0));
   FDRE \uncalib_tdata_tmp_reg[1] 
        (.C(clk_SYS),
@@ -652,14 +714,14 @@ module design_1_AXI4Stream_CoarseExt_0_2_CoarseExtensionCore
   FDRE \uncalib_tdata_tmp_reg[9] 
        (.C(clk_SYS),
         .CE(uncalib_tdata_tmp0),
-        .D(dout[10]),
+        .D(dout[9]),
         .Q(uncalib_tdata_tmp[9]),
         .R(1'b0));
   FDCE uncalib_tvalid_reg
        (.C(clk_SYS),
         .CE(1'b1),
         .CLR(reset_SYS),
-        .D(Inst_FIFO_Synchronizer_n_18),
+        .D(Inst_FIFO_Synchronizer_n_20),
         .Q(m00_axis_uncalib_tvalid));
   FDCE #(
     .INIT(1'b0)) 
@@ -673,14 +735,14 @@ endmodule
 
 module design_1_AXI4Stream_CoarseExt_0_2_Engine_EQ_TC
    (CompOut_EQ_reg_0,
-    \din_reg[14] ,
+    \din_reg[16] ,
     CoarseCounter_CTD,
     clk_TDC,
     reset_TDC,
     s00_axis_subint_tvalid,
     din);
   output CompOut_EQ_reg_0;
-  output \din_reg[14] ;
+  output \din_reg[16] ;
   input [3:0]CoarseCounter_CTD;
   input clk_TDC;
   input reset_TDC;
@@ -692,7 +754,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_Engine_EQ_TC
   wire Equality_check;
   wire clk_TDC;
   wire [0:0]din;
-  wire \din_reg[14] ;
+  wire \din_reg[16] ;
   wire p_0_in;
   wire reset_TDC;
   wire s00_axis_subint_tvalid;
@@ -713,11 +775,11 @@ module design_1_AXI4Stream_CoarseExt_0_2_Engine_EQ_TC
         .Q(Equality_check));
   LUT3 #(
     .INIT(8'hB8)) 
-    \din[14]_i_1 
+    \din[16]_i_1 
        (.I0(din),
         .I1(reset_TDC),
         .I2(Equality_check),
-        .O(\din_reg[14] ));
+        .O(\din_reg[16] ));
   LUT2 #(
     .INIT(4'hE)) 
     wr_en_i_1
@@ -740,7 +802,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_FIFO_Synchronizer
     rd_en,
     reset_SYS,
     queue_reg_1);
-  output [15:0]dout;
+  output [17:0]dout;
   output data_valid;
   output [0:0]E;
   output queue_reg;
@@ -748,7 +810,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_FIFO_Synchronizer
   output queue_reg_0;
   input clk_TDC;
   input wr_en;
-  input [15:0]din;
+  input [17:0]din;
   input clk_SYS;
   input rd_en;
   input reset_SYS;
@@ -758,8 +820,8 @@ module design_1_AXI4Stream_CoarseExt_0_2_FIFO_Synchronizer
   wire clk_SYS;
   wire clk_TDC;
   wire data_valid;
-  wire [15:0]din;
-  wire [15:0]dout;
+  wire [17:0]din;
+  wire [17:0]dout;
   wire queue_reg;
   wire queue_reg_0;
   wire queue_reg_1;
@@ -800,13 +862,13 @@ module design_1_AXI4Stream_CoarseExt_0_2_FIFO_Synchronizer
   (* P_READ_MODE = "1" *) 
   (* P_WAKEUP_TIME = "2" *) 
   (* RD_DATA_COUNT_WIDTH = "1" *) 
-  (* READ_DATA_WIDTH = "16" *) 
+  (* READ_DATA_WIDTH = "18" *) 
   (* READ_MODE = "fwft" *) 
   (* RELATED_CLOCKS = "0" *) 
   (* SIM_ASSERT_CHK = "0" *) 
   (* USE_ADV_FEATURES = "1000" *) 
   (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH = "16" *) 
+  (* WRITE_DATA_WIDTH = "18" *) 
   (* WR_DATA_COUNT_WIDTH = "1" *) 
   (* XPM_MODULE = "TRUE" *) 
   design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_async Inst_xpm_fifo_async
@@ -841,23 +903,23 @@ module design_1_AXI4Stream_CoarseExt_0_2_FIFO_Synchronizer
     .INIT(16'h4000)) 
     queue_i_1
        (.I0(queue_reg_1),
-        .I1(dout[14]),
-        .I2(dout[9]),
+        .I1(dout[16]),
+        .I2(dout[11]),
         .I3(data_valid),
         .O(queue_reg_0));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    \uncalib_tdata[14]_i_2 
-       (.I0(dout[9]),
-        .I1(dout[14]),
+    \uncalib_tdata[16]_i_2 
+       (.I0(dout[11]),
+        .I1(dout[16]),
         .O(uncalib_tvalid111_out));
   (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h0080)) 
-    \uncalib_tdata_tmp[14]_i_1 
-       (.I0(dout[14]),
-        .I1(dout[9]),
+    \uncalib_tdata_tmp[16]_i_1 
+       (.I0(dout[16]),
+        .I1(dout[11]),
         .I2(data_valid),
         .I3(reset_SYS),
         .O(E));
@@ -866,22 +928,22 @@ module design_1_AXI4Stream_CoarseExt_0_2_FIFO_Synchronizer
     .INIT(16'hFEAA)) 
     uncalib_tvalid_i_1
        (.I0(queue_reg_1),
-        .I1(dout[9]),
-        .I2(dout[14]),
+        .I1(dout[11]),
+        .I2(dout[16]),
         .I3(data_valid),
         .O(queue_reg));
 endmodule
 
 module design_1_AXI4Stream_CoarseExt_0_2_Step_TC
    (CompOut_EQ_reg,
-    \din_reg[14] ,
+    \din_reg[16] ,
     CoarseCounter_CTD,
     clk_TDC,
     reset_TDC,
     s00_axis_subint_tvalid,
     din);
   output CompOut_EQ_reg;
-  output \din_reg[14] ;
+  output \din_reg[16] ;
   input [3:0]CoarseCounter_CTD;
   input clk_TDC;
   input reset_TDC;
@@ -892,7 +954,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_Step_TC
   wire CompOut_EQ_reg;
   wire clk_TDC;
   wire [0:0]din;
-  wire \din_reg[14] ;
+  wire \din_reg[16] ;
   wire reset_TDC;
   wire s00_axis_subint_tvalid;
 
@@ -901,21 +963,21 @@ module design_1_AXI4Stream_CoarseExt_0_2_Step_TC
         .CompOut_EQ_reg_0(CompOut_EQ_reg),
         .clk_TDC(clk_TDC),
         .din(din),
-        .\din_reg[14] (\din_reg[14] ),
+        .\din_reg[16] (\din_reg[16] ),
         .reset_TDC(reset_TDC),
         .s00_axis_subint_tvalid(s00_axis_subint_tvalid));
 endmodule
 
 module design_1_AXI4Stream_CoarseExt_0_2_TreeComparator
    (CompOut_EQ_reg,
-    \din_reg[14] ,
+    \din_reg[16] ,
     CoarseCounter_CTD,
     clk_TDC,
     reset_TDC,
     s00_axis_subint_tvalid,
     din);
   output CompOut_EQ_reg;
-  output \din_reg[14] ;
+  output \din_reg[16] ;
   input [3:0]CoarseCounter_CTD;
   input clk_TDC;
   input reset_TDC;
@@ -926,7 +988,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_TreeComparator
   wire CompOut_EQ_reg;
   wire clk_TDC;
   wire [0:0]din;
-  wire \din_reg[14] ;
+  wire \din_reg[16] ;
   wire reset_TDC;
   wire s00_axis_subint_tvalid;
 
@@ -935,21 +997,21 @@ module design_1_AXI4Stream_CoarseExt_0_2_TreeComparator
         .CompOut_EQ_reg(CompOut_EQ_reg),
         .clk_TDC(clk_TDC),
         .din(din),
-        .\din_reg[14] (\din_reg[14] ),
+        .\din_reg[16] (\din_reg[16] ),
         .reset_TDC(reset_TDC),
         .s00_axis_subint_tvalid(s00_axis_subint_tvalid));
 endmodule
 
 module design_1_AXI4Stream_CoarseExt_0_2_TreeComparatorWrapper
    (CompOut_EQ_reg,
-    \din_reg[14] ,
+    \din_reg[16] ,
     CoarseCounter_CTD,
     clk_TDC,
     reset_TDC,
     s00_axis_subint_tvalid,
     din);
   output CompOut_EQ_reg;
-  output \din_reg[14] ;
+  output \din_reg[16] ;
   input [3:0]CoarseCounter_CTD;
   input clk_TDC;
   input reset_TDC;
@@ -960,7 +1022,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_TreeComparatorWrapper
   wire CompOut_EQ_reg;
   wire clk_TDC;
   wire [0:0]din;
-  wire \din_reg[14] ;
+  wire \din_reg[16] ;
   wire reset_TDC;
   wire s00_axis_subint_tvalid;
 
@@ -969,7 +1031,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_TreeComparatorWrapper
         .CompOut_EQ_reg(CompOut_EQ_reg),
         .clk_TDC(clk_TDC),
         .din(din),
-        .\din_reg[14] (\din_reg[14] ),
+        .\din_reg[16] (\din_reg[16] ),
         .reset_TDC(reset_TDC),
         .s00_axis_subint_tvalid(s00_axis_subint_tvalid));
 endmodule
@@ -994,29 +1056,35 @@ module design_1_AXI4Stream_CoarseExt_0_2
   (* x_interface_info = "xilinx.com:signal:data:1.0 CoarseCounter_CTD DATA" *) (* x_interface_parameter = "XIL_INTERFACENAME CoarseCounter_CTD, LAYERED_METADATA undef" *) input [3:0]CoarseCounter_CTD;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS_SubInt TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXIS_SubInt, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 416666666, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, LAYERED_METADATA undef, INSERT_VIP 0" *) input s00_axis_subint_tvalid;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 S00_AXIS_SubInt TDATA" *) input [15:0]s00_axis_subint_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS_UnCalib TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_UnCalib, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output m00_axis_uncalib_tvalid;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS_UnCalib TDATA" *) output [15:0]m00_axis_uncalib_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS_UnCalib TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXIS_UnCalib, TDATA_NUM_BYTES 3, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output m00_axis_uncalib_tvalid;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 M00_AXIS_UnCalib TDATA" *) output [23:0]m00_axis_uncalib_tdata;
 
   wire \<const0> ;
   wire [3:0]CoarseCounter_CTD;
   wire clk_SYS;
   wire clk_TDC;
-  wire [14:0]\^m00_axis_uncalib_tdata ;
+  wire [16:0]\^m00_axis_uncalib_tdata ;
   wire m00_axis_uncalib_tvalid;
   wire reset_SYS;
   wire reset_TDC;
   wire [15:0]s00_axis_subint_tdata;
   wire s00_axis_subint_tvalid;
-  wire [15:15]NLW_U0_m00_axis_uncalib_tdata_UNCONNECTED;
+  wire [23:17]NLW_U0_m00_axis_uncalib_tdata_UNCONNECTED;
 
-  assign m00_axis_uncalib_tdata[15] = \<const0> ;
-  assign m00_axis_uncalib_tdata[14:0] = \^m00_axis_uncalib_tdata [14:0];
+  assign m00_axis_uncalib_tdata[23] = \<const0> ;
+  assign m00_axis_uncalib_tdata[22] = \<const0> ;
+  assign m00_axis_uncalib_tdata[21] = \<const0> ;
+  assign m00_axis_uncalib_tdata[20] = \<const0> ;
+  assign m00_axis_uncalib_tdata[19] = \<const0> ;
+  assign m00_axis_uncalib_tdata[18] = \<const0> ;
+  assign m00_axis_uncalib_tdata[17] = \<const0> ;
+  assign m00_axis_uncalib_tdata[16:0] = \^m00_axis_uncalib_tdata [16:0];
   GND GND
        (.G(\<const0> ));
   (* BIT_COARSE = "4" *) 
   (* BIT_FID = "2" *) 
-  (* BIT_SUB_INT = "9" *) 
-  (* BIT_UNCALIBRATED = "9" *) 
+  (* BIT_SUB_INT = "11" *) 
+  (* BIT_UNCALIBRATED = "11" *) 
   (* CDC_SYNC_STAGES = "4" *) 
   (* CEC_COARSE_CNT_INIT = "0" *) 
   (* CEC_VS_CTD_COUNTER = "CTD" *) 
@@ -1032,11 +1100,11 @@ module design_1_AXI4Stream_CoarseExt_0_2
        (.CoarseCounter_CTD(CoarseCounter_CTD),
         .clk_SYS(clk_SYS),
         .clk_TDC(clk_TDC),
-        .m00_axis_uncalib_tdata({NLW_U0_m00_axis_uncalib_tdata_UNCONNECTED[15],\^m00_axis_uncalib_tdata }),
+        .m00_axis_uncalib_tdata({NLW_U0_m00_axis_uncalib_tdata_UNCONNECTED[23:17],\^m00_axis_uncalib_tdata }),
         .m00_axis_uncalib_tvalid(m00_axis_uncalib_tvalid),
         .reset_SYS(reset_SYS),
         .reset_TDC(reset_TDC),
-        .s00_axis_subint_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,s00_axis_subint_tdata[9:0]}),
+        .s00_axis_subint_tdata({1'b0,1'b0,1'b0,1'b0,s00_axis_subint_tdata[11:0]}),
         .s00_axis_subint_tvalid(s00_axis_subint_tvalid));
 endmodule
 
@@ -2963,9 +3031,9 @@ endmodule
 (* FIFO_READ_LATENCY = "0" *) (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) 
 (* PROG_EMPTY_THRESH = "6" *) (* PROG_FULL_THRESH = "10" *) (* P_COMMON_CLOCK = "0" *) 
 (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "1" *) (* P_READ_MODE = "1" *) 
-(* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "1" *) (* READ_DATA_WIDTH = "16" *) 
+(* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "1" *) (* READ_DATA_WIDTH = "18" *) 
 (* READ_MODE = "fwft" *) (* RELATED_CLOCKS = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* USE_ADV_FEATURES = "1000" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "16" *) 
+(* USE_ADV_FEATURES = "1000" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "18" *) 
 (* WR_DATA_COUNT_WIDTH = "1" *) (* XPM_MODULE = "TRUE" *) (* dont_touch = "true" *) 
 module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_async
    (sleep,
@@ -2998,7 +3066,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_async
   input rst;
   input wr_clk;
   input wr_en;
-  input [15:0]din;
+  input [17:0]din;
   output full;
   output prog_full;
   output [0:0]wr_data_count;
@@ -3008,7 +3076,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_async
   output wr_ack;
   input rd_clk;
   input rd_en;
-  output [15:0]dout;
+  output [17:0]dout;
   output empty;
   output prog_empty;
   output [0:0]rd_data_count;
@@ -3023,8 +3091,8 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_async
 
   wire \<const0> ;
   wire data_valid;
-  wire [15:0]din;
-  wire [15:0]dout;
+  wire [17:0]din;
+  wire [17:0]dout;
   wire empty;
   wire full;
   wire rd_clk;
@@ -3083,7 +3151,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_async
   (* FIFO_MEM_TYPE = "1" *) 
   (* FIFO_READ_DEPTH = "16" *) 
   (* FIFO_READ_LATENCY = "0" *) 
-  (* FIFO_SIZE = "256" *) 
+  (* FIFO_SIZE = "288" *) 
   (* FIFO_WRITE_DEPTH = "16" *) 
   (* FULL_RESET_VALUE = "1" *) 
   (* FULL_RST_VAL = "1'b1" *) 
@@ -3101,7 +3169,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_async
   (* RD_LATENCY = "2" *) 
   (* RD_MODE = "1" *) 
   (* RD_PNTR_WIDTH = "4" *) 
-  (* READ_DATA_WIDTH = "16" *) 
+  (* READ_DATA_WIDTH = "18" *) 
   (* READ_MODE = "1" *) 
   (* READ_MODE_LL = "1" *) 
   (* RELATED_CLOCKS = "0" *) 
@@ -3111,13 +3179,13 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_async
   (* VERSION = "0" *) 
   (* WAKEUP_TIME = "0" *) 
   (* WIDTH_RATIO = "1" *) 
-  (* WRITE_DATA_WIDTH = "16" *) 
+  (* WRITE_DATA_WIDTH = "18" *) 
   (* WR_DATA_COUNT_WIDTH = "1" *) 
   (* WR_DC_WIDTH_EXT = "5" *) 
   (* WR_DEPTH_LOG = "4" *) 
   (* WR_PNTR_WIDTH = "4" *) 
   (* WR_RD_RATIO = "0" *) 
-  (* WR_WIDTH_LOG = "4" *) 
+  (* WR_WIDTH_LOG = "5" *) 
   (* XPM_MODULE = "TRUE" *) 
   (* both_stages_valid = "3" *) 
   (* invalid = "0" *) 
@@ -3160,18 +3228,18 @@ endmodule
 (* EN_PF = "1'b0" *) (* EN_RDC = "1'b0" *) (* EN_UF = "1'b0" *) 
 (* EN_WACK = "1'b0" *) (* EN_WDC = "1'b0" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) 
 (* FIFO_MEMORY_TYPE = "1" *) (* FIFO_MEM_TYPE = "1" *) (* FIFO_READ_DEPTH = "16" *) 
-(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "256" *) (* FIFO_WRITE_DEPTH = "16" *) 
+(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "288" *) (* FIFO_WRITE_DEPTH = "16" *) 
 (* FULL_RESET_VALUE = "1" *) (* FULL_RST_VAL = "1'b1" *) (* PE_THRESH_ADJ = "4" *) 
 (* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "8" *) 
 (* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "9" *) (* PROG_EMPTY_THRESH = "6" *) 
 (* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "1" *) (* RD_DC_WIDTH_EXT = "5" *) 
 (* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) 
-(* READ_DATA_WIDTH = "16" *) (* READ_MODE = "1" *) (* READ_MODE_LL = "1" *) 
+(* READ_DATA_WIDTH = "18" *) (* READ_MODE = "1" *) (* READ_MODE_LL = "1" *) 
 (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) 
 (* USE_ADV_FEATURES = "1000" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "16" *) (* WR_DATA_COUNT_WIDTH = "1" *) 
+(* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "18" *) (* WR_DATA_COUNT_WIDTH = "1" *) 
 (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) 
-(* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "4" *) (* XPM_MODULE = "TRUE" *) 
+(* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "5" *) (* XPM_MODULE = "TRUE" *) 
 (* both_stages_valid = "3" *) (* invalid = "0" *) (* keep_hierarchy = "soft" *) 
 (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
 module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
@@ -3206,7 +3274,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
   input rst;
   input wr_clk;
   input wr_en;
-  input [15:0]din;
+  input [17:0]din;
   output full;
   output full_n;
   output prog_full;
@@ -3217,7 +3285,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
   output wr_ack;
   input rd_clk;
   input rd_en;
-  output [15:0]dout;
+  output [17:0]dout;
   output empty;
   output prog_empty;
   output [0:0]rd_data_count;
@@ -3236,8 +3304,8 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
   wire [1:0]curr_fwft_state;
   wire data_valid;
   wire data_valid_fwft1;
-  wire [15:0]din;
-  wire [15:0]dout;
+  wire [17:0]din;
+  wire [17:0]dout;
   wire empty;
   wire full;
   wire \gen_cdc_pntr.rpw_gray_reg_n_0 ;
@@ -3286,7 +3354,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
   wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED ;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED ;
-  wire [15:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
+  wire [17:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
 
   assign almost_empty = \<const0> ;
   assign almost_full = \<const0> ;
@@ -3472,8 +3540,8 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
   (* ADDR_WIDTH_A = "4" *) 
   (* ADDR_WIDTH_B = "4" *) 
   (* AUTO_SLEEP_TIME = "0" *) 
-  (* BYTE_WRITE_WIDTH_A = "16" *) 
-  (* BYTE_WRITE_WIDTH_B = "16" *) 
+  (* BYTE_WRITE_WIDTH_A = "18" *) 
+  (* BYTE_WRITE_WIDTH_B = "18" *) 
   (* CASCADE_HEIGHT = "0" *) 
   (* CLOCKING_MODE = "1" *) 
   (* ECC_MODE = "0" *) 
@@ -3483,7 +3551,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
   (* MEMORY_INIT_PARAM = "" *) 
   (* MEMORY_OPTIMIZATION = "true" *) 
   (* MEMORY_PRIMITIVE = "1" *) 
-  (* MEMORY_SIZE = "256" *) 
+  (* MEMORY_SIZE = "288" *) 
   (* MEMORY_TYPE = "1" *) 
   (* MESSAGE_CONTROL = "0" *) 
   (* NUM_CHAR_LOC = "0" *) 
@@ -3493,12 +3561,12 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
   (* P_MAX_DEPTH_DATA = "16" *) 
   (* P_MEMORY_OPT = "yes" *) 
   (* P_MEMORY_PRIMITIVE = "distributed" *) 
-  (* P_MIN_WIDTH_DATA = "16" *) 
-  (* P_MIN_WIDTH_DATA_A = "16" *) 
-  (* P_MIN_WIDTH_DATA_B = "16" *) 
-  (* P_MIN_WIDTH_DATA_ECC = "16" *) 
+  (* P_MIN_WIDTH_DATA = "18" *) 
+  (* P_MIN_WIDTH_DATA_A = "18" *) 
+  (* P_MIN_WIDTH_DATA_B = "18" *) 
+  (* P_MIN_WIDTH_DATA_ECC = "18" *) 
   (* P_MIN_WIDTH_DATA_LDW = "4" *) 
-  (* P_MIN_WIDTH_DATA_SHFT = "16" *) 
+  (* P_MIN_WIDTH_DATA_SHFT = "18" *) 
   (* P_NUM_COLS_WRITE_A = "1" *) 
   (* P_NUM_COLS_WRITE_B = "1" *) 
   (* P_NUM_ROWS_READ_A = "1" *) 
@@ -3514,10 +3582,10 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
   (* P_WIDTH_ADDR_READ_B = "4" *) 
   (* P_WIDTH_ADDR_WRITE_A = "4" *) 
   (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-  (* P_WIDTH_COL_WRITE_A = "16" *) 
-  (* P_WIDTH_COL_WRITE_B = "16" *) 
-  (* READ_DATA_WIDTH_A = "16" *) 
-  (* READ_DATA_WIDTH_B = "16" *) 
+  (* P_WIDTH_COL_WRITE_A = "18" *) 
+  (* P_WIDTH_COL_WRITE_B = "18" *) 
+  (* READ_DATA_WIDTH_A = "18" *) 
+  (* READ_DATA_WIDTH_B = "18" *) 
   (* READ_LATENCY_A = "2" *) 
   (* READ_LATENCY_B = "2" *) 
   (* READ_RESET_VALUE_A = "0" *) 
@@ -3530,14 +3598,14 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
   (* USE_MEM_INIT_MMI = "0" *) 
   (* VERSION = "0" *) 
   (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH_A = "16" *) 
-  (* WRITE_DATA_WIDTH_B = "16" *) 
+  (* WRITE_DATA_WIDTH_A = "18" *) 
+  (* WRITE_DATA_WIDTH_B = "18" *) 
   (* WRITE_MODE_A = "2" *) 
   (* WRITE_MODE_B = "1" *) 
   (* WRITE_PROTECT = "1" *) 
   (* XPM_MODULE = "TRUE" *) 
-  (* rsta_loop_iter = "16" *) 
-  (* rstb_loop_iter = "16" *) 
+  (* rsta_loop_iter = "20" *) 
+  (* rstb_loop_iter = "20" *) 
   design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base \gen_sdpram.xpm_memory_base_inst 
        (.addra(wr_pntr_ext[3:0]),
         .addrb(rd_pntr_ext),
@@ -3546,8 +3614,8 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_base
         .dbiterra(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ),
         .dbiterrb(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ),
         .dina(din),
-        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [15:0]),
+        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [17:0]),
         .doutb(dout),
         .ena(ram_wr_en_i),
         .enb(rdp_inst_n_9),
@@ -4233,28 +4301,28 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_fifo_rst
 endmodule
 
 (* ADDR_WIDTH_A = "4" *) (* ADDR_WIDTH_B = "4" *) (* AUTO_SLEEP_TIME = "0" *) 
-(* BYTE_WRITE_WIDTH_A = "16" *) (* BYTE_WRITE_WIDTH_B = "16" *) (* CASCADE_HEIGHT = "0" *) 
+(* BYTE_WRITE_WIDTH_A = "18" *) (* BYTE_WRITE_WIDTH_B = "18" *) (* CASCADE_HEIGHT = "0" *) 
 (* CLOCKING_MODE = "1" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
-(* MEMORY_PRIMITIVE = "1" *) (* MEMORY_SIZE = "256" *) (* MEMORY_TYPE = "1" *) 
+(* MEMORY_PRIMITIVE = "1" *) (* MEMORY_SIZE = "288" *) (* MEMORY_TYPE = "1" *) 
 (* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
 (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "16" *) 
-(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "distributed" *) (* P_MIN_WIDTH_DATA = "16" *) 
-(* P_MIN_WIDTH_DATA_A = "16" *) (* P_MIN_WIDTH_DATA_B = "16" *) (* P_MIN_WIDTH_DATA_ECC = "16" *) 
-(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "16" *) (* P_NUM_COLS_WRITE_A = "1" *) 
+(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "distributed" *) (* P_MIN_WIDTH_DATA = "18" *) 
+(* P_MIN_WIDTH_DATA_A = "18" *) (* P_MIN_WIDTH_DATA_B = "18" *) (* P_MIN_WIDTH_DATA_ECC = "18" *) 
+(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "18" *) (* P_NUM_COLS_WRITE_A = "1" *) 
 (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
 (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
 (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
 (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) 
-(* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "16" *) 
-(* P_WIDTH_COL_WRITE_B = "16" *) (* READ_DATA_WIDTH_A = "16" *) (* READ_DATA_WIDTH_B = "16" *) 
+(* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "18" *) 
+(* P_WIDTH_COL_WRITE_B = "18" *) (* READ_DATA_WIDTH_A = "18" *) (* READ_DATA_WIDTH_B = "18" *) 
 (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) 
 (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
 (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "1" *) (* USE_MEM_INIT = "0" *) 
 (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WRITE_DATA_WIDTH_A = "16" *) (* WRITE_DATA_WIDTH_B = "16" *) (* WRITE_MODE_A = "2" *) 
+(* WRITE_DATA_WIDTH_A = "18" *) (* WRITE_DATA_WIDTH_B = "18" *) (* WRITE_MODE_A = "2" *) 
 (* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) 
-(* keep_hierarchy = "soft" *) (* rsta_loop_iter = "16" *) (* rstb_loop_iter = "16" *) 
+(* keep_hierarchy = "soft" *) (* rsta_loop_iter = "20" *) (* rstb_loop_iter = "20" *) 
 module design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base
    (sleep,
     clka,
@@ -4288,10 +4356,10 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base
   input regcea;
   input [0:0]wea;
   input [3:0]addra;
-  input [15:0]dina;
+  input [17:0]dina;
   input injectsbiterra;
   input injectdbiterra;
-  output [15:0]douta;
+  output [17:0]douta;
   output sbiterra;
   output dbiterra;
   input clkb;
@@ -4300,10 +4368,10 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base
   input regceb;
   input [0:0]web;
   input [3:0]addrb;
-  input [15:0]dinb;
+  input [17:0]dinb;
   input injectsbiterrb;
   input injectdbiterrb;
-  output [15:0]doutb;
+  output [17:0]doutb;
   output sbiterrb;
   output dbiterrb;
 
@@ -4312,22 +4380,23 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base
   wire [3:0]addrb;
   wire clka;
   wire clkb;
-  wire [15:0]dina;
-  wire [15:0]doutb;
+  wire [17:0]dina;
+  wire [17:0]doutb;
   wire ena;
   wire enb;
-  wire [15:0]\gen_rd_b.doutb_reg ;
-  wire [15:0]\gen_rd_b.doutb_reg0 ;
+  wire [17:0]\gen_rd_b.doutb_reg ;
+  wire [17:0]\gen_rd_b.doutb_reg0 ;
   wire regceb;
   wire rstb;
   wire sleep;
   wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOC_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOD_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17_DOD_UNCONNECTED ;
   wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11_DOD_UNCONNECTED ;
 
   assign dbiterra = \<const0> ;
   assign dbiterrb = \<const0> ;
+  assign douta[17] = \<const0> ;
+  assign douta[16] = \<const0> ;
   assign douta[15] = \<const0> ;
   assign douta[14] = \<const0> ;
   assign douta[13] = \<const0> ;
@@ -4410,6 +4479,24 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base
         .CE(enb),
         .D(\gen_rd_b.doutb_reg0 [15]),
         .Q(\gen_rd_b.doutb_reg [15]),
+        .R(1'b0));
+  (* dram_emb_xdc = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[16] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [16]),
+        .Q(\gen_rd_b.doutb_reg [16]),
+        .R(1'b0));
+  (* dram_emb_xdc = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[17] 
+       (.C(clkb),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [17]),
+        .Q(\gen_rd_b.doutb_reg [17]),
         .R(1'b0));
   (* dram_emb_xdc = "yes" *) 
   FDRE #(
@@ -4550,6 +4637,22 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][16] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg [16]),
+        .Q(doutb[16]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][17] 
+       (.C(clkb),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg [17]),
+        .Q(doutb[17]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] 
        (.C(clkb),
         .CE(regceb),
@@ -4621,7 +4724,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base
         .Q(doutb[9]),
         .R(rstb));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "256" *) 
+  (* RTL_RAM_BITS = "288" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* dram_emb_xdc = "yes" *) 
@@ -4651,7 +4754,7 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base
         .WCLK(clka),
         .WE(ena));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "256" *) 
+  (* RTL_RAM_BITS = "288" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* dram_emb_xdc = "yes" *) 
@@ -4659,29 +4762,29 @@ module design_1_AXI4Stream_CoarseExt_0_2_xpm_memory_base
   (* ram_addr_end = "15" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
-  (* ram_slice_end = "15" *) 
+  (* ram_slice_end = "17" *) 
   RAM32M #(
     .INIT_A(64'h0000000000000000),
     .INIT_B(64'h0000000000000000),
     .INIT_C(64'h0000000000000000),
     .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15 
+    \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17 
        (.ADDRA({1'b0,addrb}),
         .ADDRB({1'b0,addrb}),
         .ADDRC({1'b0,addrb}),
         .ADDRD({1'b0,addra}),
         .DIA(dina[13:12]),
         .DIB(dina[15:14]),
-        .DIC({1'b0,1'b0}),
+        .DIC(dina[17:16]),
         .DID({1'b0,1'b0}),
         .DOA(\gen_rd_b.doutb_reg0 [13:12]),
         .DOB(\gen_rd_b.doutb_reg0 [15:14]),
-        .DOC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOC_UNCONNECTED [1:0]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_15_DOD_UNCONNECTED [1:0]),
+        .DOC(\gen_rd_b.doutb_reg0 [17:16]),
+        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_17_DOD_UNCONNECTED [1:0]),
         .WCLK(clka),
         .WE(ena));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "256" *) 
+  (* RTL_RAM_BITS = "288" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* dram_emb_xdc = "yes" *) 

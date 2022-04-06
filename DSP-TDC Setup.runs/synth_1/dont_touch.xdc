@@ -233,6 +233,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_AX
 # IP: bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_iic_0_0 || ORIG_REF_NAME==design_1_axi_iic_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_BeltBus_TDCLedCounter_1_0/design_1_BeltBus_TDCLedCounter_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_BeltBus_TDCLedCounter_1_0 || ORIG_REF_NAME==design_1_BeltBus_TDCLedCounter_1_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
 

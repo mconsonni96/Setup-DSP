@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tftg256-2" LaunchTime="1648460990">
+<GenRun Id="synth_1" LaunchPart="xc7a100tftg256-2" LaunchTime="1649234001">
   <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
@@ -64,22 +64,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_DSP_TDC_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_IperDecod_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_IperDecod_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_IperDecod_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_4"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_DSP_TDC_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_iic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4_TDC_Wrapper_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_MagicCali_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_DSP_TDC_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_CoarseExt_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_MagicCali_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_CoarseExt_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_DSP_TDC_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_BeltBus_TDCLedCounter_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4_AXIToIIC_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_MagicCali_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_CoarseExt_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_StartStopGenerator_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_MME_0_1"/>
 </GenRun>

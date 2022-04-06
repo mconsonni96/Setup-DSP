@@ -63,7 +63,7 @@ ENTITY design_1_AXI4Stream_CoarseExt_0_2 IS
     s00_axis_subint_tvalid : IN STD_LOGIC;
     s00_axis_subint_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     m00_axis_uncalib_tvalid : OUT STD_LOGIC;
-    m00_axis_uncalib_tdata : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    m00_axis_uncalib_tdata : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
   );
 END design_1_AXI4Stream_CoarseExt_0_2;
 
@@ -97,7 +97,7 @@ ARCHITECTURE design_1_AXI4Stream_CoarseExt_0_2_arch OF design_1_AXI4Stream_Coars
       s00_axis_subint_tvalid : IN STD_LOGIC;
       s00_axis_subint_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       m00_axis_uncalib_tvalid : OUT STD_LOGIC;
-      m00_axis_uncalib_tdata : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+      m00_axis_uncalib_tdata : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
     );
   END COMPONENT AXI4Stream_CoarseExtensionCore;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -105,7 +105,7 @@ ARCHITECTURE design_1_AXI4Stream_CoarseExt_0_2_arch OF design_1_AXI4Stream_Coars
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF m00_axis_uncalib_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 M00_AXIS_UnCalib TDATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_uncalib_tvalid: SIGNAL IS "XIL_INTERFACENAME M00_AXIS_UnCalib, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_uncalib_tvalid: SIGNAL IS "XIL_INTERFACENAME M00_AXIS_UnCalib, TDATA_NUM_BYTES 3, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m00_axis_uncalib_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M00_AXIS_UnCalib TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axis_subint_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S00_AXIS_SubInt TDATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axis_subint_tvalid: SIGNAL IS "XIL_INTERFACENAME S00_AXIS_SubInt, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 416666666, PHASE 0.000, CLK_DOMAIN design_1_util_ds_buf_3_0_IBUF_OUT, LAYERED_METADATA undef, INSERT_VIP 0";
@@ -126,8 +126,8 @@ BEGIN
       CEC_VS_CTD_COUNTER => "CTD",
       CEC_COARSE_CNT_INIT => 0,
       BIT_COARSE => 4,
-      BIT_SUB_INT => 9,
-      BIT_UNCALIBRATED => 9,
+      BIT_SUB_INT => 11,
+      BIT_UNCALIBRATED => 11,
       BIT_FID => 2,
       FIFO_MEMORY_TYPE => "distributed",
       RELATED_CLOCKS => false,

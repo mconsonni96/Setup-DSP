@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Mon Mar 28 11:53:44 2022
+| Date         : Wed Apr  6 10:35:19 2022
 | Host         : mconsonni-All-Series running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   20 |     0 |       170 | 11.76 |
+| Bonded IOB                  |   26 |     0 |       170 | 15.29 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -146,9 +146,9 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| OBUF     |   14 |                  IO |
 | IBUF     |   12 |                  IO |
 | OBUFT    |   10 |                  IO |
-| OBUF     |    8 |                  IO |
 +----------+------+---------------------+
 
 
@@ -194,6 +194,7 @@ Table of Contents
 | design_1_InputLogic_0_0              |    1 |
 | design_1_CoarseTreeDistributor_0_0   |    1 |
 | design_1_BeltBus_TTM_0_0             |    1 |
+| design_1_BeltBus_TDCLedCounter_1_0   |    1 |
 | design_1_BeltBus_TDCHistogrammer_1_0 |    1 |
 | design_1_BeltBus_TDCHistogrammer_0_0 |    1 |
 | design_1_BeltBus_TDCCounter_0_0      |    1 |

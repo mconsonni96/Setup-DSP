@@ -58,7 +58,7 @@ ENTITY design_1_AXI4Stream_MagicCali_0_1 IS
     reset : IN STD_LOGIC;
     clk : IN STD_LOGIC;
     s00_axis_uncalib_tvalid : IN STD_LOGIC;
-    s00_axis_uncalib_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    s00_axis_uncalib_tdata : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
     m00_axis_timestamp_tvalid : OUT STD_LOGIC;
     m00_axis_timestamp_tdata : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
     Calibrated : OUT STD_LOGIC;
@@ -93,7 +93,7 @@ ARCHITECTURE design_1_AXI4Stream_MagicCali_0_1_arch OF design_1_AXI4Stream_Magic
       reset : IN STD_LOGIC;
       clk : IN STD_LOGIC;
       s00_axis_uncalib_tvalid : IN STD_LOGIC;
-      s00_axis_uncalib_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      s00_axis_uncalib_tdata : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
       m00_axis_timestamp_tvalid : OUT STD_LOGIC;
       m00_axis_timestamp_tdata : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
       Calibrated : OUT STD_LOGIC;
@@ -134,7 +134,7 @@ ARCHITECTURE design_1_AXI4Stream_MagicCali_0_1_arch OF design_1_AXI4Stream_Magic
   ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_timestamp_tvalid: SIGNAL IS "XIL_INTERFACENAME M00_AXIS_TimeStamp, TDATA_NUM_BYTES 3, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m00_axis_timestamp_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M00_AXIS_TimeStamp TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axis_uncalib_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S00_AXIS_Uncalib TDATA";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axis_uncalib_tvalid: SIGNAL IS "XIL_INTERFACENAME S00_AXIS_Uncalib, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s00_axis_uncalib_tvalid: SIGNAL IS "XIL_INTERFACENAME S00_AXIS_Uncalib, TDATA_NUM_BYTES 3, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axis_uncalib_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S00_AXIS_Uncalib TVALID";
   ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF M00_AXIS_TimeStamp:S00_AXIS_Uncalib:M01_AXIS_DebugCT:M02_AXIS_DebugCC, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
@@ -143,7 +143,7 @@ ARCHITECTURE design_1_AXI4Stream_MagicCali_0_1_arch OF design_1_AXI4Stream_Magic
 BEGIN
   U0 : AXI4Stream_MagicCalibrator
     GENERIC MAP (
-      BIT_UNCALIBRATED => 9,
+      BIT_UNCALIBRATED => 11,
       BIT_COARSE => 4,
       BIT_FID => 2,
       INTEGRATION_METHOD => "-",

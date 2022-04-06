@@ -119,14 +119,14 @@ BEGIN
       DEBUG_MODE => true,
       NUMBER_OF_TDL => 2,
       NUM_TAP_TDL => 480,
-      MIN_VALID_TAP_POS => -48,
-      STEP_VALID_TAP_POS => 16,
+      MIN_VALID_TAP_POS => 0,
+      STEP_VALID_TAP_POS => 8,
       MAX_VALID_TAP_POS => 479,
       VALID_POSITION_TAP_INIT => 0,
       VALID_NUMBER_OF_TDL_INIT => 0,
       BIT_SMP_TDL => 480,
-      NUM_TAP_PRE_TDL => 48,
-      BIT_SMP_PRE_TDL => 48
+      NUM_TAP_PRE_TDL => 0,
+      BIT_SMP_PRE_TDL => 0
     )
     PORT MAP (
       reset => reset,
